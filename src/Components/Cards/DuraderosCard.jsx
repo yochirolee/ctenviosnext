@@ -1,4 +1,4 @@
-import { ArchiveBoxIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import { ArchiveBoxIcon, ScaleIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 import { React } from "react";
 import { MdAccountBox } from "react-icons/md";
 export const DuraderosCard = ({ callout }) => {
@@ -38,21 +38,21 @@ export const DuraderosCard = ({ callout }) => {
 				<h4 className="sr-only">Duraderos</h4>
 				<ul class="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
 					<li class="flex">
-						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
+						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p class="ml-5">
 							<strong class="font-semibold text-slate-900">$2,49 x Libra:</strong> en Duraderos hasta
 							500 Lbs
 						</p>
 					</li>
 					<li class="flex">
-						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
+						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p class="ml-5">
 							<strong class="font-semibold text-slate-900">$2,29 x Libra:</strong> en Duraderos mas de
 							500 Lbs
 						</p>
 					</li>
 					<li class="flex">
-						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
+						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p class="ml-5">
 							<strong class="font-semibold text-slate-900">$1,90:</strong> Equipaje no Acompañado o Menaje de Casa
 						</p>

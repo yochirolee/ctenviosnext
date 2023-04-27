@@ -3,6 +3,7 @@ import { MedicinasCard } from "@/Components/Cards/MedicinasCard";
 import { MiscelaneasCard } from "@/Components/Cards/MiscelaneasCard";
 import { Hero } from "@/Components/Hero/Hero";
 import NewsLetter from "@/Components/Newsletter/Newsletter";
+import Partners from "@/Components/Partners/Partners";
 
 export default function Home() {
 	return (
@@ -13,6 +14,7 @@ export default function Home() {
 				<MiscelaneasCard />
 				<MedicinasCard />
 			</div>
+			<Partners />
 			<NewsLetter />
 		</main>
 	);
