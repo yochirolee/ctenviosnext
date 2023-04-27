@@ -16,8 +16,6 @@ export default function Home() {
 				<MedicinasCard />
 			</div>
 			<NewsLetter />
-			<ProductsList />
-			<TrackingDetails />
 		</main>
 	);
 }
