@@ -8,13 +8,16 @@ import { useFetchByInvoiceOrHBL } from "@/Hooks/useFetchByInvoiceOrHBL";
 export const HeroTracking = () => {
 	const [searchInput, setSearchInput] = useState("");
 	const [searchTerm, setSearchTerm] = useState(null);
-	const { data: result, isLoading } = useFetchByInvoiceOrHBL(searchTerm);
+	const { data: result, isLoading, isError } = useFetchByInvoiceOrHBL(searchTerm);
 
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
 		setSearchTerm(searchInput);
 	};
 
+	if (isError) {
+		<div>Something Wrong</div>;
+	}
 	console.log(result);
 	return (
 		<div className="max-w-7xl mx-auto">
@@ -64,7 +67,7 @@ export const HeroTracking = () => {
 					</div>
 				</div>
 
-				{result || !isLoading ? <TrackingDetails result={result} /> : ""}
+				{result  || !isLoading ? <TrackingDetails result={result} /> : ""}
 			</div>
 			<ShadowBg2 />
 		</div>
