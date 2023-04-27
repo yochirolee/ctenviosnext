@@ -3,6 +3,7 @@ import { MdOutlineWhatsapp } from "react-icons/md";
 import { ShadowBg1, ShadowBg2 } from "../Ui/ShadowBg1";
 import { HeroRight } from "./HeroRight";
 import { MapPinIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export const Hero = () => {
 	return (
@@ -11,7 +12,7 @@ export const Hero = () => {
 
 			<div className="grid  lg:grid-flow-col lg:grid-cols-2 gap-20  items-center  mx-auto container   py-32  ">
 				<div className=" mx-auto  text-center  ">
-					<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+					<h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
 						Caribe Travel Express
 					</h1>
 					<p className="mt-6 text-lg leading-8 text-gray-600">
@@ -38,9 +39,10 @@ export const Hero = () => {
 							<MdOutlineWhatsapp className="h-auto w-6 mx-2" />
 							Contactanos
 						</a>
-						<a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+
+						<Link href="/tracking" className="text-sm font-semibold leading-6 text-gray-900">
 							Tracking de su Envio<span aria-hidden="true"> →</span>
-						</a>
+						</Link>
 					</div>
 				</div>
 				<HeroRight />
