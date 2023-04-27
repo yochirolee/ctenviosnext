@@ -1,10 +1,14 @@
 import { React } from "react";
 import { TrackingCard } from "../Cards/TrackingCard";
 
-export const TrackingDetails = () => {
+export const TrackingDetails = ({ result }) => {
 	return (
 		<div className="flex  flex-col gap-4 max-w-2xl mx-auto ">
-			<TrackingCard />
+			{result?.Products ? (
+				result?.Products?.map((product) => <TrackingCard key={product?.HBL} product={product} />)
+			) : (
+				<TrackingCard product={result} />
+			)}
 		</div>
 	);
 };

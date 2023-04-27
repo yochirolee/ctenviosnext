@@ -1,11 +1,7 @@
-import { GiftTopIcon } from "@heroicons/react/24/outline";
-import { React } from "react";
-import { MdDeliveryDining } from "react-icons/md";
-
 export const HeroRight = () => {
 	return (
 		<div className="relative mx-auto lg:max-w-7xl px-4 sm:px-6 lg:px-8">
-			<div class="absolute inset-0 bg-[url(/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+			<div className="absolute inset-0 bg-[url(/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
 
 			<div className="mx-auto max-w-2xl sm:py-10 lg:py-42 lg:max-w-none ">
 				<div className="justify-center items-center grid grid-cols-2 lg:grid-cols-3  lg:gap-x-6 lg:space-y-0">
