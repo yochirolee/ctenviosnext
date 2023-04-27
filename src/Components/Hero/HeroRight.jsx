@@ -23,7 +23,7 @@ export const HeroRight = () => {
 				</div>
 			</div>
 			<div>
-				<p className="text-center my-6 font-semibold text-lg">Hasta la Puerta de su Casa!</p>
+				<p className="text-center my-4 font-semibold text-lg">Hasta la Puerta de su Casa!</p>
 			</div>
 		</div>
 	);

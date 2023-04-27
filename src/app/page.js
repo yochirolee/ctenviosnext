@@ -3,8 +3,6 @@ import { MedicinasCard } from "@/Components/Cards/MedicinasCard";
 import { MiscelaneasCard } from "@/Components/Cards/MiscelaneasCard";
 import { Hero } from "@/Components/Hero/Hero";
 import NewsLetter from "@/Components/Newsletter/Newsletter";
-import { ProductsList } from "@/Components/Products/ProductsList";
-import { TrackingDetails } from "@/Components/TrackingDetails/TrackingDetails";
 
 export default function Home() {
 	return (
