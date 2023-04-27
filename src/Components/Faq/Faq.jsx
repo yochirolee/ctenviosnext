@@ -12,7 +12,7 @@ export const Faq = () => {
 				<section>
 					<h3 class="text-sm font-semibold leading-7 text-slate-400">General</h3>
 					<dl class="mt-2 divide-y divide-slate-100">
-						<details class="group py-4 marker:content-['']">
+						<details class="group py-4 marker:content-[`'`]">
 							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 [&amp;::-webkit-details-marker]:hidden">
 								Que tiempo demora un Envio?
 								<svg
@@ -30,7 +30,7 @@ export const Faq = () => {
 							<div class="pb-6 pt-6">
 								<div class="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
 									<p>
-										Tailwind UI products are a{" "}
+										Tailwind UI products are a
 										<strong>one-time purchase, with no recurring subscription</strong>. When you
 										purchase any Tailwind UI product, you have access to all of the content in that
 										product forever.
@@ -38,7 +38,7 @@ export const Faq = () => {
 								</div>
 							</div>
 						</details>
-						<details class="group py-4 marker:content-['']">
+						<details class="group py-4 marker:content-[`'`]">
 							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 [&amp;::-webkit-details-marker]:hidden">
 								Donde puedo conocer el estado de un Envio?
 								<svg
@@ -93,7 +93,7 @@ export const Faq = () => {
 				<section>
 					<h3 class="text-sm font-semibold leading-7 text-slate-400">Aduana Cuba</h3>
 					<dl class="mt-2 divide-y divide-slate-100">
-						<details class="group py-4 marker:content-['']">
+						<details class="group py-4 marker:content-[`'`]">
 							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 [&amp;::-webkit-details-marker]:hidden">
 								Are Figma, Sketch, or Adobe XD files included?
 								<svg
@@ -122,7 +122,7 @@ export const Faq = () => {
 								</div>
 							</div>
 						</details>
-						<details class="group py-4 marker:content-['']">
+						<details class="group py-4 marker:content-[`'`]">
 							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 [&amp;::-webkit-details-marker]:hidden">
 								What JS framework is used?
 								<svg
@@ -170,7 +170,7 @@ export const Faq = () => {
 								</div>
 							</div>
 						</details>
-						<details class="group py-4 marker:content-['']">
+						<details class="group py-4 marker:content-[`'`]">
 							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 [&amp;::-webkit-details-marker]:hidden">
 								What version of Tailwind CSS is used?
 								<svg
@@ -194,7 +194,7 @@ export const Faq = () => {
 								</div>
 							</div>
 						</details>
-						<details class="group py-4 marker:content-['']">
+						<details class="group py-4 marker:content-[`'`]">
 							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 [&amp;::-webkit-details-marker]:hidden">
 								What browsers are supported?
 								<svg
