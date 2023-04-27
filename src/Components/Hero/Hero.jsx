@@ -6,7 +6,7 @@ import { MapPinIcon } from "@heroicons/react/24/outline";
 
 export const Hero = () => {
 	return (
-		<div className="relative isolate  px-6 pt-14 lg:px-8">
+		<div className="relative isolate  px-6 lg:pt-14 lg:px-8">
 			<ShadowBg1 />
 
 			<div className="grid  lg:grid-flow-col lg:grid-cols-2 gap-20  items-center  mx-auto container   py-32  ">

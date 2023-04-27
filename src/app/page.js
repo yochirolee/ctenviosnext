@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<main>
 			<Hero />
-			<div className="grid container pb-20 px-10 lg:px-46 lg:grid-cols-3 mx-auto gap-10 items-center  ">
+			<div className="grid align-top container justify-center pb-20 px-10 lg:px-46 lg:grid-cols-3 mx-auto gap-10   ">
 				<DuraderosCard />
 				<MiscelaneasCard />
 				<MedicinasCard />

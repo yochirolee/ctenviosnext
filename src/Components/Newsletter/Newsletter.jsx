@@ -19,6 +19,8 @@ import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 export default function NewsLetter() {
 	return (
 		<div className="relative container mx-auto rounded-3xl isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+			<div class="absolute inset-0 bg-[url(/grid.svg)] z-10 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+
 			<div class="lg:block absolute hidden -z-10 inset-0 bg-[url(/slider4.jpg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
 
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
