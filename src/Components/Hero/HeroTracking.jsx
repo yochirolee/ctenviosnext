@@ -7,7 +7,7 @@ import { useFetchByInvoiceOrHBL } from "@/Hooks/useFetchByInvoiceOrHBL";
 
 export const HeroTracking = () => {
 	const [searchInput, setSearchInput] = useState("");
-	const [searchTerm, setSearchTerm] = useState("");
+	const [searchTerm, setSearchTerm] = useState(null);
 	const { data: result, isLoading } = useFetchByInvoiceOrHBL(searchTerm);
 
 	const handleOnSubmit = (e) => {
