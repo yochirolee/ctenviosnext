@@ -38,6 +38,141 @@ export const Faq = () => {
 								</div>
 							</div>
 						</details>
+						<details className="group py-4 ">
+							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
+								Que tiempo demora un Envio?
+								<svg
+									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M18 12H6"></path>
+									<path className="group-open:hidden" d="M12 6v12"></path>
+								</svg>
+							</summary>
+							<div className="pb-6 pt-6">
+								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+									<p>
+										Tailwind UI products are a
+										<strong>one-time purchase, with no recurring subscription</strong>. When you
+										purchase any Tailwind UI product, you have access to all of the content in that
+										product forever.
+									</p>
+								</div>
+							</div>
+						</details>
+						<details className="group py-4 ">
+							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
+								Que tiempo demora un Envio?
+								<svg
+									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M18 12H6"></path>
+									<path className="group-open:hidden" d="M12 6v12"></path>
+								</svg>
+							</summary>
+							<div className="pb-6 pt-6">
+								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+									<p>
+										Tailwind UI products are a
+										<strong>one-time purchase, with no recurring subscription</strong>. When you
+										purchase any Tailwind UI product, you have access to all of the content in that
+										product forever.
+									</p>
+								</div>
+							</div>
+						</details>
+					</dl>
+				</section>
+				<section>
+					<h3 className="text-sm font-semibold leading-7 text-slate-400">Aduana</h3>
+					<dl className="mt-2 divide-y divide-slate-100">
+						<details className="group py-4 ">
+							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
+								Que tiempo demora un Envio?
+								<svg
+									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M18 12H6"></path>
+									<path className="group-open:hidden" d="M12 6v12"></path>
+								</svg>
+							</summary>
+							<div className="pb-6 pt-6">
+								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+									<p>
+										Tailwind UI products are a
+										<strong>one-time purchase, with no recurring subscription</strong>. When you
+										purchase any Tailwind UI product, you have access to all of the content in that
+										product forever.
+									</p>
+								</div>
+							</div>
+						</details>
+						<details className="group py-4 ">
+							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
+								Que tiempo demora un Envio?
+								<svg
+									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M18 12H6"></path>
+									<path className="group-open:hidden" d="M12 6v12"></path>
+								</svg>
+							</summary>
+							<div className="pb-6 pt-6">
+								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+									<p>
+										Tailwind UI products are a
+										<strong>one-time purchase, with no recurring subscription</strong>. When you
+										purchase any Tailwind UI product, you have access to all of the content in that
+										product forever.
+									</p>
+								</div>
+							</div>
+						</details>
+						<details className="group py-4 ">
+							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
+								Que tiempo demora un Envio?
+								<svg
+									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M18 12H6"></path>
+									<path className="group-open:hidden" d="M12 6v12"></path>
+								</svg>
+							</summary>
+							<div className="pb-6 pt-6">
+								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+									<p>
+										Tailwind UI products are a
+										<strong>one-time purchase, with no recurring subscription</strong>. When you
+										purchase any Tailwind UI product, you have access to all of the content in that
+										product forever.
+									</p>
+								</div>
+							</div>
+						</details>
 					</dl>
 				</section>
 			</div>
