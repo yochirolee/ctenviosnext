@@ -13,7 +13,7 @@ export const Faq = () => {
 					<h3 class="text-sm font-semibold leading-7 text-slate-400">General</h3>
 					<dl class="mt-2 divide-y divide-slate-100">
 						<details class="group py-4 ">
-							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 [`&amp;`::-webkit-details-marker]:hidden">
+							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
 								Que tiempo demora un Envio?
 								<svg
 									class="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
@@ -39,7 +39,7 @@ export const Faq = () => {
 							</div>
 						</details>
 						<details class="group py-4 ">
-							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 [`&amp;`::-webkit-details-marker]:hidden">
+							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
 								Donde puedo conocer el estado de un Envio?
 								<svg
 									class="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
@@ -94,7 +94,7 @@ export const Faq = () => {
 					<h3 class="text-sm font-semibold leading-7 text-slate-400">Aduana Cuba</h3>
 					<dl class="mt-2 divide-y divide-slate-100">
 						<details class="group py-4 ">
-							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 [`&amp;`::-webkit-details-marker]:hidden">
+							<summary class="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
 								Are Figma, Sketch, or Adobe XD files included?
 								<svg
 									class="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
