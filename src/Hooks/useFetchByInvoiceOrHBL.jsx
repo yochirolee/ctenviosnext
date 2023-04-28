@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 const getProductData = async (id) => {
+	if (!id) return [];
 	if (id.length > 4 && id.length > 7) {
 		const res = await fetch("https://caribe-cargo-api.vercel.app/api/products/" + id);
 		return res.json();
@@ -9,7 +10,6 @@ const getProductData = async (id) => {
 
 		return res.json();
 	}
-	return null;
 };
 
 export const useFetchByInvoiceOrHBL = (id) => {

@@ -18,7 +18,7 @@ export const HeroTracking = () => {
 	if (isError) {
 		<div>Something Wrong</div>;
 	}
-	console.log(result);
+	
 	return (
 		<div className="max-w-7xl mx-auto">
 			<ShadowBg1 />

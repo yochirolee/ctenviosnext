@@ -15,6 +15,7 @@ import {
 import { React } from "react";
 import { TrackingHistoryCard } from "./TrackingHistoryCard";
 export const TrackingCard = ({ product }) => {
+	if (!product) return;
 	return (
 		<div className="relative  z-10 -mx-4 shadow-lg ring-1 ring-slate-900/10 sm:mx-0 sm:rounded-3xl  lg:flex-none">
 			<div className="flex absolute -bottom-px left-1/2 -ml-48 h-[2px] w-96">
