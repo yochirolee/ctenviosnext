@@ -25,18 +25,8 @@ export const TrackingCard = ({ product }) => {
 			</div>
 			<div className="relative flex flex-col lg:flex-row items-center gap-6 bg-white px-4 py-10 sm:rounded-3xl sm:px-10">
 				<div>
-					<div className="my-4 flex items-center">
-						<p className="text-[1.5rem] leading-none text-slate-900">
-							<span className="font-bold">{product?.HBL}</span>
-						</p>
-						<p className="ml-3 space-x-1 text-sm">
-							<span className="font-semibold text-slate-900">HBL</span>
-						</p>
-					</div>
-					<span className="text-slate-500 mt-4">{product?.Description}</span>
-
-					<div className="flex items-center justify-between">
-						<h3 className="text-base font-semibold text-sky-500">No. Factura</h3>
+					<div className="flex  gap-2 lg:gap-0 items-center justify-between">
+						<h1 className="text-xl my-6">{product?.Agency}</h1>
 						<a
 							className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-slate-900 text-white hover:bg-slate-700"
 							href="/"
@@ -47,7 +37,15 @@ export const TrackingCard = ({ product }) => {
 							</span>
 						</a>
 					</div>
-					<h1 className="text-xl my-6">{product?.Agency}</h1>
+					<div className="my-4 flex items-center">
+						<p className="text-[1.5rem] leading-none text-slate-900">
+							<span className="font-bold">{product?.HBL}</span>
+						</p>
+						<p className="ml-3 space-x-1 text-sm">
+							<span className="font-semibold text-slate-900">HBL</span>
+						</p>
+					</div>
+					<span className="text-slate-500 mt-4">{product?.Description}</span>
 				</div>
 				<TrackingHistoryCard product={product} />
 			</div>

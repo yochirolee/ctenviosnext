@@ -1,18 +1,18 @@
 "use client";
-import { React, useState } from "react";
+import { React, useRef, useState } from "react";
 import { ShadowBg1, ShadowBg2 } from "../Ui/ShadowBg1";
 import { MagnifyingGlassIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { TrackingDetails } from "../TrackingDetails/TrackingDetails";
 import { useFetchByInvoiceOrHBL } from "@/Hooks/useFetchByInvoiceOrHBL";
 
 export const HeroTracking = () => {
-	const [searchInput, setSearchInput] = useState("");
+	const searchInputRef = useRef("");
 	const [searchTerm, setSearchTerm] = useState(null);
 	const { data: result, isLoading, isError } = useFetchByInvoiceOrHBL(searchTerm);
 
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
-		setSearchTerm(searchInput);
+		setSearchTerm(searchInputRef.current.value);
 	};
 
 	if (isError) {
@@ -47,13 +47,13 @@ export const HeroTracking = () => {
 									type="text"
 									autoComplete="text"
 									required
-									value={searchInput}
-									onChange={(e) => setSearchInput(e.target.value)}
+									ref={searchInputRef}
 									className="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2  shadow-sm ring-1 ring-inset ring-blue/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
 									placeholder="Buscar por Factura o HBL"
 								/>
 								<button
 									type="submit"
+									disabled={isLoading}
 									className=" inline-flex justify-center my-4 md:my-0 items-center gap-2 rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
 								>
 									<MagnifyingGlassIcon className="h-5 w-5" />
@@ -67,7 +67,7 @@ export const HeroTracking = () => {
 					</div>
 				</div>
 
-				{result  || !isLoading ? <TrackingDetails result={result} /> : ""}
+				{result ? <TrackingDetails result={result} /> : ""}
 			</div>
 			<ShadowBg2 />
 		</div>

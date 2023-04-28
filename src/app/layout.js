@@ -2,6 +2,7 @@ import NavBar from "@/Components/NavBar/NavBar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Footer } from "@/Components/Footer/Footer";
+import QueryProvider from "@/Utils/Providers/QueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +16,11 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={inter.className}>
 				<div className="relative isolate max-w-7xl mx-auto px-6 lg:pt-14 lg:px-8">
-					<NavBar />
-					{children}
-					<Footer />
+					<QueryProvider>
+						<NavBar />
+						{children}
+						<Footer />
+					</QueryProvider>
 				</div>
 			</body>
 		</html>

@@ -12,8 +12,7 @@ import {
 
 export const TrackingHistoryCard = ({ product }) => {
 	const {
-		isLoading,
-		isError,
+	
 		data: productsDetails,
 		
 	} = useQuery(["productHistory", product?.HBL], () => fetchProductTrackingHistory(product));
@@ -25,8 +24,10 @@ export const TrackingHistoryCard = ({ product }) => {
 					<li key={index} className="flex items-center">
 						<DocumentTextIcon className="w-6 h-6 text-[#0EA5E9]" />
 						<p className="ml-5">
-							<strong className="font-semibold text-slate-900">{location?.Location}</strong>{" "}
-							04/17/2023
+							<strong className="font-semibold text-slate-900">
+								{location?.Location} {location?.Container}
+							</strong>
+							{location?.CreatedAt}
 						</p>
 					</li>
 				))}
