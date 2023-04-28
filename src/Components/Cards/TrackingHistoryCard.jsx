@@ -26,9 +26,9 @@ export const TrackingHistoryCard = ({ product }) => {
 							<strong className="font-semibold text-slate-900">
 								{location?.Location} {location?.Container}
 							</strong>
-							<p>
+							<span>
 								{location?.CreatedAt ? format(parseISO(location?.CreatedAt), "MMM d h:mm a") : ""}
-							</p>
+							</span>
 						</p>
 					</li>
 				))}
