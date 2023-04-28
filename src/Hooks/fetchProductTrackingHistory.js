@@ -1,4 +1,14 @@
 import { supabase } from "@/Supabase/SupabaseClient";
+import {
+	CheckIcon,
+	ClipboardDocumentCheckIcon,
+	DocumentTextIcon,
+	HomeIcon,
+	ShieldCheckIcon,
+	TicketIcon,
+	TruckIcon,
+} from "@heroicons/react/24/outline";
+import { MdGroup } from "react-icons/md";
 
 const createLocation = (index, product) => {
 	switch (index) {
@@ -6,18 +16,21 @@ const createLocation = (index, product) => {
 			return {
 				HBL: product.HBL,
 				Location: "Facturado",
+				Icon: <DocumentTextIcon className="w-6 h-6 text-[#0EA5E9]" />,
 			};
 
 		case 1:
 			return {
 				HBL: product.HBL,
 				Location: "En Almacen",
+				Icon: <HomeIcon className="w-6 h-6 text-[#0EA5E9]" />,
 			};
 
 		case 2:
 			return {
 				HBL: product.HBL,
 				Location: "En Pallet" + " " + product.Pallet,
+				Icon: <ClipboardDocumentCheckIcon className="w-6 h-6 text-[#0EA5E9]" />,
 			};
 
 		case 3:
@@ -68,6 +81,7 @@ export const fetchProductTrackingHistory = async (product) => {
 		HBL: location?.HBL,
 		Location: location?.locations?.LocationName,
 		CreatedAt: location?.CreatedAt,
+		Icon: <CheckIcon className="w-6 h-6 text-[#0EA5E9]" />,
 	}));
 
 	if (error) throw new Error(error.message);
