@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<main>
 			<Hero />
-			<div className="grid align-top container justify-center pb-20 px-10 lg:px-46 lg:grid-cols-3 mx-auto gap-10   ">
+			<div className="grid align-top  justify-center pb-20  lg:px-46 lg:grid-cols-3 mx-auto gap-10   ">
 				<div class="lg:col-span-4">
 					<h2 class="text-base font-semibold leading-7 text-blue-500">Nuestros Principales Servicios</h2>
 					<p class="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
