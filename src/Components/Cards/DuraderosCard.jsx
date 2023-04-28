@@ -14,13 +14,10 @@ export const DuraderosCard = ({ callout }) => {
 				<div className="flex items-center justify-between">
 					<h3 className="text-base font-semibold text-sky-500">Envie con Nosotros</h3>
 					<a
-						className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-slate-900 text-white hover:bg-slate-700"
+						className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-purple-600 text-white hover:bg-purple-700"
 						href="/"
 					>
-						<span>
-							Duraderos
-							<span aria-hidden="true"> →</span>
-						</span>
+						<span>Duraderos</span>
 					</a>
 				</div>
 				<div className="mt-3 flex items-center">
@@ -28,33 +25,33 @@ export const DuraderosCard = ({ callout }) => {
 						$<span className="font-bold">2.49</span>
 					</p>
 					<p className="ml-3 space-x-1 text-sm">
-						<span className="font-semibold text-slate-900">La libra de Productos Duraderos,</span>
-						<span className="text-slate-500">Entregas en toda Cuba siempre que el producto o articulo no exceda las 50 lbs</span>
+						<span className="font-semibold text-slate-900">La libra de Productos Duraderos</span>
 					</p>
 				</div>
 				<p className="mt-6 text-sm leading-6 text-slate-600">
-					Ejemplos de Productos Duraderos: Maquinas, Electrodomesticos ...
+					Entregas en toda Cuba siempre que el producto o articulo no exceda las 50 lbs
 				</p>
 				<h4 className="sr-only">Duraderos</h4>
 				<ul class="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
 					<li class="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">$2,49 x Libra:</strong> en Duraderos hasta
-							500 Lbs
+							<strong class="font-semibold text-slate-900">$2,49 x Libra:</strong> en Duraderos
+							hasta 500 Lbs
 						</p>
 					</li>
 					<li class="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">$2,29 x Libra:</strong> en Duraderos mas de
-							500 Lbs
+							<strong class="font-semibold text-slate-900">$2,29 x Libra:</strong> en Duraderos mas
+							de 500 Lbs
 						</p>
 					</li>
 					<li class="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">$1,90:</strong> Equipaje no Acompañado o Menaje de Casa
+							<strong class="font-semibold text-slate-900">$1,90:</strong> Equipaje no Acompañado o
+							Menaje de Casa
 						</p>
 					</li>
 				</ul>

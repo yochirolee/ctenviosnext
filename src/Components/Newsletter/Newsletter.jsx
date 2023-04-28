@@ -73,7 +73,7 @@ export default function NewsLetter() {
 							</div>
 							<dt className="mt-4 font-semibold text-white">No spam</dt>
 							<dd className="mt-2 leading-7 text-white/80">
-								Caribe Travel Express se compromete a no realizar Spam e informarle solo lo
+								CTEnvios se compromete a no realizar Spam e informarle solo lo
 								importante.
 							</dd>
 						</div>

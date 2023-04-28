@@ -30,17 +30,17 @@ export const Faq = () => {
 							<div className="pb-6 pt-6">
 								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
 									<p>
-										Tailwind UI products are a
-										<strong>one-time purchase, with no recurring subscription</strong>. When you
-										purchase any Tailwind UI product, you have access to all of the content in that
-										product forever.
+										Generalmente nuestros envios demoran de
+										<strong>30 - 45 dias laborables</strong>. Este tiempo depende tambien de la
+										provincia a la que envie, siendo las provincias orientales las que mas tardamos
+										en entregar.
 									</p>
 								</div>
 							</div>
 						</details>
 						<details className="group py-4 ">
 							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Que tiempo demora un Envio?
+								Entregan a Domicilio?
 								<svg
 									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
 									fill="none"
@@ -56,17 +56,15 @@ export const Faq = () => {
 							<div className="pb-6 pt-6">
 								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
 									<p>
-										Tailwind UI products are a
-										<strong>one-time purchase, with no recurring subscription</strong>. When you
-										purchase any Tailwind UI product, you have access to all of the content in that
-										product forever.
+										<strong>Si</strong>. Todos sus envios son entregados en la puerta del
+										destinatario en Cuba
 									</p>
 								</div>
 							</div>
 						</details>
 						<details className="group py-4 ">
 							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Que tiempo demora un Envio?
+								Si envio Miscelaneas mi familia o destinatario debe pagar algo al recibirlas?
 								<svg
 									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
 									fill="none"
@@ -82,10 +80,8 @@ export const Faq = () => {
 							<div className="pb-6 pt-6">
 								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
 									<p>
-										Tailwind UI products are a
-										<strong>one-time purchase, with no recurring subscription</strong>. When you
-										purchase any Tailwind UI product, you have access to all of the content in that
-										product forever.
+										<strong>No</strong>. Todas las miscelaneas enviadas con Nuestra Agencia son
+										libre de costo en Cuba. La persona que recibe no debe abonar nada
 									</p>
 								</div>
 							</div>
@@ -97,7 +93,7 @@ export const Faq = () => {
 					<dl className="mt-2 divide-y divide-slate-100">
 						<details className="group py-4 ">
 							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Que tiempo demora un Envio?
+								Que es un Envio Regular?
 								<svg
 									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
 									fill="none"
@@ -113,17 +109,16 @@ export const Faq = () => {
 							<div className="pb-6 pt-6">
 								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
 									<p>
-										Tailwind UI products are a
-										<strong>one-time purchase, with no recurring subscription</strong>. When you
-										purchase any Tailwind UI product, you have access to all of the content in that
-										product forever.
+										Un envío regular se refiere a los bienes que se envían al país a través de los
+										servicios regulares de transporte de mercancías, como navieras, aerolíneas o
+										empresas de transporte terrestre.
 									</p>
 								</div>
 							</div>
 						</details>
 						<details className="group py-4 ">
 							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Que tiempo demora un Envio?
+								Que es un ENA?
 								<svg
 									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
 									fill="none"
@@ -139,17 +134,16 @@ export const Faq = () => {
 							<div className="pb-6 pt-6">
 								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
 									<p>
-										Tailwind UI products are a
-										<strong>one-time purchase, with no recurring subscription</strong>. When you
-										purchase any Tailwind UI product, you have access to all of the content in that
-										product forever.
+										ENA o <strong>Equipaje no Acompañado</strong>. Se refiere a los bienes y efectos
+										personales que llegan al territorio cubano en un momento diferente al del
+										viajero que los importa, en un limite de tiempo de un año natural
 									</p>
 								</div>
 							</div>
 						</details>
 						<details className="group py-4 ">
 							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Que tiempo demora un Envio?
+								Algunas disposiciones Aduanales de Interes.
 								<svg
 									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
 									fill="none"
@@ -165,10 +159,15 @@ export const Faq = () => {
 							<div className="pb-6 pt-6">
 								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
 									<p>
-										Tailwind UI products are a
-										<strong>one-time purchase, with no recurring subscription</strong>. When you
-										purchase any Tailwind UI product, you have access to all of the content in that
-										product forever.
+										Los bienes que ingresan al territorio cubano están sujetos a la revisión y
+										control de las autoridades aduaneras. Los viajeros que ingresan a Cuba están
+										sujetos a una serie de límites en la cantidad y valor de los bienes que pueden
+										traer consigo. Los bienes que se exportan de Cuba también están sujetos a las
+										regulaciones y procedimientos aduaneros, incluyendo la necesidad de obtener
+										permisos y autorizaciones para la exportación de ciertos bienes. La ley aduanal
+										cubana establece las sanciones aplicables en caso de infracciones aduaneras, que
+										pueden incluir multas, confiscación de bienes y en algunos casos, incluso la
+										privación de libertad.
 									</p>
 								</div>
 							</div>

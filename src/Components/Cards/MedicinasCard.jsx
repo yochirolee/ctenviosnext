@@ -14,13 +14,10 @@ export const MedicinasCard = () => {
 				<div className="flex items-center justify-between">
 					<h3 className="text-base font-semibold text-sky-500">Envie con Nosotros</h3>
 					<a
-						className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-slate-900 text-white hover:bg-slate-700"
+						className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-green-600 text-white hover:bg-green-700"
 						href="/"
 					>
-						<span>
-							Medicinas
-							<span aria-hidden="true"> →</span>
-						</span>
+						<span>Medicinas</span>
 					</a>
 				</div>
 				<div className="mt-3 flex items-center">
@@ -28,23 +25,20 @@ export const MedicinasCard = () => {
 						$<span className="font-bold">2.75</span>
 					</p>
 					<p className="ml-3 space-x-1 text-sm">
-						<span className="font-semibold text-slate-900">La libra de Medicinas,</span>
-						<span className="text-slate-500">
-							Entrega gratis en toda Cuba 
-						</span>
+						<span className="font-semibold text-slate-900">La libra de Medicinas</span>
 					</p>
 				</div>
-				
+				<p className="mt-6 text-sm leading-6 text-slate-600">
+					Entregas en toda Cuba, No se paga nada en Cuba al recibirlo
+				</p>
 				<h4 className="sr-only">Medicinas</h4>
 				<ul class="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
 					<li class="flex items-center">
 						<HeartIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p class="ml-5">
 							<strong class="font-semibold text-slate-900">$2,75 x Libra:</strong> de Medicinas
-							
 						</p>
 					</li>
-				
 				</ul>
 			</div>
 		</div>

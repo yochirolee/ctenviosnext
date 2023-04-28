@@ -14,12 +14,11 @@ export const MiscelaneasCard = ({ callout }) => {
 				<div className="flex items-center justify-between">
 					<h3 className="text-base font-semibold text-sky-500">Envie con Nosotros</h3>
 					<a
-						className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-slate-900 text-white hover:bg-slate-700"
+						className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-yellow-500 text-white hover:bg-yellow-700"
 						href="/"
 					>
 						<span>
 							Miscelaneas
-							<span aria-hidden="true"> →</span>
 						</span>
 					</a>
 				</div>
@@ -28,14 +27,11 @@ export const MiscelaneasCard = ({ callout }) => {
 						$<span className="font-bold">20.00</span>
 					</p>
 					<p className="ml-3 space-x-1 text-sm">
-						<span className="font-semibold text-slate-900">Peso minimo a enviar 6.6 Lbs,</span>
-						<span className="text-slate-500">
-							Entregas en toda Cuba, No se paga nada en Cuba al recibirlo
-						</span>
+						<span className="font-semibold text-slate-900">Peso minimo a enviar 6.6 Lbs</span>
 					</p>
 				</div>
 				<p className="mt-6 text-sm leading-6 text-slate-600">
-					Ejemplos de Miscelaneas: Ropa, Zapatos, Comida...
+					Entregas en toda Cuba, No se paga nada en Cuba al recibirlo
 				</p>
 				<h4 className="sr-only">Miscelaneas</h4>
 				<ul className="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
