@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { DuraderosCard } from "@/Components/Cards/DuraderosCard";
 import { MedicinasCard } from "@/Components/Cards/MedicinasCard";
 import { MiscelaneasCard } from "@/Components/Cards/MiscelaneasCard";
@@ -25,9 +26,11 @@ export default function Home() {
 				<MedicinasCard />
 			</div>
 			<SocialMedia />
-		
+
 			<Faq />
 			<NewsLetter />
+
+			<Analytics />
 		</main>
 	);
 }
