@@ -17,7 +17,7 @@ export const SocialMedia = () => {
 					<svg
 						stroke="currentColor"
 						fill="currentColor"
-						stroke-width="0"
+						strokeWidth="0"
 						viewBox="0 0 448 512"
 						className="mx-4 text-5xl text-blue-600"
 						height="1em"
@@ -39,7 +39,7 @@ export const SocialMedia = () => {
 					<svg
 						stroke="currentColor"
 						fill="currentColor"
-						stroke-width="0"
+						strokeWidth="0"
 						viewBox="0 0 448 512"
 						className="mx-4 text-5xl text-pink-500"
 						height="1em"

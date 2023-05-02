@@ -36,21 +36,21 @@ export const HeroCard = ({ callout }) => {
 					Envie Cajas de Miscelaneas a su Familia en Cuba, al mejor precio de toda el aerea
 				</p>
 				<h4 className="sr-only">All-access features</h4>
-				<ul class="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
-					<li class="flex">
+				<ul className="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
+					<li className="flex">
 						<ArchiveBoxIcon className="w-20 h-auto text-[#0EA5E9]" />
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">Over 500+ components</strong> everything
-							you need to build beautiful application UIs, marketing sites, ecommerce stores, and
-							more.
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">Over 500+ components</strong>{" "}
+							everything you need to build beautiful application UIs, marketing sites, ecommerce
+							stores, and more.
 						</p>
 					</li>
-					<li class="flex">
+					<li className="flex">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 32 32"
-							class="h-8 w-8 flex-none"
+							className="h-8 w-8 flex-none"
 						>
 							<path fill="#fff" d="M0 0h32v32H0z"></path>
 							<rect
@@ -59,8 +59,8 @@ export const HeroCard = ({ callout }) => {
 								x="3"
 								y="5"
 								stroke="#0EA5E9"
-								stroke-linejoin="round"
-								stroke-width="1.5"
+								strokeLinejoin="round"
+								strokeWidth="1.5"
 								rx="2"
 							></rect>
 							<rect
@@ -70,26 +70,26 @@ export const HeroCard = ({ callout }) => {
 								y="9"
 								fill="#E0F2FE"
 								stroke="#0EA5E9"
-								stroke-linejoin="round"
-								stroke-width="1.5"
+								strokeLinejoin="round"
+								strokeWidth="1.5"
 								rx="2"
 							></rect>
 							<circle cx="6" cy="8" r="1" fill="#0EA5E9"></circle>
 							<circle cx="9" cy="8" r="1" fill="#0EA5E9"></circle>
-							<path stroke="#0EA5E9" stroke-width="1.5" d="M3 11h16"></path>
+							<path stroke="#0EA5E9" strokeWidth="1.5" d="M3 11h16"></path>
 						</svg>
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">Every site template</strong> beautifully
-							designed, expertly crafted website templates built with modern technologies like React
-							and Next.js.
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">Every site template</strong>{" "}
+							beautifully designed, expertly crafted website templates built with modern
+							technologies like React and Next.js.
 						</p>
 					</li>
-					<li class="flex">
+					<li className="flex">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 32 32"
-							class="h-8 w-8 flex-none"
+							className="h-8 w-8 flex-none"
 						>
 							<path fill="#fff" d="M0 0h32v32H0z"></path>
 							<path
@@ -98,16 +98,16 @@ export const HeroCard = ({ callout }) => {
 							></path>
 							<path
 								stroke="#0EA5E9"
-								stroke-linecap="round"
-								stroke-width="1.5"
+								strokeLinecap="round"
+								strokeWidth="1.5"
 								d="M14.497 17.5l-1.329 1.328a4 4 0 110-5.656l5.657 5.656a4 4 0 100-5.656L17.496 14.5"
 							></path>
-							<circle cx="16" cy="16" r="14" stroke="#0EA5E9" stroke-width="1.5"></circle>
+							<circle cx="16" cy="16" r="14" stroke="#0EA5E9" strokeWidth="1.5"></circle>
 						</svg>
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">Lifetime access</strong> — get instant
-							access to everything we have today, plus any new components and templates we add in
-							the future.
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">Lifetime access</strong> — get
+							instant access to everything we have today, plus any new components and templates we
+							add in the future.
 						</p>
 					</li>
 				</ul>

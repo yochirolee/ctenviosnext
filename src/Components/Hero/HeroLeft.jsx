@@ -5,7 +5,7 @@ import { MdOutlineWhatsapp } from "react-icons/md";
 export const HeroLeft = () => {
 	return (
 		<div className=" mx-auto  text-center  ">
-			<h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
+			<h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
 				Envios a toda Cuba
 			</h1>
 			<p className="mt-6 text-lg leading-8 text-gray-600">

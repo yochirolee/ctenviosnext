@@ -17,9 +17,7 @@ export const MiscelaneasCard = ({ callout }) => {
 						className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-yellow-500 text-white hover:bg-yellow-700"
 						href="/"
 					>
-						<span>
-							Miscelaneas
-						</span>
+						<span>Miscelaneas</span>
 					</a>
 				</div>
 				<div className="mt-3 flex items-center">
@@ -35,10 +33,10 @@ export const MiscelaneasCard = ({ callout }) => {
 				</p>
 				<h4 className="sr-only">Miscelaneas</h4>
 				<ul className="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
-					<li class="flex items-center">
+					<li className="flex items-center">
 						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">Por solo $20,00:</strong> Caja de
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">Por solo $20,00:</strong> Caja de
 							Miscelaneas 6.6 Lbs
 						</p>
 					</li>

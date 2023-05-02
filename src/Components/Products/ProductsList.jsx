@@ -72,9 +72,9 @@ const products = [
 export default function ProductsList() {
 	return (
 		<div className="bg-white">
-			<div class="lg:col-span-4">
-				<h2 class="text-base font-semibold leading-7 text-blue-500">Nuestros Productos</h2>
-				<p class="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
+			<div className="lg:col-span-4">
+				<h2 className="text-base font-semibold leading-7 text-blue-500">Nuestros Productos</h2>
+				<p className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
 					Compra Online y envia a Cuba
 				</p>
 			</div>
