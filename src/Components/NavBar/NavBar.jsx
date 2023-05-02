@@ -2,8 +2,9 @@
 import { React } from "react";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, ShoppingBagIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = [
 	{ name: "Inicio", href: "/" },
@@ -22,10 +23,21 @@ export default function NavBar() {
 					<div className="flex lg:flex-1">
 						<Link href="/" className="-m-1.5 p-1.5">
 							<span className="sr-only">Caribe Travel Express</span>
-							<img className="h-8 w-auto " src="ctelogo.png" alt="logo" />
+							<Image width={44} height={40} src="/ctelogo.png" alt="Logo Caribe Travel Envios" />
 						</Link>
 					</div>
-					<div className="flex lg:hidden">
+					<div className="flex gap-4 lg:hidden">
+						<button
+							type="button"
+							className="-m-2.5 relative rounded-md p-2.5 text-gray-700"
+							onClick={() => setMobileMenuOpen(false)}
+						>
+							<span className="sr-only">Close menu</span>
+							<ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
+							<span className="absolute -top-3 -right-6 inset-0 h-5 w-5 border border-white/10 text-center m-auto p-auto   mx-auto  rounded-full bg-red-500 text-white text-sm">
+								0
+							</span>
+						</button>
 						<button
 							type="button"
 							className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -46,20 +58,32 @@ export default function NavBar() {
 							</Link>
 						))}
 					</div>
-					<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-						<a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+					<div className="hidden lg:flex gap-6 lg:flex-1 lg:justify-end">
+						<button
+							type="button"
+							className="-m-2.5 relative rounded-md p-2.5 text-gray-700"
+							onClick={() => setMobileMenuOpen(false)}
+						>
+							<span className="sr-only">Close menu</span>
+							<ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
+							<span className="absolute -top-3 -right-6 inset-0 h-5 w-5 border border-white/10 text-center m-auto p-auto   mx-auto  rounded-full bg-red-500 text-white text-sm">
+								0
+							</span>
+						</button>
+						<Link href="/auth/SignIn" className="text-sm font-semibold leading-6 text-gray-900">
 							Log in <span aria-hidden="true">&rarr;</span>
-						</a>
+						</Link>
 					</div>
 				</nav>
 				<Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
 					<div className="fixed inset-0 z-50" />
+
 					<Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
 						<div className="flex items-center justify-between">
-							<a href="#" className="-m-1.5 p-1.5">
-								<span className="sr-only">Your Company</span>
-								<img className="h-8 w-auto" src="ctelogo.png" alt="" />
-							</a>
+							<Link href="/" className="-m-1.5 p-1.5">
+								<span className="sr-only">Caribe Travel Express</span>
+								<Image width={44} height={40} src="/ctelogo.png" alt="Logo Caribe Travel Envios" />
+							</Link>
 							<button
 								type="button"
 								className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -73,22 +97,25 @@ export default function NavBar() {
 							<div className="-my-6 divide-y divide-gray-500/10">
 								<div className="space-y-2 py-6">
 									{navigation.map((item) => (
-										<a
+										<Link
 											key={item.name}
 											href={item.href}
 											className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+											onClick={() => setMobileMenuOpen(false)}
 										>
 											{item.name}
-										</a>
+										</Link>
 									))}
 								</div>
+
 								<div className="py-6">
-									<a
-										href="#"
+									<Link
+										href="/auth/SignIn"
 										className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+										onClick={() => setMobileMenuOpen(false)}
 									>
 										Log in
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
