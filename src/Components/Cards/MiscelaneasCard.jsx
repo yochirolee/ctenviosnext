@@ -42,17 +42,17 @@ export const MiscelaneasCard = ({ callout }) => {
 							Miscelaneas 6.6 Lbs
 						</p>
 					</li>
-					<li class="flex items-center">
+					<li className="flex items-center">
 						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">Por solo $37,00:</strong> Caja de
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">Por solo $37,00:</strong> Caja de
 							Miscelaneas 11.00 Lbs
 						</p>
 					</li>
-					<li class="flex items-center">
+					<li className="flex items-center">
 						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">Por solo $60,00:</strong> Caja de
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">Por solo $60,00:</strong> Caja de
 							Miscelaneas 22.00 Lbs
 						</p>
 					</li>

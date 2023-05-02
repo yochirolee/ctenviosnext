@@ -32,25 +32,25 @@ export const DuraderosCard = ({ callout }) => {
 					Entregas en toda Cuba siempre que el producto o articulo no exceda las 50 lbs
 				</p>
 				<h4 className="sr-only">Duraderos</h4>
-				<ul class="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
-					<li class="flex">
+				<ul className="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
+					<li className="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">$2,49 x Libra:</strong> en Duraderos
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">$2,49 x Libra:</strong> en Duraderos
 							hasta 500 Lbs
 						</p>
 					</li>
-					<li class="flex">
+					<li className="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">$2,29 x Libra:</strong> en Duraderos mas
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">$2,29 x Libra:</strong> en Duraderos mas
 							de 500 Lbs
 						</p>
 					</li>
-					<li class="flex">
+					<li className="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">$1,90:</strong> Equipaje no Acompañado o
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">$1,90:</strong> Equipaje no Acompañado o
 							Menaje de Casa
 						</p>
 					</li>

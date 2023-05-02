@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 const Context = createContext(undefined);
 
-export default function SupabaseAuthProvider({ children }) {
+export default function SupabaseProvider({ children }) {
 	const [supabase] = useState(() => createBrowserSupabaseClient());
 	const router = useRouter();
 

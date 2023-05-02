@@ -5,8 +5,7 @@ import { Footer } from "@/Components/Footer/Footer";
 import QueryProvider from "@/Utils/Providers/QueryProvider";
 import Head from "next/head";
 import ShoppingCart from "@/Components/Cart/ShoppingCart";
-import { SupabaseAuthClient } from "@supabase/supabase-js/dist/module/lib/SupabaseAuthClient";
-import SupabaseAuthProvider from "@/Utils/Providers/SupabaseAuthProvider";
+import SupabaseProvider from "@/Utils/Providers/SupabaseProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +30,7 @@ export default function RootLayout({ children }) {
 				</Head>
 
 				<div className="relative isolate pt-4 max-w-7xl mx-auto px-6 lg:pt-14 lg:px-8">
-					<SupabaseAuthProvider>
+					<SupabaseProvider>
 						<QueryProvider>
 							<NavBar />
 
@@ -39,7 +38,7 @@ export default function RootLayout({ children }) {
 							<ShoppingCart />
 							<Footer />
 						</QueryProvider>
-					</SupabaseAuthProvider>
+					</SupabaseProvider>
 					<div
 						id="Snipcart"
 						data-api-key="MDEwNDVlN2MtMWE2Yy00ODQ5LTk1NjUtMGExNDZmYTQ4OTBlNjM4MTg1NzQ4NDM2NTM2NTM4

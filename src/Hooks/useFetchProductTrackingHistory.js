@@ -1,4 +1,4 @@
-import { useSupabase } from "@/Utils/Providers/SupabaseAuthProvider";
+import { useSupabase } from "@/Utils/Providers/SupabaseProvider";
 import { useQuery } from "@tanstack/react-query";
 
 const createLocation = (index, product) => {

@@ -32,11 +32,11 @@ export const MedicinasCard = () => {
 					Entregas en toda Cuba, No se paga nada en Cuba al recibirlo
 				</p>
 				<h4 className="sr-only">Medicinas</h4>
-				<ul class="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
-					<li class="flex items-center">
+				<ul className="mt-10 space-y-8 border-t border-slate-900/10 pt-10 text-sm leading-6 text-slate-700">
+					<li className="flex items-center">
 						<HeartIcon className="w-8 h-8 text-[#0EA5E9]" />
-						<p class="ml-5">
-							<strong class="font-semibold text-slate-900">$2,75 x Libra:</strong> de Medicinas
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">$2,75 x Libra:</strong> de Medicinas
 						</p>
 					</li>
 				</ul>

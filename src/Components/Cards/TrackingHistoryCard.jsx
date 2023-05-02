@@ -16,7 +16,6 @@ import {
 } from "@heroicons/react/24/outline";
 
 export const TrackingHistoryCard = ({ product }) => {
-	if (!product) return;
 	const { data: productsDetails } = useFetchProductTrackingHistory(product);
 	return (
 		<>
