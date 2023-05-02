@@ -2,7 +2,6 @@ import { React } from "react";
 import { TrackingCard } from "../Cards/TrackingCard";
 
 export const TrackingDetails = ({ result }) => {
-	console.log(result, "RESUTL");
 	if (!result || result.length == 0) return;
 	return (
 		<div className="flex  flex-col  gap-4 max-w-2xl mx-auto ">

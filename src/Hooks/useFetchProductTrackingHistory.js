@@ -1,4 +1,5 @@
-import { supabase } from "@/Supabase/SupabaseClient";
+import { useSupabase } from "@/Utils/Providers/SupabaseAuthProvider";
+import { useQuery } from "@tanstack/react-query";
 
 const createLocation = (index, product) => {
 	switch (index) {
@@ -46,8 +47,9 @@ const createProductHistory = (product) => {
 	return null;
 };
 
-export const fetchProductTrackingHistory = async (product) => {
+export const fetchProductTrackingHistory = async (product, supabase) => {
 	if (!product) return;
+
 	let productHistory = createProductHistory(product);
 
 	let { data: trackingHistory, error } = await supabase
@@ -62,7 +64,7 @@ export const fetchProductTrackingHistory = async (product) => {
 	  `,
 		)
 		.order("CreatedAt", { ascending: false })
-		.eq("HBL", product.HBL);
+		.eq("HBL", product?.HBL);
 
 	let tracking = trackingHistory?.map((location) => ({
 		HBL: location?.HBL,
@@ -73,4 +75,10 @@ export const fetchProductTrackingHistory = async (product) => {
 	if (error) throw new Error(error.message);
 	if (tracking) productHistory = [...tracking, ...productHistory];
 	return productHistory;
+};
+export const useFetchProductTrackingHistory = (product) => {
+	const { supabase } = useSupabase();
+	return useQuery(["getProductHistory", product], () =>
+		fetchProductTrackingHistory(product, supabase),
+	);
 };
