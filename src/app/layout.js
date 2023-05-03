@@ -6,6 +6,7 @@ import QueryProvider from "@/Utils/Providers/QueryProvider";
 import Head from "next/head";
 import ShoppingCart from "@/Components/Cart/ShoppingCart";
 import SupabaseProvider from "@/Utils/Providers/SupabaseProvider";
+import { AuthProvider } from "@/Utils/Providers/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,11 +33,13 @@ export default function RootLayout({ children }) {
 				<div className="relative isolate pt-4 max-w-7xl mx-auto px-6 lg:pt-14 lg:px-8">
 					<SupabaseProvider>
 						<QueryProvider>
-							<NavBar />
+							<AuthProvider>
+								<NavBar />
 
-							{children}
-							<ShoppingCart />
-							<Footer />
+								{children}
+								<ShoppingCart />
+								<Footer />
+							</AuthProvider>
 						</QueryProvider>
 					</SupabaseProvider>
 					<div

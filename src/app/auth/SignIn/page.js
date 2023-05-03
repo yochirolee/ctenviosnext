@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+import { useSupabase } from "@/Utils/Providers/SupabaseProvider";
 
 /*
   This example requires some changes to your config:
@@ -15,21 +16,36 @@ import Image from "next/image";
   ```
 */
 export default function SignIn() {
+	const { supabase } = useSupabase();
+
+	const handleSignUp = async () => {
+		await supabase.auth.signUp({
+			email: "jon@supabase.com",
+			password: "sup3rs3cur3",
+		});
+	};
+
+	const handleLogin = async () => {
+		await supabase.auth.signInWithPassword({
+			email: "jon@supabase.com",
+			password: "sup3rs3cur3",
+		});
+	};
+
+	const handleLogout = async () => {
+		await supabase.auth.signOut();
+	};
 	return (
 		<>
-			{/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
+			
 			<div className="flex mt-10 min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
 				<div className="sm:mx-auto sm:w-full sm:max-w-sm">
 					<h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
 						Sign in to your account
 					</h2>
+					<button onClick={handleSignUp}>Sign Up</button>
+					<button onClick={handleLogin}>Login</button>
+					<button onClick={handleLogout}>Logout</button>
 				</div>
 
 				<div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">

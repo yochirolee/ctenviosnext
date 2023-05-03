@@ -2,9 +2,10 @@
 import { React } from "react";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
-import { Bars3Icon, ShoppingBagIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, ShoppingBagIcon, UserIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
+import { useAuth } from "@/Utils/Providers/AuthProvider";
 
 const navigation = [
 	{ name: "Inicio", href: "/" },
@@ -15,6 +16,9 @@ const navigation = [
 
 export default function NavBar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const { user, signOut } = useAuth();
+
+	console.log(user);
 
 	return (
 		<div className="bg-white">
@@ -70,9 +74,13 @@ export default function NavBar() {
 								0
 							</span>
 						</button>
-						<Link href="/auth/SignIn" className="text-sm font-semibold leading-6 text-gray-900">
-							Log in <span aria-hidden="true">&rarr;</span>
-						</Link>
+						{user ? (
+							"Log out"
+						) : (
+							<Link href="/auth/SignIn" className="text-sm font-semibold leading-6 text-gray-900">
+								Log in <span aria-hidden="true">&rarr;</span>
+							</Link>
+						)}
 					</div>
 				</nav>
 				<Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -109,13 +117,31 @@ export default function NavBar() {
 								</div>
 
 								<div className="py-6">
-									<Link
-										href="/auth/SignIn"
-										className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-										onClick={() => setMobileMenuOpen(false)}
-									>
-										Log in
-									</Link>
+									{user?.aud == "authenticated" ? (
+										<div className="flex  justify-between space-y-2 py-6 items-center mx-auto">
+											<div className="flex gap-2 items-center  ">
+												<UserIcon className="h-5 w-5" />
+												<h2>{user?.email}</h2>
+											</div>
+											<button
+												onClick={signOut}
+												className="text-sm font-semibold leading-6 text-gray-900"
+											>
+												Log Out <span aria-hidden="true">&rarr;</span>
+											</button>
+										</div>
+									) : (
+										<div className="flex gap-2 items-center space-y-2 py-6 ">
+											<UserIcon className="h-5 w-5 mt-2" />
+											<h2>{user?.email}</h2>
+											<Link
+												href="/auth/SignIn"
+												className="text-sm font-semibold leading-6 text-gray-900"
+											>
+												Log in <span aria-hidden="true">&rarr;</span>
+											</Link>
+										</div>
+									)}
 								</div>
 							</div>
 						</div>
