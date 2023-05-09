@@ -1,11 +1,18 @@
 import { createMiddlewareSupabaseClient } from "@supabase/auth-helpers-nextjs";
+import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
 import { NextResponse } from "next/server";
 
 export async function middleware(req) {
-	const res = NextResponse.next();
-	const supabase = createMiddlewareSupabaseClient({ req, res });
+	const supabase = await createMiddlewareSupabaseClient({ req });
 	const { data, error } = await supabase.auth.getSession();
-	console.log(data, error);
+	console.log(data?.session?.access_token, "DATA");
+	if (!data?.session) {
+		const signInUrl = new URL("auth/SignIn", req.url);
+		return NextResponse.redirect(signInUrl);
+	}
 
-	return res;
+	return NextResponse.next();
 }
+export const config = {
+	matcher: ["/cart:path*", "/tracking:path*"],
+};

@@ -25,7 +25,6 @@ export default function Home() {
 				<MiscelaneasCard />
 				<MedicinasCard />
 			</div>
-			<ProductsList />
 			<SocialMedia />
 
 			<Faq />

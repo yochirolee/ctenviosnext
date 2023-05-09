@@ -75,7 +75,9 @@ export default function NavBar() {
 							</span>
 						</button>
 						{user ? (
-							"Log out"
+							<button onClick={signOut} className="text-sm font-semibold leading-6 text-gray-900">
+								Log Out <span aria-hidden="true">&rarr;</span>
+							</button>
 						) : (
 							<Link href="/auth/SignIn" className="text-sm font-semibold leading-6 text-gray-900">
 								Log in <span aria-hidden="true">&rarr;</span>

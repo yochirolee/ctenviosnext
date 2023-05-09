@@ -13,6 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
 	title: "CTEnvios",
 	description: "Envios a Latinoameria y el Caribe",
+
 };
 
 export default function RootLayout({ children }) {
@@ -21,11 +22,11 @@ export default function RootLayout({ children }) {
 			<body className={inter.className}>
 				<Head>
 					<title>My awesome store</title>
-					<link rel="preconnect" href="<https://app.snipcart.com>" />
-					<link rel="preconnect" href="<https://cdn.snipcart.com>" />
+					<link rel="preconnect" href="https://app.snipcart.com" />
+					<link rel="preconnect" href="https://cdn.snipcart.com" />
 					<link
 						rel="stylesheet"
-						href="<https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css>"
+						href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"
 					/>
 					<link rel="shortcut icon" href="../public/favicon.ico" />
 				</Head>
@@ -48,6 +49,8 @@ export default function RootLayout({ children }) {
 "
 						hidden
 					></div>
+
+				
 				</div>
 			</body>
 		</html>
