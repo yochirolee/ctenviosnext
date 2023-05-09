@@ -14,5 +14,5 @@ export async function middleware(req) {
 	return NextResponse.next();
 }
 export const config = {
-	matcher: ["/cart:path*", "/tracking:path*"],
+	matcher: ["/cart:path*"]
 };
