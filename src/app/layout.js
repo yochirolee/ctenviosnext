@@ -43,7 +43,6 @@ export default function RootLayout({ children }) {
 						<QueryProvider>
 							<AuthProvider>
 								<NavBar />
-
 								{children}
 								<ShoppingCart />
 								<Footer />
