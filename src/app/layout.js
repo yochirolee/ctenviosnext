@@ -1,3 +1,4 @@
+import Script from "next/script";
 import NavBar from "@/Components/NavBar/NavBar";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -13,7 +14,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
 	title: "CTEnvios",
 	description: "Envios a Latinoameria y el Caribe",
-
 };
 
 export default function RootLayout({ children }) {
@@ -21,14 +21,21 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={inter.className}>
 				<Head>
-					<title>My awesome store</title>
-					<link rel="preconnect" href="https://app.snipcart.com" />
-					<link rel="preconnect" href="https://cdn.snipcart.com" />
-					<link
-						rel="stylesheet"
-						href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"
-					/>
+					<title>{metadata.title}</title>
 					<link rel="shortcut icon" href="../public/favicon.ico" />
+
+					<Script
+						src="https://www.googletagmanager.com/gtag/js?id=AW-11165948511"
+						strategy="afterInteractive"
+					/>
+					<Script id="google-analytics" strategy="afterInteractive">
+						{`
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){window.dataLayer.push(arguments);}
+                          gtag('js', new Date());
+                          gtag('config', 'AW-11165948511');
+                        `}
+					</Script>
 				</Head>
 
 				<div className="relative isolate pt-4 max-w-7xl mx-auto px-6 lg:pt-14 lg:px-8">
@@ -49,8 +56,6 @@ export default function RootLayout({ children }) {
 "
 						hidden
 					></div>
-
-				
 				</div>
 			</body>
 		</html>
