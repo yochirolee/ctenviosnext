@@ -20,22 +20,21 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<Head>
-					<title>{metadata.title}</title>
-					<link rel="shortcut icon" href="../public/favicon.ico" />
-
-					<Script
-						src="https://www.googletagmanager.com/gtag/js?id=AW-11165948511"
-						strategy="afterInteractive"
-					/>
-					<Script id="google-analytics" strategy="afterInteractive">
-						{`
+				<Script
+					src="https://www.googletagmanager.com/gtag/js?id=AW-11165948511"
+					strategy="afterInteractive"
+				/>
+				<Script id="google-analytics" strategy="afterInteractive">
+					{`
                           window.dataLayer = window.dataLayer || [];
                           function gtag(){window.dataLayer.push(arguments);}
                           gtag('js', new Date());
                           gtag('config', 'AW-11165948511');
                         `}
-					</Script>
+				</Script>
+				<Head>
+					<title>{metadata.title}</title>
+					<link rel="shortcut icon" href="../public/favicon.ico" />
 				</Head>
 
 				<div className="relative isolate pt-4 max-w-7xl mx-auto px-6 lg:pt-14 lg:px-8">
