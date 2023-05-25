@@ -19,16 +19,16 @@ export const TrackingHistoryCard = ({ product }) => {
 	const { data: productsDetails } = useFetchProductTrackingHistory(product);
 	return (
 		<>
-			<ul className=" space-y-8 border-l border-slate-900/10 pl-4 text-sm leading-6 text-slate-700">
+			<ul className=" space-y-8 lg:border-l  border-slate-900/10 pl-4 text-sm leading-6 text-slate-700">
 				{productsDetails?.map((location, index) => (
-					<li key={index} className="flex items-center">
+					<li key={index} className="flex items-center ">
 						<CheckIcon className="w-6 h-6 text-[#0EA5E9]" />
-						<p className="ml-5 ">
-							<strong className="font-semibold text-slate-900">
+						<p className="ml-5 flex flex-col ">
+							<strong className="font-semibold  text-slate-900">
 								{location?.Location} {location?.Container}
 							</strong>
-							<span>
-								{location?.CreatedAt ? format(parseISO(location?.CreatedAt), "MMM d h:mm a") : ""}
+							<span className="text-xs text-[#0EA5E9]">
+								{location?.CreatedAt ? format(parseISO(location?.CreatedAt), "MMM d y h:mm a") : ""}
 							</span>
 						</p>
 					</li>
