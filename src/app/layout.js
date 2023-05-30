@@ -48,12 +48,6 @@ export default function RootLayout({ children }) {
 							</AuthProvider>
 						</QueryProvider>
 					</SupabaseProvider>
-					<div
-						id="Snipcart"
-						data-api-key="MDEwNDVlN2MtMWE2Yy00ODQ5LTk1NjUtMGExNDZmYTQ4OTBlNjM4MTg1NzQ4NDM2NTM2NTM4
-"
-						hidden
-					></div>
 				</div>
 			</body>
 		</html>

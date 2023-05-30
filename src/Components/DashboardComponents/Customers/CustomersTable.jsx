@@ -1,14 +1,15 @@
-import { useMutation } from "@tanstack/react-query";
-import { MdDelete, MdEdit } from "react-icons/md";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { MdCircle, MdDelete, MdEdit } from "react-icons/md";
 
 export const CustomersTable = ({ customers, handleEditSelectedCustomer }) => {
+	const queryClient = useQueryClient();
 	const mutationDelete = useMutation({
 		mutationFn: (id) => {
-			return fetch(`http://localhost:3001/api/v1/customers/delete/${id}`, {
+			return fetch(`https://caribeagencia-backend.vercel.app/api/v1/customers/delete/${id}`, {
 				method: "DELETE",
 			});
 		},
-		onSuccess: {},
+		onSuccess: () => queryClient.invalidateQueries(["fetchCustomers"]),
 	});
 	return (
 		<div className=" grid py-2  min-w-full ">

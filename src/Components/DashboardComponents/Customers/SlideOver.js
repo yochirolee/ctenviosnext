@@ -2,12 +2,13 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export default function SlideOver({ open, setOpen, selectedCustomer }) {
+	const queryClient = useQueryClient();
 	const mutationCreate = useMutation({
 		mutationFn: (newCustomer) => {
-			return fetch("http://localhost:3001/api/v1/customers/create", {
+			return fetch("https://caribeagencia-backend.vercel.app/api/v1/customers/create", {
 				method: "POST",
 				body: JSON.stringify(newCustomer),
 				headers: {
@@ -15,6 +16,7 @@ export default function SlideOver({ open, setOpen, selectedCustomer }) {
 				},
 			});
 		},
+		onSuccess: () => queryClient.invalidateQueries(["fetchCustomers"]),
 	});
 
 	return (
@@ -82,14 +84,14 @@ export default function SlideOver({ open, setOpen, selectedCustomer }) {
 											<button
 												onClick={() =>
 													mutationCreate.mutate({
-														firstName: "cariabe",
-														lastName: "soy",
+														firstName: "Francisco",
+														lastName: "Infanzon",
 														license: "6056555555",
 														passport: "J50456",
-														email: "testoooooo@gmail.com",
+														email: "frank30@gmail.com",
 														address: "Avenida 31 entre 30 y 34 No 3008",
-														phone: "529259942",
-														mobile: "7952445499",
+														phone: "52925009942",
+														mobile: "795200445499",
 														countryId: 1,
 														stateId: 1,
 														cityId: 1,
