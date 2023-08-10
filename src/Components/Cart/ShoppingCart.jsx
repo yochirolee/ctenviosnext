@@ -4,13 +4,14 @@ import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useCartStore } from "@/Store/useCartStore";
-import { shallow } from "zustand";
 
 export default function ShoppingCart() {
-	const [products, open, setOpen, removeFromCart] = useCartStore(
-		(state) => [state.products, state.open, state.setOpen, state.removeFromCart],
-		shallow,
-	);
+	const [products, open, setOpen, removeFromCart] = useCartStore((state) => [
+		state.products,
+		state.open,
+		state.setOpen,
+		state.removeFromCart,
+	]);
 
 	return (
 		<Transition.Root show={open} as={Fragment}>
