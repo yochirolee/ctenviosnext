@@ -1,18 +1,27 @@
-import { createMiddlewareSupabaseClient } from "@supabase/auth-helpers-nextjs";
-import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
+"use client";
+import { authMiddleware, redirectToSignIn } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
-export async function middleware(req) {
-	const supabase = await createMiddlewareSupabaseClient({ req });
-	const { data, error } = await supabase.auth.getSession();
-	console.log(data?.session?.access_token, "DATA");
-	if (!data?.session) {
-		const signInUrl = new URL("auth/SignIn", req.url);
-		return NextResponse.redirect(signInUrl);
-	}
+export default authMiddleware({
+	afterAuth(auth, req, evt) {
+		// handle users who aren't authenticated
+		if (!auth.userId && !auth.isPublicRoute) {
+			const url = req.nextUrl.clone();
+			url.pathname = "/auth/SignIn";
+			return NextResponse.redirect(url);
+		} else {
+			const url = req.nextUrl.clone();
+			if (auth.userId && url.pathname == "/auth/SignIn") {
+				url.pathname = "/";
+				return NextResponse.redirect(url);
+			}
+		}
 
-	return NextResponse.next();
-}
+		// redirect them to organization selection page
+	},
+	publicRoutes: ["/", "/tracking", "/products", "/auth/signin", "/auth/signup"],
+});
+
 export const config = {
-	matcher: ["/cart:path*"]
+	matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
 };

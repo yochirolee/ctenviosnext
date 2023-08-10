@@ -7,12 +7,13 @@ import { Hero } from "@/Components/Hero/Hero";
 import NewsLetter from "@/Components/Newsletter/Newsletter";
 import { SocialMedia } from "@/Components/SocialMedia/SocialMedia";
 import ProductsList from "@/Components/Products/ProductsList";
+import ShoppingCart from "@/Components/Cart/ShoppingCart";
 
 export default function Home() {
 	return (
 		<main>
 			<Hero />
-			<div className="grid align-top  justify-center pb-20  lg:px-46 lg:grid-cols-3 mx-auto gap-10   ">
+			<div className="grid align-top mx-auto  justify-center pb-20  lg:px-46 lg:grid-cols-3 gap-10   ">
 				<div className="lg:col-span-4">
 					<h2 className="text-base font-semibold leading-7 text-blue-500">
 						Nuestros Principales Servicios
@@ -25,12 +26,15 @@ export default function Home() {
 				<MiscelaneasCard />
 				<MedicinasCard />
 			</div>
+			<ProductsList />
+
 			<SocialMedia />
 
 			<Faq />
 			<NewsLetter />
 
 			<Analytics />
+			<ShoppingCart />
 		</main>
 	);
 }

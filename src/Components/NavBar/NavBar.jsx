@@ -5,20 +5,28 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, ShoppingBagIcon, UserIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
-import { useAuth } from "@/Utils/Providers/AuthProvider";
+import { useCartStore } from "@/Store/useCartStore";
+import { useSession } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
 const navigation = [
 	{ name: "Inicio", href: "/" },
-	{ name: "Productos", href: "#" },
+	{ name: "Productos", href: "/products" },
 	{ name: "Tracking", href: "/tracking" },
 	{ name: "Preguntas Frecuentes", href: "/#faq" },
 ];
 
 export default function NavBar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const { user, signOut } = useAuth();
+	const router = useRouter();
+	const { session } = useSession();
+	const [products, setOpen] = useCartStore((state) => [state.products, state.setOpen]);
+	const handleLogout = () => {
+		session.end();
+		router.push("/");
+	};
 
-	console.log(user);
+	console.log(products, "products on cart at navbar");
 
 	return (
 		<div className="bg-white">
@@ -27,19 +35,29 @@ export default function NavBar() {
 					<div className="flex lg:flex-1">
 						<Link href="/" className="-m-1.5 p-1.5">
 							<span className="sr-only">Caribe Travel Express</span>
-							<Image width={44} height={40} src="/ctelogo.png" alt="Logo Caribe Travel Envios" />
+							<Image
+								width={44}
+								height={40}
+								className=" object-scale-down"
+								src="/ctelogo.png"
+								alt="Logo Caribe Travel Envios"
+							/>
 						</Link>
 					</div>
 					<div className="flex gap-4 lg:hidden">
 						<button
 							type="button"
 							className="-m-2.5 relative rounded-md p-2.5 text-gray-700"
-							onClick={() => setMobileMenuOpen(false)}
+							onClick={() => setOpen()}
 						>
-							<span className="sr-only">Close menu</span>
+							<span className="sr-only">cart </span>
 							<ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
 							<span className="absolute -top-3 -right-6 inset-0 h-5 w-5 border border-white/10 text-center m-auto p-auto   mx-auto  rounded-full bg-red-500 text-white text-sm">
-								0
+								{products
+									? products?.reduce((acc, curr) => {
+											return acc + curr.quantity;
+									  }, 0)
+									: 0}
 							</span>
 						</button>
 						<button
@@ -66,16 +84,23 @@ export default function NavBar() {
 						<button
 							type="button"
 							className="-m-2.5 relative rounded-md p-2.5 text-gray-700"
-							onClick={() => setMobileMenuOpen(false)}
+							onClick={() => setOpen()}
 						>
 							<span className="sr-only">Close menu</span>
 							<ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
 							<span className="absolute -top-3 -right-6 inset-0 h-5 w-5 border border-white/10 text-center m-auto p-auto   mx-auto  rounded-full bg-red-500 text-white text-sm">
-								0
+								{products
+									? products?.reduce((acc, curr) => {
+											return acc + curr.quantity;
+									  }, 0)
+									: 0}
 							</span>
 						</button>
-						{user ? (
-							<button onClick={signOut} className="text-sm font-semibold leading-6 text-gray-900">
+						{session?.status == "active" ? (
+							<button
+								onClick={() => handleLogout()}
+								className="text-sm font-semibold leading-6 text-gray-900"
+							>
 								Log Out <span aria-hidden="true">&rarr;</span>
 							</button>
 						) : (
@@ -119,14 +144,14 @@ export default function NavBar() {
 								</div>
 
 								<div className="py-6">
-									{user?.aud == "authenticated" ? (
+									{session?.status == "active" ? (
 										<div className="flex  justify-between space-y-2 py-6 items-center mx-auto">
 											<div className="flex gap-2 items-center  ">
 												<UserIcon className="h-5 w-5" />
-												<h2>{user?.email}</h2>
+												<h2>{session?.user?.primaryEmailAddress.emailAddress}</h2>
 											</div>
 											<button
-												onClick={signOut}
+												onClick={() => handleLogout()}
 												className="text-sm font-semibold leading-6 text-gray-900"
 											>
 												Log Out <span aria-hidden="true">&rarr;</span>
@@ -135,7 +160,7 @@ export default function NavBar() {
 									) : (
 										<div className="flex gap-2 items-center space-y-2 py-6 ">
 											<UserIcon className="h-5 w-5 mt-2" />
-											<h2>{user?.email}</h2>
+											<h2>{session?.user?.fullName}</h2>
 											<Link
 												href="/auth/SignIn"
 												className="text-sm font-semibold leading-6 text-gray-900"

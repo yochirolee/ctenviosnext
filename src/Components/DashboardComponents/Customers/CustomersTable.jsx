@@ -1,16 +1,10 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { MdCircle, MdDelete, MdEdit } from "react-icons/md";
+import { useDeleteCustomer } from "@/Hooks/Customers/useCustomers";
+import { MdDelete } from "react-icons/md/index";
 
 export const CustomersTable = ({ customers, handleEditSelectedCustomer }) => {
-	const queryClient = useQueryClient();
-	const mutationDelete = useMutation({
-		mutationFn: (id) => {
-			return fetch(`https://caribeagencia-backend.vercel.app/api/v1/customers/delete/${id}`, {
-				method: "DELETE",
-			});
-		},
-		onSuccess: () => queryClient.invalidateQueries(["fetchCustomers"]),
-	});
+	if(!customers) return <div>Loading...</div>
+	const mutationDelete = useDeleteCustomer();
+	if (mutationDelete.isError) console.log(mutationDelete.error);
 	return (
 		<div className=" grid py-2  min-w-full ">
 			<div className="overflow-y-auto max-h-screen ">
@@ -64,12 +58,10 @@ export const CustomersTable = ({ customers, handleEditSelectedCustomer }) => {
 									<button
 										onClick={() => handleEditSelectedCustomer(customer)}
 										className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
-									>
-										<MdEdit className="w-4 h-4  " />
-									</button>
+									></button>
 									<button
 										onClick={() => mutationDelete.mutate(customer.id)}
-										className="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+										className="rounded-md bg-red-600/70 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
 									>
 										<MdDelete className="w-4 h-4 " />
 									</button>

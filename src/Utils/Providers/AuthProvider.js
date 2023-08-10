@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import supabase from "../supabase-browser";
+import { useSession } from "@clerk/nextjs";
 
 export const EVENTS = {
 	PASSWORD_RECOVERY: "PASSWORD_RECOVERY",
@@ -23,7 +23,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = (props) => {
 	const [initial, setInitial] = useState(true);
-	const [session, setSession] = useState(null);
+	const session = useSession();
 	const [user, setUser] = useState(null);
 	const [view, setView] = useState(VIEWS.SIGN_IN);
 	const router = useRouter();
@@ -31,20 +31,15 @@ export const AuthProvider = (props) => {
 
 	useEffect(() => {
 		async function getActiveSession() {
-			const {
-				data: { session: activeSession },
-			} = await supabase.auth.getSession();
-			setSession(activeSession);
-			setUser(activeSession?.user ?? null);
-			setInitial(false);
+			session ? setUser(session.user) : router.refresh();
 		}
 		getActiveSession();
 
-		const {
+		/* 	const {
 			data: { subscription: authListener },
 		} = supabase.auth.onAuthStateChange((event, currentSession) => {
 			if (currentSession?.access_token !== accessToken) {
-				router.refresh();
+				
 			}
 
 			setSession(currentSession);
@@ -60,11 +55,11 @@ export const AuthProvider = (props) => {
 					break;
 				default:
 			}
-		});
+		}); */
 
-		return () => {
+		/* return () => {
 			authListener?.unsubscribe();
-		};
+		}; */
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
@@ -75,7 +70,7 @@ export const AuthProvider = (props) => {
 			user,
 			view,
 			setView,
-			signOut: () => supabase.auth.signOut(),
+			signOut: () => session.end(),
 		};
 	}, [initial, session, user, view]);
 

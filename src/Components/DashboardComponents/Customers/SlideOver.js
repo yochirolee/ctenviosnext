@@ -1,23 +1,8 @@
-"use client";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-export default function SlideOver({ open, setOpen, selectedCustomer }) {
-	const queryClient = useQueryClient();
-	const mutationCreate = useMutation({
-		mutationFn: (newCustomer) => {
-			return fetch("https://caribeagencia-backend.vercel.app/api/v1/customers/create", {
-				method: "POST",
-				body: JSON.stringify(newCustomer),
-				headers: {
-					"Content-Type": "application/json",
-				},
-			});
-		},
-		onSuccess: () => queryClient.invalidateQueries(["fetchCustomers"]),
-	});
+export default function SlideOver({ open, setOpen, children }) {
 
 	return (
 		<Transition.Root show={open} as={Fragment}>
@@ -74,33 +59,7 @@ export default function SlideOver({ open, setOpen, selectedCustomer }) {
 											</Dialog.Title>
 										</div>
 										<div className="relative mt-6 flex-1 px-4 sm:px-6">
-											{mutationCreate?.isLoading ? <div>Creating Please Wait</div> : <></>}
-											{mutationCreate?.isError ? (
-												<div>{mutationCreate?.error?.message}</div>
-											) : (
-												<></>
-											)}
-											<p>no customer selected</p>
-											<button
-												onClick={() =>
-													mutationCreate.mutate({
-														firstName: "Francisco",
-														lastName: "Infanzon",
-														license: "6056555555",
-														passport: "J50456",
-														email: "frank30@gmail.com",
-														address: "Avenida 31 entre 30 y 34 No 3008",
-														phone: "52925009942",
-														mobile: "795200445499",
-														countryId: 1,
-														stateId: 1,
-														cityId: 1,
-														agencyId: 1,
-													})
-												}
-											>
-												Mutation
-											</button>
+											{children}
 										</div>
 									</div>
 								</Dialog.Panel>

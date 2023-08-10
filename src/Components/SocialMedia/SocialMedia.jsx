@@ -8,7 +8,7 @@ export const SocialMedia = () => {
 					No esperes mas, comienza a seguirnos...
 				</p>
 			</div>
-			<div className=" items-center mt-10 mx-4 z-20 justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+			<div className=" items-center mt-10  z-20 justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
 				<a
 					href="https://www.facebook.com/people/CTEnvios/100087529462450/"
 					target="_blank"

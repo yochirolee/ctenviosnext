@@ -1,7 +1,6 @@
-import { ArchiveBoxIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import { ArchiveBoxIcon } from "@heroicons/react/24/outline";
 import { React } from "react";
-import { MdAccountBox } from "react-icons/md";
-export const MiscelaneasCard = ({ callout }) => {
+export const MiscelaneasCard = () => {
 	return (
 		<div className="relative  z-10 -mx-4 shadow-lg ring-1 ring-slate-900/10 sm:mx-0 sm:rounded-3xl lg:w-/3 lg:flex-none">
 			<div className="flex absolute -bottom-px left-1/2 -ml-48 h-[2px] w-96">

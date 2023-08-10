@@ -1,5 +1,5 @@
-import { useSupabase } from "@/Utils/Providers/SupabaseProvider";
 import { useQuery } from "@tanstack/react-query";
+import supabase from "@/Utils/supabase-browser";
 
 const createLocation = (index, product) => {
 	switch (index) {
@@ -47,7 +47,7 @@ const createProductHistory = (product) => {
 	return null;
 };
 
-export const fetchProductTrackingHistory = async (product, supabase) => {
+export const fetchProductTrackingHistory = async (product) => {
 	if (!product) return;
 
 	let productHistory = createProductHistory(product);
@@ -77,8 +77,5 @@ export const fetchProductTrackingHistory = async (product, supabase) => {
 	return productHistory;
 };
 export const useFetchProductTrackingHistory = (product) => {
-	const { supabase } = useSupabase();
-	return useQuery(["getProductHistory", product], () =>
-		fetchProductTrackingHistory(product, supabase),
-	);
+	return useQuery(["getProductHistory", product], () => fetchProductTrackingHistory(product));
 };

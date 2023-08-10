@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { CustomersTable } from "@/Components/DashboardComponents/Customers/CustomersTable";
 import SlideOver from "@/Components/DashboardComponents/Customers/SlideOver";
-import { useFetchCustomers } from "@/Hooks/Customers/useFetchCustomers";
+import { useFetchCustomers } from "@/Hooks/Customers/useCustomers";
+import CustomerForm from "@/Components/DashboardComponents/Customers/CustomerForm";
 
 const CustomersPage = () => {
 	const [open, setOpen] = useState(false);
@@ -32,10 +33,12 @@ const CustomersPage = () => {
 				</button>
 			</div>
 			<CustomersTable
-				customers={customers}
+				customers={customers ? customers : []}
 				handleEditSelectedCustomer={handleEditSelectedCustomer}
 			/>
-			<SlideOver open={open} setOpen={setOpen} selectedCustomer={selectedCustomer} />
+			<SlideOver open={open} setOpen={setOpen} selectedCustomer={selectedCustomer}>
+				<CustomerForm setIsOpen={setOpen} />
+			</SlideOver>
 			<p>selected: {selectedCustomer?.firstName}</p>
 		</div>
 	);

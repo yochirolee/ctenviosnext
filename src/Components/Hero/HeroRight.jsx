@@ -11,8 +11,9 @@ export const HeroRight = () => {
 						<Image
 							src="/slider4.jpg"
 							className="lg:block h-full w-full object-cover object-center"
-							fill
-							alt="Ship Image Envios a cuba"
+							height={500}
+							width={500}
+							alt="Envios a cuba"
 						/>
 					</div>
 
@@ -20,7 +21,8 @@ export const HeroRight = () => {
 						<Image
 							src="/truck.png"
 							className="lg:block h-full w-full object-cover object-center"
-							fill
+							height={200}
+							width={200}
 							alt="Track Entregas Cuba"
 						/>
 					</div>

@@ -6,8 +6,8 @@ import { Footer } from "@/Components/Footer/Footer";
 import QueryProvider from "@/Utils/Providers/QueryProvider";
 import Head from "next/head";
 import ShoppingCart from "@/Components/Cart/ShoppingCart";
-import SupabaseProvider from "@/Utils/Providers/SupabaseProvider";
 import { AuthProvider } from "@/Utils/Providers/AuthProvider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,17 +37,15 @@ export default function RootLayout({ children }) {
 					<link rel="shortcut icon" href="../public/favicon.ico" />
 				</Head>
 
-				<div className="relative isolate pt-4 max-w-7xl mx-auto px-6 lg:pt-14 lg:px-8">
-					<SupabaseProvider>
+				<div className="relative isolate pt-4 max-w-7xl mx-auto px-2 sm:px-6 lg:pt-14 lg:px-8">
+					<ClerkProvider>
 						<QueryProvider>
-							<AuthProvider>
-								<NavBar />
-								{children}
-								<ShoppingCart />
-								<Footer />
-							</AuthProvider>
+							<NavBar />
+							{children}
+							<ShoppingCart />
+							<Footer />
 						</QueryProvider>
-					</SupabaseProvider>
+					</ClerkProvider>
 				</div>
 			</body>
 		</html>

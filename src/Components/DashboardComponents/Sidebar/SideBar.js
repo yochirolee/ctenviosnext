@@ -20,7 +20,7 @@ export const Sidebar = () => {
 							</li>
 							<li>
 								<Link
-									href="dashboard/invoices"
+									href="/dashboard/invoices"
 									className="flex flex-row  px-4 font-medium  rounded-lg  items-center  h-10 hover:bg-gray-100"
 								>
 									<DocumentIcon className="h-6 w-6 mr-2" />
@@ -29,7 +29,7 @@ export const Sidebar = () => {
 							</li>
 							<li>
 								<Link
-									href="dashboard/products"
+									href="/dashboard/products"
 									className="flex flex-row  px-4 font-medium  rounded-lg  items-center  h-10 hover:bg-gray-100"
 								>
 									<MdShoppingCartCheckout className="h-6 w-6 mr-2" />
@@ -39,7 +39,7 @@ export const Sidebar = () => {
 
 							<li>
 								<Link
-									href="dashboard/customers"
+									href="/dashboard/customers"
 									className="flex flex-row  px-4 font-medium  rounded-lg  items-center  h-10 hover:bg-gray-100"
 								>
 									<UserGroupIcon className="h-6 w-6 mr-2" />
