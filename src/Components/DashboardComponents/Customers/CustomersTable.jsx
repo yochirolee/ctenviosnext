@@ -2,8 +2,8 @@ import { useDeleteCustomer } from "@/Hooks/Customers/useCustomers";
 import { MdDelete } from "react-icons/md/index";
 
 export const CustomersTable = ({ customers, handleEditSelectedCustomer }) => {
-	if(!customers) return <div>Loading...</div>
 	const mutationDelete = useDeleteCustomer();
+	if (!customers) return <div>Loading...</div>;
 	if (mutationDelete.isError) console.log(mutationDelete.error);
 	return (
 		<div className=" grid py-2  min-w-full ">
