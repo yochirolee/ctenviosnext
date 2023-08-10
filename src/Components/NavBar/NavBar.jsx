@@ -23,10 +23,10 @@ export default function NavBar() {
 	const [products, setOpen] = useCartStore((state) => [state.products, state.setOpen]);
 	const handleLogout = () => {
 		session.end();
+		setMobileMenuOpen(false);
 		router.push("/");
+		router.reload();
 	};
-
-	console.log(products, "products on cart at navbar");
 
 	return (
 		<div className="bg-white">
@@ -104,7 +104,11 @@ export default function NavBar() {
 								Log Out <span aria-hidden="true">&rarr;</span>
 							</button>
 						) : (
-							<Link href="/auth/SignIn" className="text-sm font-semibold leading-6 text-gray-900">
+							<Link
+								onClick={() => setMobileMenuOpen(false)}
+								href="/auth/SignIn"
+								className="text-sm font-semibold leading-6 text-gray-900"
+							>
 								Log in <span aria-hidden="true">&rarr;</span>
 							</Link>
 						)}
@@ -162,6 +166,7 @@ export default function NavBar() {
 											<UserIcon className="h-5 w-5 mt-2" />
 											<h2>{session?.user?.fullName}</h2>
 											<Link
+												onClick={() => setMobileMenuOpen(false)}
 												href="/auth/SignIn"
 												className="text-sm font-semibold leading-6 text-gray-900"
 											>
