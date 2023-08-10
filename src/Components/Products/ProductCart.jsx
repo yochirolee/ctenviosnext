@@ -8,15 +8,15 @@ export const ProductCart = ({ product }) => {
 	const [addToCart] = useCartStore((state) => [state.addToCart]);
 
 	return (
-		<div className="grid   min-w-72 h-auto grid-cols-1 ">
+		<div className="grid bg-gradient-to-b shadow-lg shadow-blue-400/20 from-white  to-slate-100 rounded-lg  min-w-72 h-auto grid-cols-1 ">
 			<img
 				src={product.imageSrc}
 				alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-				className="rounded-lg  h-64 w-64 shrink-0 p-4 mx-auto"
+				className="rounded-lg  h-44 w-44 shrink-0 p-4 mx-auto"
 			/>
 			<div className="flex flex-col gap-4  my-2 py-2  px-4 backdrop-blur-sm ">
-				<div className="flex flex-col justify-start  gap-2">
-					<h2 className=" text-clip text-slate-500">{product.name}</h2>
+				<div className="flex flex-col   justify-start  gap-2">
+					<h2 className="inline-block text-sm h-6 text-slate-500">{product.name}</h2>
 					<div className="inline-flex items-center justify-between">
 						<p className="text-md ">${product.price} usd</p>
 						<a href="#" className="font-light inline-flex gap-1 text-[11px] items-center ">

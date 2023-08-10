@@ -28,27 +28,61 @@ const products = [
 	},
 	{
 		id: 4,
-		name: "InstantPop Olla Multifuncion",
+		name: "InstantPop Multifuncion",
 		href: "#",
 		price: "35",
 		imageSrc: "olla.png",
 		imageAlt: "Hand holding black machined steel mechanical pencil with brass tip and top.",
 	},
-	
+	{
+		id: 5,
+		name: "Batidora",
+		href: "#",
+		price: "48",
+		imageSrc: "/batidora.webp",
+		imageAlt: "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+	},
+	{
+		id: 6,
+		name: "Generador Electrico",
+		href: "#",
+		price: "35",
+		imageSrc: "/generador.webp",
+		imageAlt: "Olive drab green insulated bottle with flared screw lid and flat top.",
+	},
+	{
+		id: 7,
+		name: "TV Onn 65 Pulgadas",
+		href: "#",
+		price: "89",
+		imageSrc: "/tv-remove.png",
+		imageAlt: "Person using a pen to cross a task off a productivity paper card.",
+	},
+	{
+		id: 8,
+		name: "InstantPop Multifuncion",
+		href: "#",
+		price: "35",
+		imageSrc: "olla.png",
+		imageAlt: "Hand holding black machined steel mechanical pencil with brass tip and top.",
+	},
+
 	// More products...
 ];
 
-export default function ProductsList() {
+export default function ProductsList({ showHeader = false }) {
 	return (
 		<div className="bg-white">
-			<div>
-				<h2 className="text-base font-semibold leading-7 text-blue-500">
-					Nuestros Productos Destacados
-				</h2>
-				<p className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
-					Compra Online
-				</p>
-			</div>
+			{showHeader ? (
+				<div>
+					<h2 className="text-base font-semibold leading-7 text-blue-500">
+						Nuestros Productos Destacados
+					</h2>
+					<p className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
+						Compra Online
+					</p>
+				</div>
+			) : null}
 			<div className="mx-auto max-w-2xl    sm:px-6 sm:py-10 lg:max-w-7xl lg:px-4">
 				<h2 className="sr-only">Products</h2>
 

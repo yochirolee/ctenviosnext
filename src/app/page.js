@@ -26,7 +26,7 @@ export default function Home() {
 				<MiscelaneasCard />
 				<MedicinasCard />
 			</div>
-			<ProductsList />
+			<ProductsList showHeader={true} />
 
 			<SocialMedia />
 
