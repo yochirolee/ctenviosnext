@@ -4,7 +4,7 @@ import { MagnifyingGlassCircleIcon, MagnifyingGlassIcon } from "@heroicons/react
 export default function Products() {
 	return (
 		<div className="grid grid-flow-col   grid-cols-12 mt-10">
-			<aside className=" max-w-64 border-r border-slate-200 p-4 col-span-2 ">
+			<aside className="hidden lg:block max-w-64 border-r border-slate-200 p-4 col-span-2 ">
 				<nav className="">
 					<ul className="flex flex-col text-sm space-y-2">
 						<li>
@@ -26,8 +26,8 @@ export default function Products() {
 				</nav>
 			</aside>
 			<div className="w-full col-span-10">
-				<div className=" flex items-center text-sm justify-between border-b border-slate-200 p-4">
-					<div>Filter Section</div>
+				<div className=" flex flex-col lg:flex-row items-center text-sm justify-between border-b border-slate-200 p-4">
+					<div className="hidden lg:block">Filter Section</div>
 					<div className="relative">
 						<MagnifyingGlassIcon className="absolute z-10 top-2 left-2 w-5 h-5 text-slate-300" />
 						<input
