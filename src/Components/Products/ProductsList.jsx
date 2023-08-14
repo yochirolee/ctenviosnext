@@ -81,6 +81,7 @@ export default function ProductsList({ showHeader = false }) {
 					<p className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
 						Compra Online
 					</p>
+				
 				</div>
 			) : null}
 			<div className="mx-auto max-w-2xl    sm:px-6 sm:py-10 lg:max-w-7xl lg:px-4">

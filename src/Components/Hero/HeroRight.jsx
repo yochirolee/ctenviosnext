@@ -1,4 +1,6 @@
+import { TruckIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { MdOutlineDeliveryDining } from "react-icons/md";
 
 export const HeroRight = () => {
 	return (
@@ -31,7 +33,8 @@ export const HeroRight = () => {
 						<Image
 							src="/happy_cuban.png"
 							className="lg:block h-full w-full object-cover object-center"
-							fill
+							height={200}
+							width={200}
 							alt="Familia Cubana, Envios"
 						/>
 					</div>
@@ -39,6 +42,18 @@ export const HeroRight = () => {
 			</div>
 			<div>
 				<p className="text-center my-4 font-semibold text-lg">Hasta la Puerta de su Casa!</p>
+				<a
+					className="group -my-2 ml-6 hidden items-center gap-2 rounded-full bg-white/25 px-3 py-2 text-xs text-slate-900 ring-1 ring-inset ring-black/[0.08] hover:bg-white/50 hover:ring-black/[0.13] sm:flex md:ml-8 lg:hidden xl:flex"
+					href="/templates/studio"
+				>
+					<TruckIcon className="h-6 w-6" />
+					<span className="font-semibold">Seguridad y Garantia</span>
+
+					<span className="font-medium">
+						<span className="md:hidden">Lideres en el Sector</span>
+						<span className="hidden md:inline">Lideres en el Sector de Paqueteria a Cuba</span>
+					</span>
+				</a>
 			</div>
 		</div>
 	);

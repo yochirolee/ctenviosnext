@@ -25,7 +25,6 @@ export default function NavBar() {
 		session.end();
 		setMobileMenuOpen(false);
 		router.push("/");
-		router.reload();
 	};
 
 	return (
@@ -36,9 +35,9 @@ export default function NavBar() {
 						<Link href="/" className="-m-1.5 p-1.5">
 							<span className="sr-only">Caribe Travel Express</span>
 							<Image
-								width={44}
+								width={40}
 								height={40}
-								className=" object-scale-down"
+								className=" "
 								src="/ctelogo.png"
 								alt="Logo Caribe Travel Envios"
 							/>

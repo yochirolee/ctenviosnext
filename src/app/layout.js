@@ -8,6 +8,7 @@ import Head from "next/head";
 import ShoppingCart from "@/Components/Cart/ShoppingCart";
 import { AuthProvider } from "@/Utils/Providers/AuthProvider";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
 						<QueryProvider>
 							<NavBar />
 							{children}
+							<Analytics />
 							<ShoppingCart />
 							<Footer />
 						</QueryProvider>

@@ -1,5 +1,6 @@
 import { useSignIn } from "@clerk/nextjs";
 import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,8 +11,6 @@ export const SignInForm = () => {
 	const [isError, setIsError] = useState(null);
 
 	const { signIn, setActive, isLoaded } = useSignIn();
-
-	console.log(isLoaded, "isLoaded");
 
 	if (!isLoaded) {
 		return null;
@@ -40,9 +39,11 @@ export const SignInForm = () => {
 		<>
 			<div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
 				<div className="sm:mx-auto sm:w-full sm:max-w-sm">
-					<img
-						className="mx-auto h-10 w-auto"
-						src="https://tailwindui.com/img/logos/mark.svg?color=blue&shade=600"
+					<Image
+						className="mx-auto h-10 w-auto "
+						width={40}
+						height={40}
+						src="/ctelogo.png"
 						alt="CTEnvios"
 					/>
 					<h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">

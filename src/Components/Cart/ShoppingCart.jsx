@@ -6,16 +6,19 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useCartStore } from "@/Store/useCartStore";
 
 export default function ShoppingCart() {
-	const [products, open, setOpen, removeFromCart] = useCartStore((state) => [
+	const [products, isOpen, setOpen, removeFromCart] = useCartStore((state) => [
 		state.products,
-		state.open,
+		state.isOpen,
 		state.setOpen,
 		state.removeFromCart,
 	]);
 
+	console.log("runninng");
+	console.log(isOpen, "isOpen");
+
 	return (
-		<Transition.Root show={open} as={Fragment}>
-			<Dialog as="div" className="relative z-10" onClose={setOpen}>
+		<Transition.Root show={isOpen} as={Fragment}>
+			<Dialog as="div" className="relative z-10" onClose={() => setOpen()}>
 				<Transition.Child
 					as={Fragment}
 					enter="ease-in-out duration-500"
@@ -129,7 +132,7 @@ export default function ShoppingCart() {
 												<button
 													type="button"
 													className="font-medium ml-2 text-indigo-600 hover:text-indigo-500"
-													onClick={() => setOpen(false)}
+													onClick={() => () => setOpen()(false)}
 												>
 													Continue Shopping
 													<span aria-hidden="true"> &rarr;</span>

@@ -2,15 +2,19 @@ import { create } from "zustand";
 
 export const useCartStore = create((set) => ({
 	products: [],
-
 	total: 0,
+	isOpen: false,
 
-	open: false,
 	setOpen: () =>
-		set((state) => ({
-			...state,
-			open: !state.open,
-		})),
+		set(
+			(state) => (
+				console.log(state.isOpen,"zustand"),
+				{
+					...state,
+					isOpen: state.isOpen ? false : true,
+				}
+			),
+		),
 
 	addToCart: (product) => {
 		set((state) => ({
