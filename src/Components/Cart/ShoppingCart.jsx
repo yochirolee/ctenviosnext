@@ -13,9 +13,6 @@ export default function ShoppingCart() {
 		state.removeFromCart,
 	]);
 
-	console.log("runninng");
-	console.log(isOpen, "isOpen");
-
 	return (
 		<Transition.Root show={isOpen} as={Fragment}>
 			<Dialog as="div" className="relative z-10" onClose={() => setOpen()}>

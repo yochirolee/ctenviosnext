@@ -10,6 +10,7 @@ import {
 	StarIcon,
 	TruckIcon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 export const ProductCart = ({ product }) => {
 	const [addToCart] = useCartStore((state) => [state.addToCart]);
@@ -32,8 +33,10 @@ export const ProductCart = ({ product }) => {
 
 	return (
 		<div className="grid bg-gradient-to-b shadow-lg shadow-blue-400/20 rounded-lg  min-w-72 h-auto grid-cols-1 ">
-			<img
+			<Image
 				src={product.imageSrc}
+				width={200}
+				height={200}
 				alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
 				className="rounded-lg  h-44 w-44 shrink-0 p-4 mx-auto"
 			/>
