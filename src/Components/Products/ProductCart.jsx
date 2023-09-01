@@ -32,21 +32,21 @@ export const ProductCart = ({ product }) => {
 	};
 
 	return (
-		<div className="grid bg-gradient-to-b shadow-lg shadow-blue-400/20 rounded-lg  min-w-72 h-auto grid-cols-1 ">
+		<div className="grid bg-gradient-to-b hover:scale-105 transition duration-300 ease-in-out shadow-lg shadow-blue-400/20 rounded-lg  min-w-72 h-auto grid-cols-1 ">
 			<Image
 				src={product.imageSrc}
 				width={200}
 				height={200}
 				alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-				className="rounded-lg  h-44 w-44 shrink-0 p-4 mx-auto"
+				className="rounded-lg  h-44 w-44 shrink-0 p-4 mx-auto "
 			/>
 			<div className="flex flex-col gap-4  my-2 py-2  px-4 backdrop-blur-sm ">
 				<div className="flex flex-col   justify-start  gap-2">
-					<h2 className="inline-block text-sm h-6 text-slate-600">{product.name}</h2>
-					<span className="text-xs text-slate-500 ">
+					<h2 className="inline-block text-sm h-6 text-blue-700 cursor-pointer">{product.name}</h2>
+					<span className="text-xs text-slate-600 ">
 						Description Product Bla Bla, con ajustes manuales bla bla
 					</span>
-					<div className="inline-flex items-center justify-between">
+					<div className="inline-flex items-center justify-between mt-2">
 						<p className="text-md ">${product.price} usd</p>
 						<a href="#" className="font-light inline-flex gap-1 text-[11px] items-center ">
 							<CheckCircleIcon className="h-4 w-4 text-green-600" aria-hidden="true" />
@@ -56,13 +56,13 @@ export const ProductCart = ({ product }) => {
 				</div>
 				<div className="flex   gap-2 items-center justify-center">
 					<div className="inline-flex">
-						<StarIcon className="h-5 w-5 text-yellow-500" />
-						<StarIcon className="h-5 w-5 text-yellow-500" />
-						<StarIcon className="h-5 w-5 text-yellow-500" />
-						<StarIcon className="h-5 w-5 text-yellow-500" />
-						<StarIcon className="h-5 w-5 text-yellow-500" />
+						<StarIcon className="h-5 w-5 text-yellow-400" />
+						<StarIcon className="h-5 w-5 text-yellow-400" />
+						<StarIcon className="h-5 w-5 text-yellow-400" />
+						<StarIcon className="h-5 w-5 text-yellow-400" />
+						<StarIcon className="h-5 w-5 text-yellow-400" />
 					</div>
-					<p className="text-slate-400 text-sm">45</p>
+					<p className="text-slate-400 font-light text-xs">45</p>
 				</div>
 
 				<div className="inline-flex border-dashed border-t pt-2 justify-between items-center gap-6 px-6 mx-auto">

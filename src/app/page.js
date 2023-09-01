@@ -6,7 +6,6 @@ import { Hero } from "@/Components/Hero/Hero";
 import NewsLetter from "@/Components/Newsletter/Newsletter";
 import { SocialMedia } from "@/Components/SocialMedia/SocialMedia";
 import ProductsList from "@/Components/Products/ProductsList";
-import ShoppingCart from "@/Components/Cart/ShoppingCart";
 
 export default function Home() {
 	return (
@@ -25,7 +24,8 @@ export default function Home() {
 				<MiscelaneasCard />
 				<MedicinasCard />
 			</div>
-			<ProductsList showHeader={true} />
+			{/* <ProductsList showHeader={true} />
+			 */}
 
 			<SocialMedia />
 
