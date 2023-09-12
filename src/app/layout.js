@@ -13,13 +13,13 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "CTEnvios",
-	description: "Envios a Latinoameria y el Caribe",
+	title: "CTEnvios - Envios a Cuba",
+	description: "Envios de alimentos, medicinas y miscelaneas a Cuba",
 };
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
+		<html lang="es">
 			<body className={inter.className}>
 				<Script
 					src="https://www.googletagmanager.com/gtag/js?id=AW-11165948511"
