@@ -19,7 +19,7 @@ import Image from "next/image";
 
 export default function NewsLetter() {
 	return (
-		<div className="relative  mx-4 rounded-3xl isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+		<div className="relative  sm:rounded-3xl isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
 			<Image
 				fill
 				src="/ship.jpg"

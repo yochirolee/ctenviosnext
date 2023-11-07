@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
 					<link rel="shortcut icon" href="../public/favicon.ico" />
 				</Head>
 
-				<div className="relative isolate pt-4 max-w-7xl mx-auto px-2 sm:px-6 lg:pt-14 lg:px-8">
+				<div className="relative isolate pt-4 max-w-7xl mx-auto  sm:px-6 lg:pt-14 lg:px-8">
 					<ClerkProvider>
 						<QueryProvider>
 							<NavBar />
