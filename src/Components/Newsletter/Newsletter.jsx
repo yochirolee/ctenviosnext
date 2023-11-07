@@ -19,12 +19,12 @@ import Image from "next/image";
 
 export default function NewsLetter() {
 	return (
-		<div className="relative  mx-auto rounded-3xl isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+		<div className="relative  mx-4 rounded-3xl isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
 			<Image
 				fill
 				src="/ship.jpg"
 				alt="Ship Cuba Envios"
-				className="lg:block object-center object-cover absolute hidden -z-10 inset-0  bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
+				className="lg:block object-center object-cover absolute  -z-10 inset-0  bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
 			></Image>
 
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">

@@ -1,7 +1,7 @@
 import { React } from "react";
 export const SocialMedia = () => {
 	return (
-		<div className="my-20">
+		<div className="my-20 mx-4">
 			<div className="lg:col-span-4 ">
 				<h2 className="text-base font-semibold leading-7 text-blue-500">Nuestras Redes Sociales</h2>
 				<p className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">

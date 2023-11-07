@@ -26,9 +26,8 @@ export default function Home() {
 			</div>
 			{/* <ProductsList showHeader={true} />
 			 */}
-
+      
 			<SocialMedia />
-
 			<Faq />
 			<NewsLetter />
 		</main>

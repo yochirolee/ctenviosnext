@@ -1,9 +1,8 @@
-import { ArchiveBoxIcon, ScaleIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import { ScaleIcon } from "@heroicons/react/24/outline";
 import { React } from "react";
-import { MdAccountBox } from "react-icons/md";
 export const DuraderosCard = ({ callout }) => {
 	return (
-		<div className="relative  z-10 -mx-4 shadow-lg ring-1 ring-slate-900/10 sm:mx-0 sm:rounded-3xl lg:w-/3 lg:flex-none">
+		<div className="relative  z-10 mx-2 rounded-lg shadow-lg ring-1 ring-slate-900/10 sm:mx-0 sm:rounded-3xl lg:w-/3 lg:flex-none">
 			<div className="flex absolute -bottom-px left-1/2 -ml-48 h-[2px] w-96">
 				<div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
 				<div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
@@ -43,15 +42,15 @@ export const DuraderosCard = ({ callout }) => {
 					<li className="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p className="ml-5">
-							<strong className="font-semibold text-slate-900">$2,29 x Libra:</strong> en Duraderos mas
-							de 500 Lbs
+							<strong className="font-semibold text-slate-900">$2,29 x Libra:</strong> en Duraderos
+							mas de 500 Lbs
 						</p>
 					</li>
 					<li className="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p className="ml-5">
-							<strong className="font-semibold text-slate-900">$1,90:</strong> Equipaje no Acompañado o
-							Menaje de Casa
+							<strong className="font-semibold text-slate-900">$1,90:</strong> Equipaje no
+							Acompañado o Menaje de Casa
 						</p>
 					</li>
 				</ul>
