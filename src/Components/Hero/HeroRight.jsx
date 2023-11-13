@@ -1,7 +1,6 @@
 "use client";
-import { TruckIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import IconAnimation from "../Slider/IconAnimation";
+import { motion, useAnimation } from "framer-motion";
 
 export const HeroRight = () => {
 	return (
@@ -10,7 +9,12 @@ export const HeroRight = () => {
 
 			<div className="mx-auto max-w-2xl sm:py-10 lg:py-42 lg:max-w-none ">
 				<div className="justify-center items-center grid grid-cols-2 lg:grid-cols-3  lg:gap-x-6 lg:space-y-0">
-					<div className="relative hidden lg:block lg:max-h-80   lg:w-44 md:h-60 md:w-48 h-48 w-48 -rotate-12  overflow-hidden  rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+					<motion.div
+						animate={{ x: [0, 100, 0] }}
+						style={{ x: 0, rotate: -25 }}
+						transition={{ ease: "easeOut", duration: 2 }}
+						className="relative hidden lg:block lg:max-h-80   lg:w-44 md:h-60 md:w-48 h-48 w-48 -rotate-12  overflow-hidden  rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64"
+					>
 						<Image
 							src="/slider4.webp"
 							className="lg:block h-full w-full object-cover object-center"
@@ -18,7 +22,7 @@ export const HeroRight = () => {
 							width={500}
 							alt="Envios a cuba"
 						/>
-					</div>
+					</motion.div>
 
 					<div className="relative lg:max-h-80   lg:w-44 md:h-60 md:w-48 h-48 w-48 overflow-hidden  rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
 						<Image
@@ -30,7 +34,10 @@ export const HeroRight = () => {
 						/>
 					</div>
 
-					<div className="relative  lg:max-h-80   lg:w-44  md:h-60 md:w-48 h-48 w-48 rotate-12 overflow-hidden rounded-lg  sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+					<motion.div
+						animate={{ x: [0, 50, 0] }}
+						style={{ x: 0, rotate: 25 }}
+						transition={{ ease: "easeIn", duration: 4 }} className="relative  lg:max-h-80   lg:w-44  md:h-60 md:w-48 h-48 w-48 rotate-12 overflow-hidden rounded-lg  sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
 						<Image
 							src="/happy_cuban.png"
 							className="lg:block h-full w-full object-cover object-center"
@@ -38,7 +45,7 @@ export const HeroRight = () => {
 							width={200}
 							alt="Familia Cubana, Envios"
 						/>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 			<div>
