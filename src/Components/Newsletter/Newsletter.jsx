@@ -22,7 +22,7 @@ export default function NewsLetter() {
 		<div className="relative  sm:rounded-3xl isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
 			<Image
 				fill
-				src="/ship.jpg"
+				src="/ship.webp"
 				alt="Ship Cuba Envios"
 				className="lg:block object-center object-cover absolute  -z-10 inset-0  bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
 			></Image>
