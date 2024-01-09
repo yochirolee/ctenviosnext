@@ -1,6 +1,7 @@
 import { DuraderosCard } from "@/Components/Cards/DuraderosCard";
 import { MedicinasCard } from "@/Components/Cards/MedicinasCard";
 import { MiscelaneasCard } from "@/Components/Cards/MiscelaneasCard";
+import { TrackingContent } from "@/Components/Content/TrackingContent";
 import { Faq } from "@/Components/Faq/Faq";
 import { Hero } from "@/Components/Hero/Hero";
 import NewsLetter from "@/Components/Newsletter/Newsletter";
@@ -25,7 +26,7 @@ export default function Home() {
 			</div>
 			{/* <ProductsList showHeader={true} />
 			 */}
-      
+			<TrackingContent />
 			<SocialMedia />
 			<Faq />
 			<NewsLetter />
