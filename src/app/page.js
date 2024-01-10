@@ -6,6 +6,7 @@ import { Faq } from "@/Components/Faq/Faq";
 import { Hero } from "@/Components/Hero/Hero";
 import NewsLetter from "@/Components/Newsletter/Newsletter";
 import { SocialMedia } from "@/Components/SocialMedia/SocialMedia";
+import { Stats } from "@/Components/Stats/Stats";
 
 export default function Home() {
 	return (
@@ -26,6 +27,7 @@ export default function Home() {
 			</div>
 			{/* <ProductsList showHeader={true} />
 			 */}
+			<Stats />
 			<TrackingContent />
 			<SocialMedia />
 			<Faq />
