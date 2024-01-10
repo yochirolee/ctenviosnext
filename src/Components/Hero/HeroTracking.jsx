@@ -22,7 +22,7 @@ export const HeroTracking = () => {
 	return (
 		<div className="max-w-7xl mx-auto">
 			<ShadowBg1 />
-			<div className="grid   gap-20    mx-auto container  py-6  lg:py-20  ">
+			<div className="grid   gap-20 px-4   mx-auto container  py-6  lg:py-20  ">
 				<div className=" mt-10 sm:mb-8 sm:flex sm:justify-center ">
 					<div className="max-w-xl lg:max-w-lg">
 						<div className=" flex flex-col gap-4 ">
