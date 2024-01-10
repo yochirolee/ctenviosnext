@@ -2,7 +2,7 @@
 import { HeroTracking } from "@/Components/Hero/HeroTracking";
 import { TrackingContent } from "@/Components/Content/TrackingContent";
 import { React } from "react";
-import { Stats } from "@/Components/Stats/stats";
+import { Stats } from "@/Components/Stats//Stats";
 
 const Tracking = () => {
 	return (
