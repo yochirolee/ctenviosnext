@@ -8,7 +8,8 @@ import { useFetchByInvoiceOrHBL } from "@/Hooks/useFetchByInvoiceOrHBL";
 export const HeroTracking = () => {
 	const searchInputRef = useRef("");
 	const [searchTerm, setSearchTerm] = useState(null);
-	const { data: result, isLoading, isError } = useFetchByInvoiceOrHBL(searchTerm);
+	const { data: invoice, isLoading, isError } = useFetchByInvoiceOrHBL(searchTerm);
+
 
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
@@ -18,7 +19,7 @@ export const HeroTracking = () => {
 	if (isError) {
 		<div>Something Wrong</div>;
 	}
-	
+
 	return (
 		<div className="max-w-7xl mx-auto">
 			<ShadowBg1 />
@@ -67,7 +68,7 @@ export const HeroTracking = () => {
 					</div>
 				</div>
 
-				{result ? <TrackingDetails result={result} /> : ""}
+				{invoice ? <TrackingDetails invoice={invoice} /> : ""}
 			</div>
 			<ShadowBg2 />
 		</div>
