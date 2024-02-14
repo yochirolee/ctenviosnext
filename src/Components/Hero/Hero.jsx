@@ -1,7 +1,6 @@
 import { React } from "react";
 import { ShadowBg1, ShadowBg2 } from "../Ui/ShadowBg1";
 import { HeroRight } from "./HeroRight";
-
 import { HeroLeft } from "./HeroLeft";
 
 export const Hero = () => {

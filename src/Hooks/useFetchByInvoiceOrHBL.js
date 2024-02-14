@@ -3,10 +3,10 @@ import { useQuery } from "@tanstack/react-query";
 const getProductData = async (id) => {
 	if (!id) return [];
 	if (id.length >= 4 && id.length < 7) {
-		const res = await fetch("https://ctenviosbackend.onrender.com/tracking/invoice/" + id);
+		const res = await fetch("https://ctenviosapi.vercel.app/api/tracking/invoice/" + id);
 		return await res.json();
 	} else {
-		const res = await fetch("https://ctenviosbackend.onrender.com/tracking/hbl/" + id);
+		const res = await fetch("https://ctenviosapi.vercel.app/api/tracking/hbl/" + id);
 		return await res.json();
 	}
 };
