@@ -21,7 +21,7 @@ export const MiscelaneasCard = () => {
 				</div>
 				<div className="mt-3 flex items-center">
 					<p className="text-[2.5rem] leading-none text-slate-900">
-						<span className="font-semibold mx-1">6.60</span>lbs
+						<span className="font-semibold mx-1">6.6</span>lbs
 					</p>
 					<p className="ml-3 space-x-1 text-sm">
 						<span className="font-semibold text-slate-900">Peso minimo a enviar</span>
