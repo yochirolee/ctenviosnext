@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
 				</Script> */}
 				<Head>
 					<title>{metadata.title}</title>
-					<link rel="icon" href="./ctelogo.ico" sizes="small" />
+					<link rel="icon" href="/images/ctelogo.ico" sizes="any" />
 				</Head>
 
 				<div className="relative isolate pt-4 max-w-7xl mx-auto  sm:px-6 lg:pt-14 lg:px-8">
