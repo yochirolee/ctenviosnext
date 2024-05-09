@@ -1,24 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+
+const production_URL = "https://tracking.ctenvios.com/api/v1";
+axios.defaults.baseURL = production_URL;
+const apiKey = "c3VwYmFzZWNyZXQ=";
+axios.defaults.headers.common = { "api-key": apiKey };
 
 const getProductData = async (id) => {
 	if (!id) return [];
 	if (id.length >= 4 && id.length < 7) {
-		const res = await fetch("https://ctenviosapi.vercel.app/api/tracking/invoice/" + id);
-		return await res.json();
+		const response = await axios.get(`parcels/invoice/${id}`);
+		return response.data;
 	} else {
-		const res = await fetch("https://ctenviosapi.vercel.app/api/tracking/hbl/" + id);
-		return await res.json();
+		const response = await axios.get(`parcels/hbl/${id}`);
+		return response.data;
 	}
 };
 
-//https://ctenviosbackend.onrender.com/tracking
-
 export const useFetchByInvoiceOrHBL = (id) => {
-	let { data, isLoading, isError } = useQuery({
+	return useQuery({
 		queryKey: ["fetchProductByHBL", id],
 		queryFn: () => getProductData(id),
+
 		staleTime: 1000 * 60 * 5,
 	});
-
-	return { data, isLoading, isError };
 };

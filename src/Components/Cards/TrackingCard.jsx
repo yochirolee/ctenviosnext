@@ -1,8 +1,8 @@
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
 import { React } from "react";
 import { TrackingHistoryCard } from "./TrackingHistoryCard";
-export const TrackingCard = ({ pack, invoice }) => {
-	if (!pack) return;
+export const TrackingCard = ({ parcel, invoice }) => {
+	if (!parcel) return;
 	return (
 		<div className="relative  z-10 -mx-4 shadow-lg ring-1 ring-slate-900/10 sm:mx-0 sm:rounded-3xl  lg:flex-none">
 			<div className="flex absolute -bottom-px left-1/2 -ml-48 h-[2px] w-96">
@@ -27,15 +27,15 @@ export const TrackingCard = ({ pack, invoice }) => {
 					</div>
 					<div className="my-4 flex items-center">
 						<p className="text-[1.5rem] leading-none text-slate-900">
-							<span className="font-bold">{pack?.hbl}</span>
+							<span className="font-bold">{parcel?.hbl}</span>
 						</p>
 						<p className="ml-3 space-x-1 text-sm">
 							<span className="font-semibold text-slate-900">HBL</span>
 						</p>
 					</div>
-					<span className="text-slate-500 mt-4">{pack?.description}</span>
+					<span className="text-slate-500 mt-4">{parcel?.description}</span>
 				</div>
-				<TrackingHistoryCard pack={pack} invoice={invoice} />
+				<TrackingHistoryCard events={parcel.events}  />
 			</div>
 		</div>
 	);

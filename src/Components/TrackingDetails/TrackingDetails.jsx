@@ -6,9 +6,9 @@ export const TrackingDetails = ({ invoice }) => {
 
 	return (
 		<div className="flex  flex-col  gap-4 max-w-2xl mx-auto ">
-			{invoice?.packages &&
-				invoice?.packages?.map((pack, index) => (
-					<TrackingCard key={index} pack={pack} invoice={invoice} />
+			{invoice?.parcels &&
+				invoice?.parcels?.map((parcel, index) => (
+					<TrackingCard key={index} parcel={parcel} invoice={invoice} />
 				))}
 		</div>
 	);

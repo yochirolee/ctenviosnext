@@ -10,7 +10,6 @@ export const HeroTracking = () => {
 	const [searchTerm, setSearchTerm] = useState(null);
 	const { data: invoice, isLoading, isError } = useFetchByInvoiceOrHBL(searchTerm);
 
-
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
 		setSearchTerm(searchInputRef.current.value);

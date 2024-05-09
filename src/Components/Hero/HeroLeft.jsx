@@ -34,7 +34,7 @@ export const HeroLeft = () => {
 					className="flex  items-center   rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
 				>
 					<MdOutlineWhatsapp className="h-auto w-6 mx-2" />
-					Contactanos
+					<span className="text-white">Contactanos</span>
 				</Link>
 
 				<Link href="/tracking" className="text-sm font-semibold leading-6 text-gray-900">

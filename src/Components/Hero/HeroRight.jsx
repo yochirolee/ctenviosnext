@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const HeroRight = () => {
 	return (
@@ -17,17 +17,17 @@ export const HeroRight = () => {
 					>
 						<Image
 							src="/slider4.webp"
-							className="lg:block h-full w-full object-cover object-center"
-							height={500}
-							width={500}
+							className="lg:block  object-cover object-center"
+							height={200}
+							width={200}
 							alt="Envios a cuba"
 						/>
 					</motion.div>
 
 					<div className="relative lg:max-h-80   lg:w-44 md:h-60 md:w-48 h-48 w-48 overflow-hidden  rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
 						<Image
-							src="/truck.png"
-							className="lg:block h-full w-full object-cover object-center"
+							src="/truck.webp"
+							className="lg:block  object-cover object-center"
 							height={200}
 							width={200}
 							alt="Track Entregas Cuba"
@@ -37,10 +37,12 @@ export const HeroRight = () => {
 					<motion.div
 						animate={{ x: [0, 50, 0] }}
 						style={{ x: 0, rotate: 25 }}
-						transition={{ ease: "easeIn", duration: 4 }} className="relative  lg:max-h-80   lg:w-44  md:h-60 md:w-48 h-48 w-48 rotate-12 overflow-hidden rounded-lg  sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+						transition={{ ease: "easeIn", duration: 4 }}
+						className="relative  lg:max-h-80   lg:w-44  md:h-60 md:w-48 h-48 w-48 rotate-12 overflow-hidden rounded-lg  sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64"
+					>
 						<Image
-							src="/happy_cuban.png"
-							className="lg:block h-full w-full object-cover object-center"
+							src="/happy_cuban.webp"
+							className="lg:block  object-cover object-center"
 							height={200}
 							width={200}
 							alt="Familia Cubana, Envios"

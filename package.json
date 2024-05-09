@@ -20,6 +20,7 @@
     "@tanstack/react-query-devtools": "^4.29.6",
     "@vercel/analytics": "^1.0.0",
     "autoprefixer": "10.4.14",
+    "axios": "^1.6.8",
     "date-fns": "^2.29.3",
     "encoding": "^0.1.13",
     "eslint": "8.39.0",
