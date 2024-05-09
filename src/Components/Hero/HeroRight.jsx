@@ -17,9 +17,9 @@ export const HeroRight = () => {
 					>
 						<Image
 							src="/slider4.webp"
-							className="lg:block  object-cover object-center"
-							height={200}
-							width={200}
+							className="lg:block  object-center object-cover"
+							height={300}
+							width={300}
 							alt="Envios a cuba"
 						/>
 					</motion.div>
