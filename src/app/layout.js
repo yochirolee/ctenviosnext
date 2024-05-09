@@ -9,7 +9,7 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "CTEnvios - Envios a Cuba", 
+	title: "CTEnvios - Envios a Cuba",
 	description: "Envios de alimentos, medicinas y miscelaneas a Cuba",
 };
 
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
 				</Script> */}
 				<Head>
 					<title>{metadata.title}</title>
-					<link rel="icon" href="/ctelogo.ico" sizes="any" />
+					<link rel="icon" href="./ctelogo.ico" sizes="small" />
 				</Head>
 
 				<div className="relative isolate pt-4 max-w-7xl mx-auto  sm:px-6 lg:pt-14 lg:px-8">
