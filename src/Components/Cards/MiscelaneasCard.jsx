@@ -16,15 +16,15 @@ export const MiscelaneasCard = () => {
 						className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-yellow-500 text-white hover:bg-yellow-700"
 						href="/"
 					>
-						<span>Miscelaneas</span>
+						<span>Alimentos, Aseo y Medicinas</span>
 					</a>
 				</div>
 				<div className="mt-3 flex items-center">
 					<p className="text-[2.5rem] leading-none text-slate-900">
-						$<span className="font-bold">20.00</span>
+						<span className="font-semibold mx-1">6.60</span>lbs
 					</p>
 					<p className="ml-3 space-x-1 text-sm">
-						<span className="font-semibold text-slate-900">Peso minimo a enviar 6.6 Lbs</span>
+						<span className="font-semibold text-slate-900">Peso minimo a enviar</span>
 					</p>
 				</div>
 				<p className="mt-6 text-sm leading-6 text-slate-600">
@@ -35,22 +35,29 @@ export const MiscelaneasCard = () => {
 					<li className="flex items-center">
 						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p className="ml-5">
-							<strong className="font-semibold text-slate-900">Por solo $20,00:</strong> Caja de
-							Miscelaneas 6.6 Lbs
+							<strong className="font-semibold text-slate-900">Por solo $16,00:</strong> Caja de
+							Alimentos, Aseo y Medicinas 6.6 Lbs
 						</p>
 					</li>
 					<li className="flex items-center">
 						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p className="ml-5">
-							<strong className="font-semibold text-slate-900">Por solo $37,00:</strong> Caja de
-							Miscelaneas 11.00 Lbs
+							<strong className="font-semibold text-slate-900">Por solo $25,00:</strong> Caja de
+							Alimentos, Aseo y Medicinas 11.00 Lbs
 						</p>
 					</li>
 					<li className="flex items-center">
 						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p className="ml-5">
-							<strong className="font-semibold text-slate-900">Por solo $60,00:</strong> Caja de
-							Miscelaneas 22.00 Lbs
+							<strong className="font-semibold text-slate-900">Por solo $49,00:</strong> Caja de
+							Alimentos, Aseo y Medicinas 22.00 Lbs
+						</p>
+					</li>
+					<li className="flex items-center">
+						<ArchiveBoxIcon className="w-8 h-8 text-[#0EA5E9]" />
+						<p className="ml-5">
+							<strong className="font-semibold text-slate-900">Por solo $92,00:</strong> Caja de
+							Alimentos, Aseo y Medicinas 44.00 Lbs
 						</p>
 					</li>
 				</ul>

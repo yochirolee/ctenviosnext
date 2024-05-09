@@ -21,7 +21,7 @@ export const DuraderosCard = ({ callout }) => {
 				</div>
 				<div className="mt-3 flex items-center">
 					<p className="text-[2.5rem] leading-none text-slate-900">
-						$<span className="font-bold">2.49</span>
+						$<span className="font-bold">1.99</span>
 					</p>
 					<p className="ml-3 space-x-1 text-sm">
 						<span className="font-semibold text-slate-900">La libra de Productos Duraderos</span>
@@ -35,14 +35,14 @@ export const DuraderosCard = ({ callout }) => {
 					<li className="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p className="ml-5">
-							<strong className="font-semibold text-slate-900">$2,49 x Libra:</strong> en Duraderos
+							<strong className="font-semibold text-slate-900">$1.99 x Libra:</strong> en Duraderos
 							hasta 500 Lbs
 						</p>
 					</li>
 					<li className="flex">
 						<ScaleIcon className="w-8 h-8 text-[#0EA5E9]" />
 						<p className="ml-5">
-							<strong className="font-semibold text-slate-900">$2,29 x Libra:</strong> en Duraderos
+							<strong className="font-semibold text-slate-900">$1.95 x Libra:</strong> en Duraderos
 							mas de 500 Lbs
 						</p>
 					</li>
