@@ -11,10 +11,12 @@ export const TrackingHistoryCard = ({ events }) => {
 					<CheckIcon className="w-6 h-6 text-[#0EA5E9]" />
 					<p className="ml-5 flex flex-col ">
 						<strong className="flex font-semibold gap-2 text-slate-900">
-							{event?.location ? event?.location : event?.locations?.name}
+							{event?.locations?.name}
 						</strong>
 						<span className="text-xs text-[#0EA5E9]">
-							{event?.updatedAt ? format(parseISO(event?.updatedAt), "MMM d y") : ""}
+							{event?.locations?.updatedAt
+								? format(parseISO(event?.locations?.updatedAt), "MMM d y")
+								: ""}
 						</span>
 					</p>
 				</li>
