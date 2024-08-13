@@ -14,7 +14,9 @@ export const TrackingHistoryCard = ({ events }) => {
 							{event?.locations?.name}
 						</strong>
 						<span className="text-xs text-[#0EA5E9]">
-							{event?.updatedAt ? format(parseISO(event?.updatedAt), "MMM d y") : ""}
+							{event?.updatedAt !== "0000-00-00"
+								? format(parseISO(event?.updatedAt), "MMM d y")
+								: ""}
 						</span>
 					</p>
 				</li>
