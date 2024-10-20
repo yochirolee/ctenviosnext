@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { AnimatedList } from "../Ui/animated-list";
+import { AnimatedList } from "../ui/animated-list";
 import {
 	CheckCircle,
 	Container,
@@ -102,12 +102,7 @@ const Notification = ({ name, description, icon, color, time }) => {
 
 export const AnimatedListEvents = ({ className }) => {
 	return (
-		<div
-			className={cn(
-				"relative flex h-[500px] w-full flex-col p-6 overflow-hidden rounded-lg border bg-background md:shadow-xl",
-				className,
-			)}
-		>
+		<div className="relative flex h-[500px] w-full flex-col p-6 overflow-hidden ">
 			<AnimatedList>
 				{extendedEvents.map((item, idx) => (
 					<Notification {...item} key={idx} />

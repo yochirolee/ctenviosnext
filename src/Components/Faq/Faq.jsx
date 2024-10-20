@@ -3,13 +3,15 @@ export const Faq = () => {
 	return (
 		<div
 			id="faq"
-			className=" my-12 mx-4 pb-12  grid grid-cols-1 gap-x-14 gap-y-16  lg:grid-cols-12"
+			className=" py-16 sm:py-24 lg:py-32 mx-4   grid grid-cols-1 gap-x-14 gap-y-16  lg:grid-cols-12"
 		>
 			<div className="lg:col-span-4">
-				<h2 className="text-base font-semibold leading-7 text-sky-800">Preguntas Frecuentes</h2>
-				<p className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
-					Todo lo que Necesita Saber y Mas...
-				</p>
+				<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
+					<h2 className="text-base font-semibold leading-7 text-sky-600">Preguntas Frecuentes</h2>
+					<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+						Todo lo que necesitas saber
+					</p>
+				</div>
 			</div>
 			<div className="-mb-4 space-y-12 lg:col-span-8 xl:col-span-7 xl:col-start-6">
 				<section>

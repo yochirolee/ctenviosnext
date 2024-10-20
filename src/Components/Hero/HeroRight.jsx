@@ -54,7 +54,7 @@ export const HeroRight = () => {
 				<p className="text-center my-4  font-semibold text-lg">Hasta la Puerta de su Casa!</p>
 				<div className="relative ">
 					<a
-						className="group mx-auto -my-2 ml-6   items-center gap-2 rounded-full bg-white/25 px-3 py-2 text-xs text-slate-900 ring-1 ring-inset ring-black/[0.08] hover:bg-white/50 hover:ring-black/[0.13] sm:flex md:ml-8 lg:hidden xl:flex"
+						className="group mx-auto -my-2 ml-6   items-center gap-2 rounded-full bg-white/25 px-3 py-2 text-sm text-slate-900 ring-1 ring-inset ring-black/[0.08] hover:bg-white/50 hover:ring-black/[0.13] sm:flex md:ml-8 lg:hidden xl:flex"
 						href="/"
 					>
 						<span className="font-semibold ">Seguridad y Garantia</span>

@@ -38,17 +38,12 @@ export const TrackingContent = () => {
 			<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
 				<div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="lg:pr-4">
-						<div className="lg:max-w-lg">
-							<p className="text-base font-semibold leading-7 text-sky-800">
-								Envíos Rápidos y Seguros
-							</p>
-							<h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+						<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
+							<h2 className="text-base font-semibold leading-7 text-sky-600">
+								Envie Rapido y Seguro
+							</h2>
+							<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
 								CTEnvios a Cuba y el Caribe
-							</h1>
-							<p className="mt-6 text-xl leading-8 text-gray-700">
-								Nos destacamos como líderes en el ámbito de envíos internacionales a Cuba. Con un
-								compromiso inquebrantable con la excelencia y la satisfacción del cliente, hemos
-								perfeccionado nuestros servicios para brindar la mejor experiencia de envío posible
 							</p>
 						</div>
 					</div>
@@ -60,7 +55,6 @@ export const TrackingContent = () => {
 						height={800}
 						width={800}
 						alt="Familia Cubana, Envios"
-						
 					/>
 				</div>
 				<div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -75,7 +69,7 @@ export const TrackingContent = () => {
 							</p>
 							<ul role="list" className="mt-8 space-y-8 text-gray-600">
 								<li className="flex gap-x-3">
-									<HomeIcon className="mt-1 h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+									<HomeIcon className="mt-1 h-5 w-5 flex-none text-sky-600" aria-hidden="true" />
 									<span>
 										<strong className="font-semibold text-gray-900">
 											Entregas Puerta de Casa.
@@ -84,7 +78,7 @@ export const TrackingContent = () => {
 									</span>
 								</li>
 								<li className="flex gap-x-3">
-									<ClockIcon className="mt-1 h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+									<ClockIcon className="mt-1 h-5 w-5 flex-none text-sky-600" aria-hidden="true" />
 									<span>
 										<strong className="font-semibold text-gray-900">
 											Informacion en tiempo real.
@@ -94,7 +88,7 @@ export const TrackingContent = () => {
 								</li>
 								<li className="flex gap-x-3">
 									<ShieldCheckIcon
-										className="mt-1 h-5 w-5 flex-none text-blue-600"
+										className="mt-1 h-5 w-5 flex-none text-sky-600"
 										aria-hidden="true"
 									/>
 									<span>

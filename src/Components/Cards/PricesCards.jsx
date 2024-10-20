@@ -1,5 +1,6 @@
+
 import { CheckIcon } from "@heroicons/react/20/solid";
-import { BorderBeam } from "../Ui/border-beam";
+import BlurFade from "../Ui/blur-fade";
 
 const tiers = [
 	{
@@ -40,6 +41,7 @@ function classNames(...classes) {
 export default function PriceCards() {
 	return (
 		<div className="relative isolate bg-white px-6 pb-24 sm:pb-32 lg:px-8">
+			
 			<div
 				aria-hidden="true"
 				className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
@@ -54,7 +56,7 @@ export default function PriceCards() {
 			</div>
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">Nuestros Precios</h2>
-				<p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
 					El mejor Precio del Mercado
 				</p>
 			</div>
@@ -64,8 +66,6 @@ export default function PriceCards() {
 			</p> */}
 
 			<div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
-				<BorderBeam size={250} duration={12} delay={9} colorFrom="#ec4899" colorTo="#6fa8dc" />
-
 				{tiers.map((tier, tierIdx) => (
 					<div
 						key={tier.id}
@@ -134,58 +134,64 @@ export default function PriceCards() {
 								</li>
 							))}
 						</ul>
-						<div>
-							<div
-								className={classNames(
-									tier.featured
-										? "mt-8 border-t bg-gray-800 border rounded-lg p-6 border-gray-700 pt-6"
-										: "mt-8 border-t bg-gray-50 border rounded-lg p-6 border-gray-300 pt-6",
-								)}
-							>
-								<h4
+						<div className="relative">
+							<BlurFade delay={0.25 * 0.05} inView>
+								<div
 									className={classNames(
-										tier.featured ? "text-white" : "text-gray-900",
-										"text-lg font-semibold mb-2",
+										tier.featured
+											? "mt-8 border-t bg-gray-800 border rounded-lg p-6 border-gray-700 pt-6"
+											: "mt-8 border-t bg-gray-50 border rounded-lg p-6 border-gray-300 pt-6",
 									)}
 								>
-									Sobrepeso
-								</h4>
-								<p
-									className={classNames(
-										tier.featured ? "text-gray-300" : "text-gray-600",
-										"text-sm mb-4",
-									)}
-								>
-									Para artículos con sobrepeso, se aplican las siguientes tarifas:
-								</p>
-								<ul
-									className={classNames(
-										tier.featured ? "text-gray-300" : "text-gray-600",
-										"text-sm space-y-2",
-									)}
-								>
-									<li className="flex justify-between">
-										<span>101-200 lbs:</span>
-										<span
-											className={classNames(
-												tier.featured ? "font-semibold text-sky-400" : "font-semibold text-sky-600",
-											)}
-										>
-											$30 adicionales
-										</span>
-									</li>
-									<li className="flex justify-between">
-										<span>200-500 lbs:</span>
-										<span
-											className={classNames(
-												tier.featured ? "font-semibold text-sky-400" : "font-semibold text-sky-600",
-											)}
-										>
-											$50 adicionales
-										</span>
-									</li>
-								</ul>
-							</div>
+									<h4
+										className={classNames(
+											tier.featured ? "text-white" : "text-gray-900",
+											"text-lg font-semibold mb-2",
+										)}
+									>
+										Sobrepeso
+									</h4>
+									<p
+										className={classNames(
+											tier.featured ? "text-gray-300" : "text-gray-600",
+											"text-sm mb-4",
+										)}
+									>
+										Para artículos con sobrepeso, se aplican las siguientes tarifas:
+									</p>
+									<ul
+										className={classNames(
+											tier.featured ? "text-gray-300" : "text-gray-600",
+											"text-sm space-y-2",
+										)}
+									>
+										<li className="flex justify-between">
+											<span>101-200 lbs:</span>
+											<span
+												className={classNames(
+													tier.featured
+														? "font-semibold text-sky-400"
+														: "font-semibold text-sky-600",
+												)}
+											>
+												$30 adicionales
+											</span>
+										</li>
+										<li className="flex justify-between">
+											<span>200-500 lbs:</span>
+											<span
+												className={classNames(
+													tier.featured
+														? "font-semibold text-sky-400"
+														: "font-semibold text-sky-600",
+												)}
+											>
+												$50 adicionales
+											</span>
+										</li>
+									</ul>
+								</div>
+							</BlurFade>
 						</div>
 					</div>
 				))}

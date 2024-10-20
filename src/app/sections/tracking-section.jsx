@@ -2,7 +2,8 @@ import Link from "next/link";
 import { MapPinIcon } from "lucide-react";
 import { AnimatedListEvents } from "@/Components/Animated/animated-list-events";
 import { SphereMask } from "@/Components/Animated/sphere-mask";
-import ShimmerButton from "../../Components/Ui/shimmer-button";
+import ShimmerButton from "../../Components/ui/shimmer-button";
+import Ripple from "@/Components/Ui/ripple";
 
 export const ShadowBg1 = () => {
 	return (
@@ -64,27 +65,29 @@ export const ShadowBg2 = () => {
 
 export default function TrackingSection() {
 	return (
-		<section className=" relative  md:py-24 lg:py-32">
-			<div className="mx-auto lg:container lg:max-w-7xl ">
+		<section className=" relative  sm:py-24 lg:py-32">
+			<div className="mx-auto sm:py-24 lg:py-32 lg:container lg:max-w-7xl ">
 				<div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
 					<div className=" relative mx-auto px-4 text-center  ">
-						<h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
-							Mantengase Informado en todo Momento
-						</h1>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							Nuestro sistema de tracking le permite conocer el estado de todos sus envíos en tiempo
-							real.
-						</p>
+						<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
+							<h2 className="text-base font-semibold leading-7 text-sky-600">
+								Sistema de Tracking
+							</h2>
+							<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+								Conozca en todo momento donde se encuentra su envio
+							</p>
+						</div>
 
 						<SphereMask />
 
-						<ShimmerButton className=" mx-auto w-64 bg-primary">
+						<ShimmerButton className=" mx-auto w-64 bg-gray-800">
 							<Link href="/tracking" className="inline-flex items-center gap-2">
 								Tracking
 								<MapPinIcon className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
 							</Link>
 						</ShimmerButton>
 					</div>
+
 					<div className="relative h-full rounded-xl   bg-white/30 backdrop-blur-md">
 						<div className="absolute inset-0 -z-10 overflow-hidden">
 							<svg

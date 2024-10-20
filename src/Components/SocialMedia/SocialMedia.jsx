@@ -2,10 +2,10 @@ import { React } from "react";
 export const SocialMedia = () => {
 	return (
 		<div className="my-20 mx-4">
-			<div className="lg:col-span-4 ">
-				<h2 className="text-base font-semibold leading-7 text-sky-800">Nuestras Redes Sociales</h2>
-				<p className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
-					No esperes mas, comienza a seguirnos...
+			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
+				<h2 className="text-base font-semibold leading-7 text-sky-600">Nuestras Redes Sociales</h2>
+				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+					No esperes mas, comienza a seguirnos
 				</p>
 			</div>
 			<div className=" items-center mt-10  z-20 justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
