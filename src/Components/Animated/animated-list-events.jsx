@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { AnimatedList } from "../ui/animated-list";
+import { AnimatedList } from "../Ui/animated-list";
 import {
 	CheckCircle,
 	Container,

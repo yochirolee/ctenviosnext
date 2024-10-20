@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BlurFade from "../ui/blur-fade";
+import BlurFade from "../Ui/blur-fade";
 
 const images = ["/slider4.webp", "/truck.webp", "/happy_cuban.webp", "/ship2.jpg"];
 

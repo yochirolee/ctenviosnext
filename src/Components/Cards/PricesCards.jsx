@@ -1,6 +1,5 @@
-"use client";
 import { CheckIcon } from "@heroicons/react/20/solid";
-import { BorderBeam } from "../ui/border-beam";
+import { BorderBeam } from "../Ui/border-beam";
 
 const tiers = [
 	{
