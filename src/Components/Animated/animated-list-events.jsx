@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/lib/utils";
 import { AnimatedList } from "../ui/animated-list";
 import {
@@ -102,7 +100,7 @@ const Notification = ({ name, description, icon, color, time }) => {
 
 export const AnimatedListEvents = ({ className }) => {
 	return (
-		<div className="relative flex h-[500px] w-full flex-col p-6 overflow-hidden ">
+		<div className="relative flex h-[500px] w-full flex-col p-6 overflow-hidden l">
 			<AnimatedList>
 				{extendedEvents.map((item, idx) => (
 					<Notification {...item} key={idx} />

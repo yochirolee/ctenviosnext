@@ -3,7 +3,6 @@ import { MapPinIcon } from "lucide-react";
 import { AnimatedListEvents } from "@/Components/Animated/animated-list-events";
 import { SphereMask } from "@/Components/Animated/sphere-mask";
 import ShimmerButton from "../../Components/ui/shimmer-button";
-import Ripple from "@/Components/ui/ripple";
 
 export const ShadowBg1 = () => {
 	return (
