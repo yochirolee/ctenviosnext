@@ -1,6 +1,5 @@
-
 import { CheckIcon } from "@heroicons/react/20/solid";
-import BlurFade from "../Ui/blur-fade";
+import BlurFade from "../ui/blur-fade";
 
 const tiers = [
 	{
@@ -40,8 +39,7 @@ function classNames(...classes) {
 
 export default function PriceCards() {
 	return (
-		<div className="relative isolate bg-white px-6 pb-24 sm:pb-32 lg:px-8">
-			
+		<div className="relative isolate bg-white px-6 p py-20 sm:py-24 lg:py-32 lg:px-8">
 			<div
 				aria-hidden="true"
 				className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"

@@ -1,7 +1,7 @@
 import { React } from "react";
 export const SocialMedia = () => {
 	return (
-		<div className="my-20 mx-4">
+		<div className=" py-20 sm:py-24 lg:py-32 mx-4">
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">Nuestras Redes Sociales</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">

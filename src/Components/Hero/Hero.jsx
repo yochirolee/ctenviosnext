@@ -7,7 +7,7 @@ export const Hero = () => {
 	return (
 		<>
 			<ShadowBg1 />
-			<div className="grid  lg:grid-flow-col lg:grid-cols-2 gap-20  items-center     py-32  ">
+			<div className="grid  lg:grid-flow-col lg:grid-cols-2 gap-20  items-center   py-20 sm:py-24 lg:py-32  ">
 				<HeroLeft />
 				<HeroRight />
 			</div>

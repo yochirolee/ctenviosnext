@@ -3,7 +3,7 @@ export const Faq = () => {
 	return (
 		<div
 			id="faq"
-			className=" py-16 sm:py-24 lg:py-32 mx-4   grid grid-cols-1 gap-x-14 gap-y-16  lg:grid-cols-12"
+			className="  py-20 sm:py-24 lg:py-32 mx-4   grid grid-cols-1 gap-x-14 gap-y-16  lg:grid-cols-12"
 		>
 			<div className="lg:col-span-4">
 				<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">

@@ -1,7 +1,7 @@
-import BlurFade from "../Ui/blur-fade";
-import Meteors from "../Ui/meteors";
-import NumberTicker from "../Ui/number-ticker";
-import Ripple from "../Ui/ripple";
+import BlurFade from "../ui/blur-fade";
+import Meteors from "../ui/meteors";
+import NumberTicker from "../ui/number-ticker";
+import Ripple from "../ui/ripple";
 
 const stats = [
 	{ id: 1, name: "Enviados en el 2023", description: "Contenedores", value: 48 },
@@ -11,7 +11,7 @@ const stats = [
 
 export const Stats = () => {
 	return (
-		<div className="sm:py-24 lg:py-32">
+		<div className=" py-20 sm:py-24 lg:py-32">
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">
 					Paquetes Entregados y Clientes

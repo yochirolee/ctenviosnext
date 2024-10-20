@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ArrowRightCircleIcon, MapPinIcon } from "lucide-react";
-import AnimatedShinyText from "../Ui/animated-shiny-text";
+import AnimatedShinyText from "../ui/animated-shiny-text";
 import Link from "next/link";
 
 export async function AnimatedShinyTextDemo() {

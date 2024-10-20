@@ -3,7 +3,7 @@ import { MapPinIcon } from "lucide-react";
 import { AnimatedListEvents } from "@/Components/Animated/animated-list-events";
 import { SphereMask } from "@/Components/Animated/sphere-mask";
 import ShimmerButton from "../../Components/ui/shimmer-button";
-import Ripple from "@/Components/Ui/ripple";
+import Ripple from "@/Components/ui/ripple";
 
 export const ShadowBg1 = () => {
 	return (
@@ -65,7 +65,7 @@ export const ShadowBg2 = () => {
 
 export default function TrackingSection() {
 	return (
-		<section className=" relative  sm:py-24 lg:py-32">
+		<section className=" relative   py-20 sm:py-24 lg:py-32">
 			<div className="mx-auto sm:py-24 lg:py-32 lg:container lg:max-w-7xl ">
 				<div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
 					<div className=" relative mx-auto px-4 text-center  ">
