@@ -7,26 +7,17 @@ import { Hero } from "@/Components/Hero/Hero";
 import NewsLetter from "@/Components/Newsletter/Newsletter";
 import { SocialMedia } from "@/Components/SocialMedia/SocialMedia";
 import { Stats } from "@/Components/Stats/Stats";
+import TrackingSection from "./sections/tracking-section";
+import PriceCards from "@/Components/Cards/PricesCards";
 
 export default function Home() {
 	return (
 		<main>
 			<Hero />
 
-			<div className="grid align-top mx-auto p-4  justify-center pb-20  lg:px-46 lg:grid-cols-3 gap-10   ">
-				<div className="lg:col-span-4">
-					<h2 className="text-base font-semibold leading-7 text-sky-700">
-						Nuestros Principales Servicios
-					</h2>
-					<p className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
-						Envios de Duraderos, Miscelaneas y Medicinas...
-					</p>
-				</div>
-				<DuraderosCard />
-				<MiscelaneasCard />
-				<MedicinasCard />
-			</div>
-		
+			<PriceCards />
+
+			<TrackingSection />
 			<Stats />
 			<TrackingContent />
 			<SocialMedia />

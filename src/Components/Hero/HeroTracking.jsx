@@ -1,6 +1,6 @@
 "use client";
 import { React, useRef, useState } from "react";
-import { ShadowBg1, ShadowBg2 } from "../Ui/ShadowBg1";
+import { ShadowBg1, ShadowBg2 } from "../ui/ShadowBg1";
 import { MagnifyingGlassIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { TrackingDetails } from "../TrackingDetails/TrackingDetails";
 import { useFetchByInvoiceOrHBL } from "@/Hooks/useFetchByInvoiceOrHBL";

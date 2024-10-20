@@ -7,10 +7,35 @@ import QueryProvider from "@/Utils/Providers/QueryProvider";
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
-	title: "CTEnvios - Envios a Cuba",
-	description: "Envios de alimentos, medicinas y miscelaneas a Cuba",
+	title: "CTEnvios - Envios a Cuba | Alimentos, Medicinas y Miscelaneas",
+	description:
+		"Servicio confiable de envíos de alimentos, medicinas y misceláneas a Cuba. Rápido, seguro y económico. ¡Haz tu envío hoy!",
+	icons: {
+		icon: "/ctelogo.ico",
+		shortcut: "/ctelogo.ico",
+		apple: "/ctelogo.ico",
+	},
+	openGraph: {
+		title: "CTEnvios - Envios a Cuba | Alimentos, Medicinas y Miscelaneas",
+		description: "Agencia de Envios a Cuba.",
+		type: "website",
+		url: "https://www.ctenvios.com",
+		images: [
+			{
+				url: "/og-image.jpg",
+				width: 1200,
+				height: 630,
+				alt: "CTEnvios - Envios a Cuba",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "CTEnvios - Envios a Cuba | Alimentos, Medicinas y Miscelaneas",
+		description: "Agencia de Envios a Cuba. Rápido, seguro y económico.",
+		images: ["/twitter-image.jpg"],
+	},
 };
 
 export default function RootLayout({ children }) {
@@ -29,10 +54,7 @@ export default function RootLayout({ children }) {
                           gtag('config', 'AW-11165948511');
                         `}
 				</Script> */}
-				<Head>
-					<title>{metadata.title}</title>
-					<link rel="icon" href="/images/ctelogo.ico" sizes="any" />
-				</Head>
+				
 
 				<div className="relative isolate pt-4 max-w-7xl mx-auto  sm:px-6 lg:pt-14 lg:px-8">
 					<QueryProvider>
