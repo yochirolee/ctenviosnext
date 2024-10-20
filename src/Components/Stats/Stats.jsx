@@ -11,8 +11,8 @@ const stats = [
 
 export const Stats = () => {
 	return (
-		<div className=" py-20 sm:py-24 lg:py-32">
-			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
+		<div className=" ">
+			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl mb-10">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">
 					Paquetes Entregados y Clientes
 				</h2>
@@ -21,13 +21,12 @@ export const Stats = () => {
 				</p>
 			</div>
 			<BlurFade delay={0.5 * 0.5} inView>
-				<p className="mt-6 text-lg leading-8 text-gray-600"></p>
-				<div className="relative flex md:grid md:grid-cols-3 h-[500px] w-full flex-col items-center justify-center overflow-hidden ">
+				<div className="relative grid items-center  md:grid-cols-3 my-10 md:my-0 h-[500px] w-full flex-col  overflow-hidden ">
 					{stats.map((stat) => (
-						<div key={stat.id} className="mx-auto px-4 flex max-w-xs flex-col gap-y-4">
+						<div key={stat.id} className="flex flex-col items-center lg:gap-10 ">
 							<div className="text-xl leading-7 text-gray-600">{stat.description}</div>
-							<div className="text-base leading-7 text-gray-600">{stat.name}</div>
-							<div className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+							<div className="text-2xl leading-7 text-gray-600">{stat.name}</div>
+							<div className="order-first text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 								<NumberTicker value={stat.value} />
 							</div>
 						</div>
