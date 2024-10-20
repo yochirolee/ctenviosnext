@@ -2,7 +2,7 @@ import { React } from "react";
 import { MdWhatsapp } from "react-icons/md";
 export const Footer = () => {
 	return (
-		<div className="Namecontainer text-center mx-auto py-24">
+		<div className="Namecontainer text-center mx-auto pt-10">
 			<div className="h-12 inline-flex gap-8 p-10 ">
 				<a href="https://www.facebook.com/people/CTEnvios/100087529462450/" className="w-8 h-8">
 					<span className="sr-only">Facebook</span>

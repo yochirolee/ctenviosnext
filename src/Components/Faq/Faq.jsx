@@ -16,7 +16,7 @@ export const Faq = () => {
 			<div className="-mb-4 space-y-12 lg:col-span-8 xl:col-span-7 xl:col-start-6">
 				<section>
 					<h3 className="text-sm font-semibold leading-7 text-slate-400">General</h3>
-					<dl className="mt-2 divide-y divide-slate-100">
+					<div className="mt-2 divide-y divide-slate-100">
 						<details className="group py-4 ">
 							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
 								Que tiempo demora un Envio?
@@ -91,11 +91,11 @@ export const Faq = () => {
 								</div>
 							</div>
 						</details>
-					</dl>
+					</div>
 				</section>
 				<section>
 					<h3 className="text-sm font-semibold leading-7 text-slate-400">Aduana</h3>
-					<dl className="mt-2 divide-y divide-slate-100">
+					<div className="mt-2 divide-y divide-slate-100">
 						<details className="group py-4 ">
 							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
 								Que es un Envio Regular?
@@ -177,7 +177,7 @@ export const Faq = () => {
 								</div>
 							</div>
 						</details>
-					</dl>
+					</div>
 				</section>
 			</div>
 		</div>
