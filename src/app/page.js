@@ -1,6 +1,3 @@
-import { DuraderosCard } from "@/Components/Cards/DuraderosCard";
-import { MedicinasCard } from "@/Components/Cards/MedicinasCard";
-import { MiscelaneasCard } from "@/Components/Cards/MiscelaneasCard";
 import { TrackingContent } from "@/Components/Content/TrackingContent";
 import { Faq } from "@/Components/Faq/Faq";
 import { Hero } from "@/Components/Hero/Hero";
@@ -14,9 +11,7 @@ export default function Home() {
 	return (
 		<main>
 			<Hero />
-
 			<PriceCards />
-
 			<TrackingSection />
 			<Stats />
 			<TrackingContent />
