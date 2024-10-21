@@ -56,7 +56,7 @@ const faqSections = [
 
 export default function Faq() {
 	return (
-		<div className="py-20 mx-4 sm:py-24 lg:py-32 items-center  grid lg:grid-cols-2 gap-10">
+		<div id="faq" className="py-20 mx-4 sm:py-24 lg:py-32 items-center  grid lg:grid-cols-2 gap-10">
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">Preguntas Frecuentes</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
