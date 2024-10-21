@@ -24,7 +24,11 @@ const products = [
 			"Neumaticos: 120/70-12",
 		],
 
-		images: ["/bikes/e1/e1-1.webp", "/bikes/e1/e1-2.webp", "/bikes/e1/e1-3.webp"],
+		images: [
+			"/bikes/e1/e1-1.webp?height=150&width=150",
+			"/bikes/e1/e1-2.webp?height=150&width=150",
+			"/bikes/e1/e1-3.webp?height=150&width=150",
+		],
 	},
 	{
 		name: "Scorpion E2",
