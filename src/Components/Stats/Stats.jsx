@@ -24,7 +24,7 @@ export const Stats = () => {
 				<div className="relative grid items-center  md:grid-cols-3 my-10 md:my-0 h-[500px] w-full flex-col  overflow-hidden ">
 					{stats.map((stat) => (
 						<div key={stat.id} className="flex flex-col items-center lg:gap-10 ">
-							<div className="text-xl leading-7 text-gray-600">{stat.description}</div>
+							<div className="text-xl leading-7 text-sky-600">{stat.description}</div>
 							<div className="text-2xl leading-7 text-gray-600">{stat.name}</div>
 							<div className="order-first text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 								<NumberTicker value={stat.value} />
