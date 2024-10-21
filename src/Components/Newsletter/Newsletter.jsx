@@ -80,9 +80,7 @@ export default function NewsLetter() {
 								promocionales?
 							</span>
 						</div>
-						<Button className="w-40 mx-auto bg-white/5 p-2 ring-1 ring-white/10 hover:bg-white/10">
-							Unirse
-						</Button>
+						<Button>Unirse</Button>
 					</div>
 					<dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
 						<div className="flex flex-col items-start">
