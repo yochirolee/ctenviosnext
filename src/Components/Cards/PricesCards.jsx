@@ -39,7 +39,7 @@ function classNames(...classes) {
 
 export default function PriceCards() {
 	return (
-		<div className="relative isolate bg-white px-6 p py-12 lg:px-8">
+		<div className="relative isolate bg-white px-6 p pt-4 pb-12 lg:px-8">
 			<div
 				aria-hidden="true"
 				className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
