@@ -59,7 +59,7 @@ const faqSections = [
 	},
 ];
 
-export function Faq() {
+export default function Faq() {
 	return (
 		<div className="py-20 sm:py-24 lg:py-32 items-center  grid lg:grid-cols-2 gap-10">
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
