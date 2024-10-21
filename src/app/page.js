@@ -17,6 +17,7 @@ export default function Home() {
 			<Stats />
 			<TrackingContent />
 			<SocialMedia />
+
 			<Faq />
 			<NewsLetter />
 		</main>
