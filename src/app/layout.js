@@ -8,33 +8,58 @@ import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
-	title: "CTEnvios - Envios a Cuba | Alimentos, Medicinas y Miscelaneas",
+	title: "CTEnvios - Envíos a Cuba Rápidos y Confiables",
 	description:
-		"Servicio confiable de envíos de alimentos, medicinas y misceláneas a Cuba. Rápido, seguro y económico. ¡Haz tu envío hoy!",
+		"CTEnvios ofrece servicios de envío a Cuba seguros y económicos. Envía paquetes  y más a tus seres queridos en Cuba.",
+	generator: "Next.js",
+	applicationName: "CTEnvios",
+	referrer: "origin-when-cross-origin",
+	keywords: [
+		"Envíos a Cuba",
+		"Paquetes a Cuba",
+		"Remesas a Cuba",
+		"Envío maritimo y aereo a Cuba",
+		"Servicios de mensajería a Cuba",
+		"Agencia de envios  a Cuba",
+		"Autos, Carros  para Cuba",
+		"Motos para Cuba",
+	],
+	authors: [{ name: "CTEnvios Team" }],
+	creator: "CTEnvios",
+	publisher: "CTEnvios",
 	icons: {
 		icon: "/ctelogo.ico",
 		shortcut: "/ctelogo.ico",
 		apple: "/ctelogo.ico",
 	},
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
 	openGraph: {
-		title: "CTEnvios - Envios a Cuba | Alimentos, Medicinas y Miscelaneas",
-		description: "Agencia de Envios a Cuba.",
-		type: "website",
+		title: "CTEnvios - Envíos a Cuba Rápidos y Confiables",
+		description:
+			"Servicios de envío a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
 		url: "https://www.ctenvios.com",
+		siteName: "CTEnvios",
 		images: [
 			{
-				url: "/og-image.jpg",
+				url: "https://www.ctenvios.com/og-image.jpg",
 				width: 1200,
 				height: 630,
-				alt: "CTEnvios - Envios a Cuba",
+				alt: "CTEnvios - Envíos a Cuba",
 			},
 		],
+		locale: "es_ES",
+		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "CTEnvios - Envios a Cuba | Alimentos, Medicinas y Miscelaneas",
-		description: "Agencia de Envios a Cuba. Rápido, seguro y económico.",
-		images: ["/twitter-image.jpg"],
+		title: "CTEnvios - Envíos a Cuba Rápidos y Confiables",
+		description:
+			"Servicios de envío a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
+		images: ["https://www.ctenvios.com/twitter-image.jpg"],
 	},
 };
 
@@ -54,7 +79,6 @@ export default function RootLayout({ children }) {
                           gtag('config', 'AW-11165948511');
                         `}
 				</Script> */}
-				
 
 				<div className="relative isolate pt-4 max-w-7xl mx-auto  sm:px-6 lg:pt-14 lg:px-8">
 					<QueryProvider>

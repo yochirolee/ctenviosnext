@@ -58,10 +58,6 @@ export default function PriceCards() {
 					El mejor Precio del Mercado
 				</p>
 			</div>
-			{/* <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
-				Envie via maritima con los precios mas competitivos del mercado en cuanto a Envios a Cuba se
-				trata.
-			</p> */}
 
 			<div className="mx-auto mt-16 grid  max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
 				{tiers
