@@ -3,30 +3,30 @@ import BlurFade from "../ui/blur-fade";
 
 const tiers = [
 	{
-		name: "Maritimo",
+		name: "Marítimo",
 		id: "tier-hobby",
 		href: "#",
 		priceMonthly: "$1.99",
 		description:
-			"El precio y el plan perfecto para enviar a Cuba, Ahorra en los articulos de gran volumen y peso",
+			"El precio y el plan perfecto para enviar a Cuba. Ahorra en los artículos de gran volumen y peso",
 		features: [
 			"Entregas en Toda la Isla",
-			"Sitema de Tracking en Tiempo Real",
-			"Atencion al Cliente 24/7 mediante Whatsapp",
+			"Sistema de Tracking en Tiempo Real",
+			"Atención al Cliente 24/7 mediante WhatsApp",
 		],
 		featured: false,
 	},
 	{
-		name: "Aereo - Coming soon",
+		name: "Aéreo - Próximamente",
 		id: "tier-enterprise",
 		href: "#",
 		priceMonthly: "$2.29",
 		description:
-			"El envio aereo estara disponible pronto, como parte de los cambios y mejoras que estamos realizando.",
+			"El envío aéreo estará disponible pronto, como parte de los cambios y mejoras que estamos realizando.",
 		features: [
-			"Envios de 3-5 dias a toda la Isla",
+			"Envíos de 3-5 días a toda la Isla",
 			"Sistema de Tracking en Tiempo Real",
-			"Atencion al Cliente 24/7 mediante Whatsapp",
+			"Atención al Cliente 24/7 mediante WhatsApp",
 			"Vuelos programados todas las Semanas",
 		],
 		featured: true,

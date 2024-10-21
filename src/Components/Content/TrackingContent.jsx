@@ -40,10 +40,10 @@ export const TrackingContent = () => {
 					<div className="lg:pr-4">
 						<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 							<h2 className="text-base font-semibold leading-7 text-sky-600">
-								Envie Rapido y Seguro
+								Envíe Rápido y Seguro
 							</h2>
 							<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-								CTEnvios a Cuba y el Caribe
+								CTEnvíos a Cuba y el Caribe
 							</p>
 						</div>
 					</div>
@@ -54,7 +54,7 @@ export const TrackingContent = () => {
 						className="w-[48rem]   max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
 						height={800}
 						width={800}
-						alt="Familia Cubana, Envios"
+						alt="Familia Cubana, Envíos"
 					/>
 				</div>
 				<div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -72,17 +72,17 @@ export const TrackingContent = () => {
 									<HomeIcon className="mt-1 h-5 w-5 flex-none text-sky-600" aria-hidden="true" />
 									<span>
 										<strong className="font-semibold text-gray-900">
-											Entregas Puerta de Casa.
-										</strong>
-										Todos sus Paquetes seran entregados en la puerta de su casa o su Familiar.
+											Entregas Puerta a Casa.
+										</strong>{" "}
+										Todos sus Paquetes serán entregados en la puerta de su casa o su Familiar.
 									</span>
 								</li>
 								<li className="flex gap-x-3">
 									<ClockIcon className="mt-1 h-5 w-5 flex-none text-sky-600" aria-hidden="true" />
 									<span>
 										<strong className="font-semibold text-gray-900">
-											Informacion en tiempo real.
-										</strong>
+											Información en tiempo real.
+										</strong>{" "}
 										Puede rastrear su paquete en tiempo real desde su celular o computadora.
 									</span>
 								</li>
@@ -92,14 +92,14 @@ export const TrackingContent = () => {
 										aria-hidden="true"
 									/>
 									<span>
-										<strong className="font-semibold text-gray-900">Garantia y Seguridad.</strong>{" "}
-										Con nosotros todos sus paquetes estan asegurados y garantizados.
+										<strong className="font-semibold text-gray-900">Garantía y Seguridad.</strong>{" "}
+										Con nosotros todos sus paquetes están asegurados y garantizados.
 									</span>
 								</li>
 							</ul>
 							<p className="mt-8">
 								No solo ofrecemos un servicio de envío, sino una experiencia completa. Valoramos la
-								confianza que depositan en nosotros al elegirnos para sus envíos a Cuba
+								confianza que depositan en nosotros al elegirnos para sus envíos a Cuba.
 							</p>
 						</div>
 					</div>

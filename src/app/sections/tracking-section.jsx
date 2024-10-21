@@ -73,7 +73,7 @@ export default function TrackingSection() {
 								Sistema de Tracking
 							</h2>
 							<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-								Conozca en todo momento donde se encuentra su envio
+								Conozca en todo momento dónde se encuentra su envío
 							</p>
 						</div>
 

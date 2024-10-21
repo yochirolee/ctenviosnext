@@ -18,10 +18,10 @@ const products = [
 		price: 2092.0,
 		specs: [
 			"Cilindrada: 150cc",
-			"Vel Max: 85km/h",
+			"Vel Máx: 85km/h",
 			"Capacidad de Tanque: 6 Litros",
 			"Freno de Discos",
-			"Neumaticos: 120/70-12",
+			"Neumáticos: 120/70-12",
 		],
 
 		images: [
@@ -34,12 +34,12 @@ const products = [
 		name: "Scorpion E2",
 		price: 1983.0,
 		specs: [
-			"Cilindrada: 125cc",
-			"Vel Max: 80km/h",
-			"Capacidad de Tanque: 5 Litros",
-			"Freno de Discos",
-			"Neumaticos: 3.50-10",
-		],
+				"Cilindrada: 125cc",
+				"Vel Máx: 80km/h",
+				"Capacidad de Tanque: 5 Litros",
+				"Freno de Discos",
+				"Neumáticos: 3.50-10",
+			],
 		images: [
 			"/bikes/e2/e2-1.webp?height=150&width=150",
 			"/bikes/e2/e2-2.webp?height=150&width=150",
@@ -111,7 +111,7 @@ export default function FeaturedProducts() {
 			<div className="mx-auto p-10 max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">Reserve desde ya</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-					Ya puedes pre-reservar tu moto de gasolina desde Ahora!!!
+					Ya puedes pre-reservar tu moto de gasolina !!!
 				</p>
 			</div>
 

@@ -24,7 +24,7 @@ export default function NewsLetter() {
 			<Image
 				fill
 				src="/ship.webp"
-				alt="Ship Cuba Envios"
+				alt="Ship Cuba Envíos"
 				className="lg:block object-center object-cover absolute  -z-10 inset-0  bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
 			></Image>
 
@@ -32,14 +32,14 @@ export default function NewsLetter() {
 				<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
 					<div className="max-w-xl lg:max-w-lg">
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-							Unete a Nuestra Gran Familia.
+							Únete a Nuestra Gran Familia.
 						</h2>
 						<p className="mt-4 text-lg leading-8 text-white">
-							Mantengase Informado de nuestras noticias y promociones.
+							Manténgase Informado de nuestras noticias y promociones.
 						</p>
 						<div className="mt-6 flex max-w-md gap-x-4">
 							<label htmlFor="email-address" className="sr-only">
-								Phone
+								Correo electrónico
 							</label>
 							<input
 								id="email-address"
@@ -52,17 +52,17 @@ export default function NewsLetter() {
 							/>
 						</div>
 						<div className="mt-6 flex max-w-md gap-x-4">
-							<label htmlFor="email-address" className="sr-only">
-								Phone Number
+							<label htmlFor="phone" className="sr-only">
+								Número de teléfono
 							</label>
 							<input
 								id="phone"
 								name="phone"
-								type="phone"
-								autoComplete="phone"
+								type="tel"
+								autoComplete="tel"
 								required
 								className="min-w-0 flex-auto rounded-md border-0  px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-								placeholder="Entre su Telefono"
+								placeholder="Entre su Teléfono"
 							/>
 						</div>
 						<div className="flex items-center text-white gap-4 my-4">
@@ -76,7 +76,7 @@ export default function NewsLetter() {
 								Consentimiento para recibir emails y mensajes de texto informativos y promocionales
 							</label>
 							<span className="text-xs">
-								Ud esta de acuerdo en recibir emails y mensajes de textos informativos y
+								¿Usted está de acuerdo en recibir emails y mensajes de textos informativos y
 								promocionales?
 							</span>
 						</div>
@@ -89,7 +89,7 @@ export default function NewsLetter() {
 							</div>
 							<h2 className="mt-4 font-semibold text-white">Promociones y Noticias</h2>
 							<p className="mt-2 leading-7 text-white">
-								Mantengase al tanto de Nuestras Promociones, Eventos y Noticias
+								Manténgase al tanto de Nuestras Promociones, Eventos y Noticias
 							</p>
 						</div>
 						<div className="flex flex-col items-start">
@@ -98,7 +98,7 @@ export default function NewsLetter() {
 							</div>
 							<h2 className="mt-4 font-semibold text-white">No spam</h2>
 							<p className="mt-2 leading-7 text-white">
-								CTEnvios se compromete a no realizar Spam e informarle solo lo importante.
+								CTEnvíos se compromete a no realizar Spam e informarle solo lo importante.
 							</p>
 						</div>
 					</div>
