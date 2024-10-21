@@ -46,6 +46,7 @@ const products = [
 			"/bikes/e2/e2-3.webp?height=150&width=150",
 		],
 	},
+
 	{
 		name: "Scorpion E3",
 		price: 2389.0,
