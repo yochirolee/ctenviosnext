@@ -18,8 +18,9 @@ export const HeroRight = () => {
 						<Image
 							src="/slider4.webp"
 							className="lg:block  object-center object-cover"
-							height={300}
-							width={300}
+							fill
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							priority
 							alt="Envios a cuba"
 						/>
 					</motion.div>
@@ -28,8 +29,9 @@ export const HeroRight = () => {
 						<Image
 							src="/truck.webp"
 							className="  object-cover object-center"
-							height={200}
-							width={200}
+							fill
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							priority
 							alt="Track Entregas Cuba"
 						/>
 					</div>
@@ -43,8 +45,9 @@ export const HeroRight = () => {
 						<Image
 							src="/happy_cuban.webp"
 							className="lg:block overflow-hidden    object-cover object-center"
-							height={200}
-							width={200}
+							fill
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							loading="lazy"
 							alt="Familia Cubana, Envios"
 						/>
 					</motion.div>
