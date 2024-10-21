@@ -15,15 +15,12 @@ export const TrackingCard = ({ parcel, invoice }) => {
 				<div>
 					<div className="flex  gap-2 lg:gap-0 items-center justify-between">
 						<h1 className="text-xl my-6">{invoice?.agency}</h1>
-						<a
-							className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-slate-900 text-white hover:bg-slate-700"
-							href="/"
-						>
+						<span className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 border  bg-white/5  text-gray-700 ">
 							<span className="flex items-center gap-2">
 								<DocumentTextIcon className="h-6 w-6" />
 								<span aria-hidden="true">{invoice?.invoiceId}</span>
 							</span>
-						</a>
+						</span>
 					</div>
 					<div className="my-4 flex items-center">
 						<p className="text-[1.5rem] leading-none text-slate-900">
@@ -35,7 +32,7 @@ export const TrackingCard = ({ parcel, invoice }) => {
 					</div>
 					<span className="text-slate-500 mt-4">{parcel?.description}</span>
 				</div>
-				<TrackingHistoryCard events={parcel.events}  />
+				<TrackingHistoryCard events={parcel.events} />
 			</div>
 		</div>
 	);
