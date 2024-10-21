@@ -111,7 +111,7 @@ export default function FeaturedProducts() {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-2  md:grid-cols-3 gap-2 md:gap-6 ">
+			<div className="grid grid-cols-1  md:grid-cols-3 gap-6 md:gap-6 ">
 				{products.map((product, productIndex) => (
 					<Card key={productIndex} className="overflow-hidden shadow-md">
 						<Carousel className="w-full ">
