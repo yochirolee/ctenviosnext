@@ -6,12 +6,15 @@ import { SocialMedia } from "@/Components/SocialMedia/SocialMedia";
 import { Stats } from "@/Components/Stats/Stats";
 import TrackingSection from "./sections/tracking-section";
 import PriceCards from "@/Components/Cards/PricesCards";
+import FeaturedProducts from "./sections/feaured-products";
 
 export default function Home() {
 	return (
 		<main>
 			<Hero />
 			<PriceCards />
+
+			{/* <FeaturedProducts /> */}
 			<TrackingSection />
 			<Stats />
 			<TrackingContent />

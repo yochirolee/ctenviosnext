@@ -1,185 +1,90 @@
-import { React } from "react";
-export const Faq = () => {
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const faqSections = [
+	{
+		title: "Información General",
+		faqs: [
+			{
+				title: "¿Qué tiempo demora un envío?",
+				content:
+					"Generalmente nuestros envíos demoran de 30 a 45 días laborables. Este tiempo depende también de la provincia a la que se envíe, siendo las provincias orientales las que más tardamos en entregar.",
+				value: "general-1",
+			},
+			{
+				title: "¿Cuál es el peso máximo permitido para un paquete?",
+				content:
+					"El peso máximo permitido para un paquete es de 30 kg. Si su envío supera este peso, deberá dividirlo en varios paquetes.",
+				value: "general-2",
+			},
+		],
+	},
+	{
+		title: "Restricciones y Seguridad",
+		faqs: [
+			{
+				title: "¿Qué artículos están prohibidos para enviar?",
+				content:
+					"Está prohibido enviar artículos como drogas, armas, explosivos, materiales inflamables, animales vivos, dinero en efectivo y otros artículos ilegales o peligrosos. Por favor, consulte nuestra lista completa de artículos prohibidos antes de realizar su envío.",
+				value: "security-1",
+			},
+			{
+				title: "¿Ofrecen seguro para los envíos?",
+				content:
+					"Sí, ofrecemos opciones de seguro para sus envíos. El costo del seguro varía según el valor declarado del contenido del paquete. Recomendamos asegurar todos los envíos de alto valor para su tranquilidad.",
+				value: "security-2",
+			},
+		],
+	},
+	{
+		title: "Seguimiento y Resolución de Problemas",
+		faqs: [
+			{
+				title: "¿Cómo puedo rastrear mi paquete?",
+				content:
+					"Puede rastrear su paquete utilizando el número de seguimiento proporcionado en el momento del envío. Ingrese este número en la sección de 'Rastreo' de nuestra página web o aplicación móvil para obtener actualizaciones sobre el estado de su envío.",
+				value: "tracking-1",
+			},
+			{
+				title: "¿Qué hago si mi paquete se pierde o se daña?",
+				content:
+					"En caso de pérdida o daño de su paquete, por favor contáctenos inmediatamente. Tenemos un proceso de reclamación que debe iniciarse dentro de los 15 días posteriores a la fecha estimada de entrega. Asegúrese de guardar todos los recibos y documentación relacionada con su envío.",
+				value: "tracking-2",
+			},
+		],
+	},
+];
+
+export function Faq() {
 	return (
-		<div
-			id="faq"
-			className="  py-20 sm:py-24 lg:py-32 mx-4   grid grid-cols-1 gap-x-14 gap-y-16  lg:grid-cols-12"
-		>
-			<div className="lg:col-span-4">
-				<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-					<h2 className="text-base font-semibold leading-7 text-sky-600">Preguntas Frecuentes</h2>
-					<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-						Todo lo que necesitas saber
-					</p>
-				</div>
+		<div className="py-20 sm:py-24 lg:py-32 items-center  grid lg:grid-cols-2 gap-10">
+			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
+				<h2 className="text-base font-semibold leading-7 text-sky-600">Preguntas Frecuentes</h2>
+				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+					Todo lo que debe Conocer..
+				</p>
 			</div>
-			<div className="-mb-4 space-y-12 lg:col-span-8 xl:col-span-7 xl:col-start-6">
-				<section>
-					<h3 className="text-sm font-semibold leading-7 text-slate-400">General</h3>
-					<div className="mt-2 divide-y divide-slate-100">
-						<details className="group py-4 ">
-							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Que tiempo demora un Envio?
-								<svg
-									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<path d="M18 12H6"></path>
-									<path className="group-open:hidden" d="M12 6v12"></path>
-								</svg>
-							</summary>
-							<div className="pb-6 pt-6">
-								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
-									<p>
-										Generalmente nuestros envios demoran de
-										<strong>30 - 45 dias laborables</strong>. Este tiempo depende tambien de la
-										provincia a la que envie, siendo las provincias orientales las que mas tardamos
-										en entregar.
-									</p>
-								</div>
-							</div>
-						</details>
-						<details className="group py-4 ">
-							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Entregan a Domicilio?
-								<svg
-									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<path d="M18 12H6"></path>
-									<path className="group-open:hidden" d="M12 6v12"></path>
-								</svg>
-							</summary>
-							<div className="pb-6 pt-6">
-								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
-									<p>
-										<strong>Si</strong>. Todos sus envios son entregados en la puerta del
-										destinatario en Cuba
-									</p>
-								</div>
-							</div>
-						</details>
-						<details className="group py-4 ">
-							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Si envio Miscelaneas mi familia o destinatario debe pagar algo al recibirlas?
-								<svg
-									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<path d="M18 12H6"></path>
-									<path className="group-open:hidden" d="M12 6v12"></path>
-								</svg>
-							</summary>
-							<div className="pb-6 pt-6">
-								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
-									<p>
-										<strong>No</strong>. Todas las miscelaneas enviadas con Nuestra Agencia son
-										libre de costo en Cuba. La persona que recibe no debe abonar nada
-									</p>
-								</div>
-							</div>
-						</details>
+			<div>
+				{faqSections.map((section, sectionIndex) => (
+					<div key={sectionIndex} className="mb-10">
+						<h2 className=" cursor-pointer  text-left text-base font-semibold leading-7 text-sky-700">
+							{section.title}
+						</h2>
+						<Accordion type="single" collapsible>
+							{section.faqs.map((faq, faqIndex) => (
+								<AccordionItem key={faqIndex} value={faq.value}>
+									<AccordionTrigger>{faq.title}</AccordionTrigger>
+									<AccordionContent>{faq.content}</AccordionContent>
+								</AccordionItem>
+							))}
+						</Accordion>
 					</div>
-				</section>
-				<section>
-					<h3 className="text-sm font-semibold leading-7 text-slate-400">Aduana</h3>
-					<div className="mt-2 divide-y divide-slate-100">
-						<details className="group py-4 ">
-							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Que es un Envio Regular?
-								<svg
-									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<path d="M18 12H6"></path>
-									<path className="group-open:hidden" d="M12 6v12"></path>
-								</svg>
-							</summary>
-							<div className="pb-6 pt-6">
-								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
-									<p>
-										Un envío regular se refiere a los bienes que se envían al país a través de los
-										servicios regulares de transporte de mercancías, como navieras, aerolíneas o
-										empresas de transporte terrestre.
-									</p>
-								</div>
-							</div>
-						</details>
-						<details className="group py-4 ">
-							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Que es un ENA?
-								<svg
-									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<path d="M18 12H6"></path>
-									<path className="group-open:hidden" d="M12 6v12"></path>
-								</svg>
-							</summary>
-							<div className="pb-6 pt-6">
-								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
-									<p>
-										ENA o <strong>Equipaje no Acompañado</strong>. Se refiere a los bienes y efectos
-										personales que llegan al territorio cubano en un momento diferente al del
-										viajero que los importa, en un limite de tiempo de un año natural
-									</p>
-								</div>
-							</div>
-						</details>
-						<details className="group py-4 ">
-							<summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-600 ">
-								Algunas disposiciones Aduanales de Interes.
-								<svg
-									className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-blue-500"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<path d="M18 12H6"></path>
-									<path className="group-open:hidden" d="M12 6v12"></path>
-								</svg>
-							</summary>
-							<div className="pb-6 pt-6">
-								<div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-blue-600 hover:prose-a:text-blue-500">
-									<p>
-										Los bienes que ingresan al territorio cubano están sujetos a la revisión y
-										control de las autoridades aduaneras. Los viajeros que ingresan a Cuba están
-										sujetos a una serie de límites en la cantidad y valor de los bienes que pueden
-										traer consigo. Los bienes que se exportan de Cuba también están sujetos a las
-										regulaciones y procedimientos aduaneros, incluyendo la necesidad de obtener
-										permisos y autorizaciones para la exportación de ciertos bienes. La ley aduanal
-										cubana establece las sanciones aplicables en caso de infracciones aduaneras, que
-										pueden incluir multas, confiscación de bienes y en algunos casos, incluso la
-										privación de libertad.
-									</p>
-								</div>
-							</div>
-						</details>
-					</div>
-				</section>
+				))}
 			</div>
 		</div>
 	);
-};
+}
