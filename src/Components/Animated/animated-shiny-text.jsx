@@ -15,12 +15,13 @@ export async function AnimatedShinyTextDemo() {
 					<Link
 						href="https://www.google.com/maps/place/CTEnvios.+Envios+a+Cuba/@25.8675816,-80.3278302,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x88d9bb702273d979:0x35fce58bb3908f86!2sCTEnvios.+Envios+a+Cuba!8m2!3d25.8675804!4d-80.3271865!16s%2Fg%2F11kjzkr9zf!3m5!1s0x88d9bb702273d979:0x35fce58bb3908f86!8m2!3d25.8675804!4d-80.3271865!16s%2Fg%2F11kjzkr9zf?hl=es-419"
 						className="font-semibold text-indigo-600"
+						aria-label="Ver ubicación en Google Maps"
 					>
 						<span className="absolute inset-0" aria-hidden="true" />
-
 						<span aria-hidden="true">
 							<MapPinIcon className="h-6 w-6" />
 						</span>
+						<span className="sr-only">Ver en Google Maps</span>
 					</Link>
 				</AnimatedShinyText>
 			</div>

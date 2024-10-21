@@ -6,18 +6,24 @@ import { Stats } from "@/Components/Stats/Stats";
 import TrackingSection from "./sections/tracking-section";
 import PriceCards from "@/Components/Cards/PricesCards";
 import Faq from "@/Components/Faq/Faq";
+import dynamic from "next/dynamic";
+
+const FeaturedProducts = dynamic(() => import("./sections/feaured-products"), {
+	loading: () => <p>Loading featured products...</p>,
+	ssr: true,
+});
 
 export default function Home() {
 	return (
 		<main>
 			<Hero />
 			<PriceCards />
-			{/* <FeaturedProducts /> */}
+			<FeaturedProducts />
 			<TrackingSection />
 			<Stats />
 			<TrackingContent />
 			<SocialMedia />
-			<Faq/>
+			<Faq />
 			<NewsLetter />
 		</main>
 	);

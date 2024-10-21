@@ -82,26 +82,26 @@ export default function NewsLetter() {
 						</div>
 						<Button>Unirse</Button>
 					</div>
-					<dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+					<div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
 						<div className="flex flex-col items-start">
 							<div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
 								<CalendarDaysIcon className="h-6 w-6 text-white" aria-hidden="true" />
 							</div>
-							<dt className="mt-4 font-semibold text-white">Promociones y Noticias</dt>
-							<dd className="mt-2 leading-7 text-white">
+							<h2 className="mt-4 font-semibold text-white">Promociones y Noticias</h2>
+							<p className="mt-2 leading-7 text-white">
 								Mantengase al tanto de Nuestras Promociones, Eventos y Noticias
-							</dd>
+							</p>
 						</div>
 						<div className="flex flex-col items-start">
 							<div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
 								<HandRaisedIcon className="h-6 w-6 text-white" aria-hidden="true" />
 							</div>
-							<dt className="mt-4 font-semibold text-white">No spam</dt>
-							<dd className="mt-2 leading-7 text-white">
+							<h2 className="mt-4 font-semibold text-white">No spam</h2>
+							<p className="mt-2 leading-7 text-white">
 								CTEnvios se compromete a no realizar Spam e informarle solo lo importante.
-							</dd>
+							</p>
 						</div>
-					</dl>
+					</div>
 				</div>
 			</div>
 			<div
