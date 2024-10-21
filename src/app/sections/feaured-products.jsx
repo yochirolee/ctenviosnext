@@ -1,15 +1,15 @@
 import * as React from "react";
 import Image from "next/image";
 
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "../../Components/ui/card";
 import {
 	Carousel,
 	CarouselContent,
 	CarouselItem,
 	CarouselNext,
 	CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Button } from "@/Components/ui/button";
+} from "../../Components/ui/carousel";
+import { Button } from "../../Components/ui/button";
 import { CheckIcon } from "lucide-react";
 
 const products = [
