@@ -1,18 +1,23 @@
 "use client";
-import { React, useRef, useState } from "react";
+import { React, useState } from "react";
 import { ShadowBg1, ShadowBg2 } from "../ui/ShadowBg1";
 import { MagnifyingGlassIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { TrackingDetails } from "../TrackingDetails/TrackingDetails";
 import { useFetchByInvoiceOrHBL } from "@/Hooks/useFetchByInvoiceOrHBL";
 
 export const HeroTracking = () => {
-	const searchInputRef = useRef("");
-	const [searchTerm, setSearchTerm] = useState(null);
+	const [searchTerm, setSearchTerm] = useState("");
 	const { data: invoice, isLoading, isError } = useFetchByInvoiceOrHBL(searchTerm);
+	const [hasSearched, setHasSearched] = useState(false);
 
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
-		setSearchTerm(searchInputRef.current.value);
+		const formData = new FormData(e.target);
+		const newSearchTerm = formData.get("search");
+		if (newSearchTerm !== searchTerm) {
+			setSearchTerm(newSearchTerm);
+			setHasSearched(true);
+		}
 	};
 
 	if (isError) {
@@ -28,7 +33,7 @@ export const HeroTracking = () => {
 						<div className=" flex flex-col gap-4 ">
 							<MapPinIcon
 								className={`w-16 h-16 mx-auto text-blue-500 ${
-									isLoading ? "animate-spin" : "animate-bounce"
+									hasSearched && isLoading ? "animate-spin" : "animate-bounce"
 								}`}
 							/>
 							<h2 className="mt-4 text-center text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
@@ -36,7 +41,7 @@ export const HeroTracking = () => {
 							</h2>
 						</div>
 
-						<form onSubmit={(e) => handleOnSubmit(e)}>
+						<form onSubmit={handleOnSubmit}>
 							<div className="mt-6 flex flex-col  md:flex-row  max-w-md gap-x-4">
 								<label htmlFor="search" className="sr-only">
 									Traking
@@ -47,7 +52,7 @@ export const HeroTracking = () => {
 									type="text"
 									autoComplete="text"
 									required
-									ref={searchInputRef}
+									defaultValue={searchTerm}
 									className="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2  shadow-sm ring-1 ring-inset ring-blue/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
 									placeholder="Buscar por Factura o HBL"
 								/>
@@ -57,7 +62,7 @@ export const HeroTracking = () => {
 									className=" inline-flex justify-center my-4 md:my-0 items-center gap-2 rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
 								>
 									<MagnifyingGlassIcon className="h-5 w-5" />
-									{isLoading ? "Buscando " : "Buscar"}
+									{hasSearched && isLoading ? "Buscando " : "Buscar"}
 								</button>
 							</div>
 						</form>

@@ -22,7 +22,7 @@ export const useFetchByInvoiceOrHBL = (id) => {
 	return useQuery({
 		queryKey: ["fetchProductByHBL", id],
 		queryFn: () => getProductData(id),
-
 		staleTime: 1000 * 60 * 5,
+		
 	});
 };

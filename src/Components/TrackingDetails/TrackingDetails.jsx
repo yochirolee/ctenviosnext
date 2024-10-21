@@ -1,15 +1,24 @@
-import { React } from "react";
+import React from "react";
 import { TrackingCard } from "../Cards/TrackingCard";
 
 export const TrackingDetails = ({ invoice }) => {
-	if (!invoice || invoice.length == 0) return;
+	// Early return if invoice is falsy or empty
+	if (!invoice || Object.keys(invoice).length === 0) {
+		return null;
+	}
+
+	const { parcels } = invoice;
+
+	// Early return if parcels is falsy or empty
+	if (!parcels || parcels.length === 0) {
+		return null;
+	}
 
 	return (
-		<div className="flex  flex-col  gap-4 max-w-2xl mx-auto ">
-			{invoice?.parcels &&
-				invoice?.parcels?.map((parcel, index) => (
-					<TrackingCard key={index} parcel={parcel} invoice={invoice} />
-				))}
+		<div className="flex flex-col gap-4 max-w-2xl mx-auto">
+			{parcels.map((parcel, index) => (
+				<TrackingCard key={`parcel-${index}`} parcel={parcel} invoice={invoice} />
+			))}
 		</div>
 	);
 };
