@@ -5,6 +5,7 @@ import { SocialMedia } from "@/Components/SocialMedia/SocialMedia";
 import { Stats } from "@/Components/Stats/Stats";
 import TrackingSection from "./sections/tracking-section";
 import PriceCards from "@/Components/Cards/PricesCards";
+import Faq from "@/Components/Faq/Faq";
 
 export default function Home() {
 	return (
@@ -16,7 +17,7 @@ export default function Home() {
 			<Stats />
 			<TrackingContent />
 			<SocialMedia />
-
+			<Faq/>
 			<NewsLetter />
 		</main>
 	);
