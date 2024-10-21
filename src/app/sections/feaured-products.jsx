@@ -120,14 +120,14 @@ export default function FeaturedProducts() {
 					<Card key={productIndex} className="overflow-hidden shadow-md">
 						<Carousel className="w-full ">
 							<CarouselContent>
-								{product.images.map((image, index) => (
+								{product?.images?.map((image, index) => (
 									<CarouselItem key={index}>
 										<Image
 											src={image}
 											alt={`${product.name} - Image ${index + 1}`}
 											width={150}
 											height={150}
-											className="w-full h-auto p-6 object-contain bg-gray-50 mb-2 rounded-t-md"
+											className="w-full h-60 p-6 object-contain bg-gray-50 mb-2 rounded-t-md"
 										/>
 									</CarouselItem>
 								))}
@@ -147,7 +147,7 @@ export default function FeaturedProducts() {
 							</div>
 							<div className="grid gap-2 border-t pt-4 items-center">
 								<ul className="gap-2 text-xs flex flex-col">
-									{product.specs.map((spec, index) => (
+									{product?.specs?.map((spec, index) => (
 										<li key={index} className="flex gap-x-3">
 											<CheckIcon aria-hidden="true" className="text-sky-600 h-6 w-5 flex-none" />
 											{spec}
