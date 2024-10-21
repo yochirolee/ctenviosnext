@@ -16,6 +16,7 @@ import { React } from "react";
 */
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 export default function NewsLetter() {
 	return (
@@ -65,18 +66,23 @@ export default function NewsLetter() {
 							/>
 						</div>
 						<div className="flex items-center text-white gap-4 my-4">
-							<input type="checkbox"></input>
+							<input
+								type="checkbox"
+								id="consent-checkbox"
+								name="consent"
+								aria-describedby="consent-description"
+							/>
+							<label htmlFor="consent-checkbox" id="consent-description" className="sr-only">
+								Consentimiento para recibir emails y mensajes de texto informativos y promocionales
+							</label>
 							<span className="text-xs">
 								Ud esta de acuerdo en recibir emails y mensajes de textos informativos y
 								promocionales?
 							</span>
 						</div>
-						<button
-							type="submit"
-							className="flex-none rounded-md bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-						>
-							Subscribe
-						</button>
+						<Button className="w-40 mx-auto bg-white/5 p-2 ring-1 ring-white/10 hover:bg-white/10">
+							Unirse
+						</Button>
 					</div>
 					<dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
 						<div className="flex flex-col items-start">

@@ -56,7 +56,7 @@ const faqSections = [
 
 export default function Faq() {
 	return (
-		<div className="py-20 sm:py-24 lg:py-32 items-center  grid lg:grid-cols-2 gap-10">
+		<div className="py-20 mx-4 sm:py-24 lg:py-32 items-center  grid lg:grid-cols-2 gap-10">
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">Preguntas Frecuentes</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
@@ -66,13 +66,15 @@ export default function Faq() {
 			<div>
 				{faqSections.map((section, sectionIndex) => (
 					<div key={sectionIndex} className="mb-10">
-						<h2 className=" cursor-pointer  text-left text-base font-semibold leading-7 text-sky-700">
+						<h2 className=" cursor-pointer    text-base font-semibold leading-7 text-sky-700">
 							{section.title}
 						</h2>
 						<Accordion type="single" collapsible>
 							{section.faqs.map((faq, faqIndex) => (
 								<AccordionItem key={faqIndex} value={faq.value}>
-									<AccordionTrigger>{faq.title}</AccordionTrigger>
+									<AccordionTrigger className="inline-flex text-left justify-between">
+										{faq.title}
+									</AccordionTrigger>
 									<AccordionContent>{faq.content}</AccordionContent>
 								</AccordionItem>
 							))}
