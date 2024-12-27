@@ -1,14 +1,25 @@
 "use client";
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { ShadowBg1, ShadowBg2 } from "../ui/ShadowBg1";
 import { MagnifyingGlassIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { TrackingDetails } from "../TrackingDetails/TrackingDetails";
 import { useFetchByInvoiceOrHBL } from "@/Hooks/useFetchByInvoiceOrHBL";
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export const HeroTracking = () => {
-	const [searchTerm, setSearchTerm] = useState("");
+	const router = useRouter();
+	const searchParams = useSearchParams();
+	const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '');
 	const { data: invoice, isLoading, isError } = useFetchByInvoiceOrHBL(searchTerm);
-	const [hasSearched, setHasSearched] = useState(false);
+	const [hasSearched, setHasSearched] = useState(!!searchParams.get('search'));
+
+	useEffect(() => {
+		const currentSearch = searchParams.get('search');
+		if (currentSearch) {
+			setSearchTerm(currentSearch);
+			setHasSearched(true);
+		}
+	}, [searchParams]);
 
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
@@ -17,6 +28,7 @@ export const HeroTracking = () => {
 		if (newSearchTerm !== searchTerm) {
 			setSearchTerm(newSearchTerm);
 			setHasSearched(true);
+			router.push(`/tracking?search=${encodeURIComponent(newSearchTerm)}`);
 		}
 	};
 

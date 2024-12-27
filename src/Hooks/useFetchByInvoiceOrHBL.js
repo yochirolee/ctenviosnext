@@ -9,6 +9,9 @@ axios.defaults.headers.common = { "api-key": apiKey };
 
 const getProductData = async (id) => {
 	if (!id) return [];
+	if (id.endsWith("CTE") || id.endsWith("cte")) {
+		id = id.slice(0, -3);
+	}
 	if (id.length >= 4 && id.length < 7) {
 		const response = await axios.get(`parcels/invoice/${id}`);
 		return response.data;
@@ -23,6 +26,5 @@ export const useFetchByInvoiceOrHBL = (id) => {
 		queryKey: ["fetchProductByHBL", id],
 		queryFn: () => getProductData(id),
 		staleTime: 1000 * 60 * 5,
-		
 	});
 };

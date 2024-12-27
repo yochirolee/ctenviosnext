@@ -34,12 +34,12 @@ const products = [
 		name: "Scorpion E2",
 		price: 1983.0,
 		specs: [
-				"Cilindrada: 125cc",
-				"Vel Máx: 80km/h",
-				"Capacidad de Tanque: 5 Litros",
-				"Freno de Discos",
-				"Neumáticos: 3.50-10",
-			],
+			"Cilindrada: 125cc",
+			"Vel Máx: 80km/h",
+			"Capacidad de Tanque: 5 Litros",
+			"Freno de Discos",
+			"Neumáticos: 3.50-10",
+		],
 		images: [
 			"/bikes/e2/e2-1.webp?height=150&width=150",
 			"/bikes/e2/e2-2.webp?height=150&width=150",
