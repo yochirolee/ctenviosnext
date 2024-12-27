@@ -4,13 +4,13 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Footer } from "@/Components/Footer/Footer";
 import QueryProvider from "@/Utils/Providers/QueryProvider";
-import Head from "next/head";
+import GoogleAnalytics from "@/Components/Analytics/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
 	title: "CTEnvios - Envíos a Cuba Rápidos y Confiables",
 	description:
-		"CTEnvios ofrece servicios de envío a Cuba seguros y económicos. Envía paquetes  y más a tus seres queridos en Cuba.",
+		"CTEnvios ofrece servicios de envío a Cuba seguros y económicos. Envía paquetes, remesas, alimentos y más a tus seres queridos en Cuba con garantía y rapidez.",
 	generator: "Next.js",
 	applicationName: "CTEnvios",
 	referrer: "origin-when-cross-origin",
@@ -23,6 +23,12 @@ export const metadata = {
 		"Agencia de envios  a Cuba",
 		"Autos, Carros  para Cuba",
 		"Motos para Cuba",
+		"Enviar dinero a Cuba",
+		"Enviar comida a Cuba",
+		"Envíos seguros a Cuba",
+		"Mejor servicio de envíos a Cuba",
+		"Envíos garantizados a Cuba",
+		"Precios de envíos a Cuba",
 	],
 	authors: [{ name: "CTEnvios Team" }],
 	creator: "CTEnvios",
@@ -37,6 +43,17 @@ export const metadata = {
 		address: false,
 		telephone: false,
 	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
 	openGraph: {
 		title: "CTEnvios - Envíos a Cuba Rápidos y Confiables",
 		description:
@@ -49,9 +66,11 @@ export const metadata = {
 				width: 1200,
 				height: 630,
 				alt: "CTEnvios - Envíos a Cuba",
+				type: "image/jpeg",
 			},
 		],
 		locale: "es_ES",
+		alternateLocale: ["en_US"],
 		type: "website",
 	},
 	twitter: {
@@ -59,33 +78,38 @@ export const metadata = {
 		title: "CTEnvios - Envíos a Cuba Rápidos y Confiables",
 		description:
 			"Servicios de envío a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
-		images: ["https://www.ctenvios.com/twitter-image.jpg"],
+		creator: "@ctenvios",
+		images: {
+			url: "https://www.ctenvios.com/twitter-image.jpg",
+			alt: "CTEnvios - Envíos a Cuba",
+		},
 	},
+	verification: {
+		google: "B5Vgy5pZSGjmc9UX3WAcWCk-sBe_yUesP-DIZ7fDe2k",
+	},
+};
+
+export const viewport = {
+	width: "device-width",
+	initialScale: 1,
+	maximumScale: 1,
 };
 
 export default function RootLayout({ children }) {
 	return (
 		<html lang="es">
 			<body className={inter.className}>
-				{/* <Script
-					src="https://www.googletagmanager.com/gtag/js?id=AW-11165948511"
-					strategy="afterInteractive"
-				/>
-				<Script id="google-analytics" strategy="afterInteractive">
-					{`
-                          window.dataLayer = window.dataLayer || [];
-                          function gtag(){window.dataLayer.push(arguments);}
-                          gtag('js', new Date());
-                          gtag('config', 'AW-11165948511');
-                        `}
-				</Script> */}
-
-				<div className="relative isolate pt-4 max-w-7xl mx-auto  sm:px-6 lg:pt-14 lg:px-8">
-					<QueryProvider>
+				<GoogleAnalytics />
+				<div className="relative isolate pt-4 max-w-7xl mx-auto sm:px-6 lg:pt-14 lg:px-8">
+					<header>
 						<NavBar />
-						{children}
-						<Footer />
+					</header>
+					<QueryProvider>
+						<main>{children}</main>
 					</QueryProvider>
+					<footer>
+						<Footer />
+					</footer>
 				</div>
 			</body>
 		</html>

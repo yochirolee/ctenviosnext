@@ -25,8 +25,10 @@ export default function NewsLetter() {
 				fill
 				src="/ship.webp"
 				alt="Ship Cuba Envíos"
-				className="lg:block object-center object-cover absolute  -z-10 inset-0  bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
-			></Image>
+				priority
+				quality={85}
+				className="lg:block object-center object-cover absolute -z-10 inset-0 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
+			/>
 
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">

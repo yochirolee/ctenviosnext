@@ -12,6 +12,7 @@ const getProductData = async (id) => {
 	if (id.endsWith("CTE") || id.endsWith("cte")) {
 		id = id.slice(0, -3);
 	}
+	//scalp id
 	if (id.length >= 4 && id.length < 7) {
 		const response = await axios.get(`parcels/invoice/${id}`);
 		return response.data;
