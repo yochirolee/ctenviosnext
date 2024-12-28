@@ -6,7 +6,12 @@ import { Footer } from "@/Components/Footer/Footer";
 import QueryProvider from "@/Utils/Providers/QueryProvider";
 import GoogleAnalytics from "@/Components/Analytics/GoogleAnalytics";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+	subsets: ["latin"],
+	display: "swap",
+	preload: true,
+});
+
 export const metadata = {
 	title: "CTEnvios - Envíos a Cuba Rápidos y Confiables",
 	description:

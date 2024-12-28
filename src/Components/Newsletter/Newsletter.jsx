@@ -25,7 +25,8 @@ export default function NewsLetter() {
 				fill
 				src="/ship.webp"
 				alt="Ship Cuba Envíos"
-				priority
+				loading="lazy"
+				priority={false}
 				quality={85}
 				className="lg:block object-center object-cover absolute -z-10 inset-0 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
 			/>

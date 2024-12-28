@@ -54,7 +54,8 @@ export const TrackingContent = () => {
 						className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
 						height={1200}
 						width={1600}
-						priority
+						loading="lazy"
+						priority={false}
 						quality={85}
 						alt="Barco de carga transportando contenedores para envíos a Cuba"
 					/>

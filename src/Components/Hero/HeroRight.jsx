@@ -20,7 +20,7 @@ export const HeroRight = () => {
 							className="lg:block  object-center object-cover"
 							fill
 							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-							priority
+							priority={true}
 							alt="Envios a cuba"
 						/>
 					</motion.div>
@@ -31,7 +31,8 @@ export const HeroRight = () => {
 							className="  object-cover object-center"
 							fill
 							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-							priority
+							priority={true}
+							loading="eager"
 							alt="Track Entregas Cuba"
 						/>
 					</div>
@@ -47,7 +48,8 @@ export const HeroRight = () => {
 							className="lg:block overflow-hidden    object-cover object-center"
 							fill
 							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-							loading="lazy"
+							priority={true}
+							loading="eager"
 							alt="Familia Cubana, Envios"
 						/>
 					</motion.div>
