@@ -19,7 +19,8 @@ export const HeroRight = () => {
 							src="/slider4.webp"
 							className="lg:block  object-center object-cover"
 							fill
-							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							sizes="(max-width: 768px) 176px, (max-width: 1200px) 176px, 176px"
+							quality={80}
 							priority={true}
 							alt="Envios a cuba"
 						/>
@@ -30,7 +31,8 @@ export const HeroRight = () => {
 							src="/truck.webp"
 							className="  object-cover object-center"
 							fill
-							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							sizes="(max-width: 768px) 192px, (max-width: 1200px) 192px, 176px"
+							quality={80}
 							priority={true}
 							loading="eager"
 							alt="Track Entregas Cuba"
@@ -47,7 +49,8 @@ export const HeroRight = () => {
 							src="/happy_cuban.webp"
 							className="lg:block overflow-hidden    object-cover object-center"
 							fill
-							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							sizes="(max-width: 768px) 192px, (max-width: 1200px) 192px, 176px"
+							quality={80}
 							priority={true}
 							loading="eager"
 							alt="Familia Cubana, Envios"
