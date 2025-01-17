@@ -42,7 +42,7 @@ export const Footer = () => {
 					</svg>
 				</a>
 			</div>
-			<div>© 2023 CTEnvios, Inc. All rights reserved.</div>
+			<div>© 2025 CTEnvios, Inc. Todos los derechos reservados.</div>
 		</div>
 	);
 };

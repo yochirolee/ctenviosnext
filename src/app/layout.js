@@ -109,13 +109,11 @@ export default function RootLayout({ children }) {
 					<header>
 						<NavBar />
 					</header>
-					<QueryProvider>
-						<main>{children}</main>
-					</QueryProvider>
-					<footer>
-						<Footer />
-					</footer>
+					<QueryProvider>{children}</QueryProvider>
 				</div>
+				<footer>
+					<Footer />
+				</footer>
 			</body>
 		</html>
 	);

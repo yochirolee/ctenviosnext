@@ -1,9 +1,10 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
-import BlurFade from "../ui/blur-fade";
+
+import { BorderBeam } from "../ui/border-beam";
 
 const tiers = [
 	{
-		name: "Marítimo",
+		name: "Marítimo Precio Regular",
 		id: "tier-hobby",
 		href: "#",
 		priceMonthly: "$1.99",
@@ -17,17 +18,15 @@ const tiers = [
 		featured: false,
 	},
 	{
-		name: "Aéreo - Próximamente",
+		name: "Oferta Especial - Enero 2025",
 		id: "tier-enterprise",
 		href: "#",
-		priceMonthly: "$2.29",
-		description:
-			"El envío aéreo estará disponible pronto, como parte de los cambios y mejoras que estamos realizando.",
+		priceMonthly: "$1.79",
+		description: "Si envias mas de 50 lb en el mes, te ofrecemos un 10% de descuento en el envio.",
 		features: [
-			"Envíos de 3-5 días a toda la Isla",
+			"Entregas en Toda la Isla",
 			"Sistema de Tracking en Tiempo Real",
 			"Atención al Cliente 24/7 mediante WhatsApp",
-			"Vuelos programados todas las Semanas",
 		],
 		featured: true,
 	},
@@ -89,7 +88,7 @@ export default function PriceCards() {
 								<span
 									className={classNames(
 										tier.featured ? "text-white" : "text-gray-900",
-										"text-5xl font-bold tracking-tight",
+										"text-7xl font-bold  tracking-tight",
 									)}
 								>
 									{tier.priceMonthly}
@@ -131,65 +130,74 @@ export default function PriceCards() {
 									</li>
 								))}
 							</ul>
-							<div className="relative">
-								<BlurFade delay={0.25 * 0.05} inView>
-									<div
-										className={classNames(
-											tier.featured
-												? "mt-8 border-t bg-gray-800 border rounded-lg p-6 border-gray-700 pt-6"
-												: "mt-8 border-t bg-gray-50 border rounded-lg p-6 border-gray-300 pt-6",
-										)}
-									>
-										<h4
+							{tier.featured && (
+								<>
+									<div className="relative my-6">
+										<div
 											className={classNames(
-												tier.featured ? "text-white" : "text-gray-900",
-												"text-lg font-semibold mb-2",
+												tier.featured
+													? " bg-gray-800 border rounded-lg p-6 border-gray-700 pt-6"
+													: " bg-gray-50 border rounded-lg p-6 border-gray-300 pt-6",
 											)}
 										>
-											Sobrepeso
-										</h4>
-										<p
-											className={classNames(
-												tier.featured ? "text-gray-300" : "text-gray-600",
-												"text-sm mb-4",
-											)}
-										>
-											Para artículos con sobrepeso, se aplican las siguientes tarifas:
-										</p>
-										<ul
-											className={classNames(
-												tier.featured ? "text-gray-300" : "text-gray-600",
-												"text-sm space-y-2",
-											)}
-										>
-											<li className="flex justify-between">
-												<span>101-200 lbs:</span>
-												<span
-													className={classNames(
-														tier.featured
-															? "font-semibold text-sky-400"
-															: "font-semibold text-sky-600",
-													)}
-												>
-													$30 adicionales
-												</span>
-											</li>
-											<li className="flex justify-between">
-												<span>200-500 lbs:</span>
-												<span
-													className={classNames(
-														tier.featured
-															? "font-semibold text-sky-400"
-															: "font-semibold text-sky-600",
-													)}
-												>
-													$50 adicionales
-												</span>
-											</li>
-										</ul>
+											<h4
+												className={classNames(
+													tier.featured ? "text-white" : "text-gray-900",
+													"text-lg font-semibold mb-2",
+												)}
+											>
+												Sobrepeso
+											</h4>
+											<p
+												className={classNames(
+													tier.featured ? "text-gray-300" : "text-gray-600",
+													"text-sm mb-4",
+												)}
+											>
+												Para artículos con sobrepeso, se aplican las siguientes tarifas:
+											</p>
+											<ul
+												className={classNames(
+													tier.featured ? "text-gray-300" : "text-gray-600",
+													"text-sm space-y-2",
+												)}
+											>
+												<li className="flex justify-between">
+													<span>101-200 lbs:</span>
+													<span
+														className={classNames(
+															tier.featured
+																? "font-semibold text-sky-400"
+																: "font-semibold text-sky-600",
+														)}
+													>
+														$30 adicionales
+													</span>
+												</li>
+												<li className="flex justify-between">
+													<span>200-500 lbs:</span>
+													<span
+														className={classNames(
+															tier.featured
+																? "font-semibold text-sky-400"
+																: "font-semibold text-sky-600",
+														)}
+													>
+														$50 adicionales
+													</span>
+												</li>
+											</ul>
+										</div>
 									</div>
-								</BlurFade>
-							</div>
+									<BorderBeam
+										size={250}
+										duration={12}
+										delay={9}
+										colorFrom="#ec4899"
+										colorTo="#6fa8dc"
+									/>
+								</>
+							)}
 						</div>
 					))}
 			</div>
