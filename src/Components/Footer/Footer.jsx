@@ -3,9 +3,13 @@ import { React } from "react";
 import { MdWhatsapp } from "react-icons/md";
 export const Footer = () => {
 	return (
-		<div className="Namecontainer text-center mx-auto pt-10">
-			<div className="h-12 inline-flex gap-8 p-10 ">
-				<a href="https://www.facebook.com/people/CTEnvios/100087529462450/" className="w-8 h-8">
+		<footer className="container text-center mx-auto pt-10 relative z-50 bg-white mt-auto">
+			<div className="relative z-50 h-12 inline-flex gap-8 p-10">
+				<a
+					href="https://www.facebook.com/people/CTEnvios/100087529462450/"
+					className="w-8 h-8 relative z-50"
+					style={{ pointerEvents: "auto" }}
+				>
 					<span className="sr-only">Facebook</span>
 					<svg
 						fill="currentColor"
@@ -22,12 +26,17 @@ export const Footer = () => {
 				</a>
 				<a
 					href="https://api.whatsapp.com/send?phone=%2B17542778810&data=AWCHK2enYTDFDGMl_C4WA-bU40pq2QeXbNy1Sy7ChnJantSaLPPYdb9OC4HK7-TXb4PUCw98TQsnV2uXOr4AHR8w7oKLusK52IM_7hQJqn-TKg36Y5KSPvQKVYyehzFbmSiDmcw6C3U2V_h6L2GUxzYviilHWyCEetBiYEYg8xsJ5Bwf4XzAto8JhiDGWmfZdXuopzwfJzIS1WSmWMp9-_Vk9rfhD4IyFq-jtsLWgY3Zr3O3kjmG4eOBdWssT8hI_RtD5_pM10XEXowaTTyD_xuVKsQ8d62vxfbpRpJBWlj1XgU&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR0gA2hkfBC9mgbWIaX9XRjAiFZdRwxPDIaH0Frad0oE4jUD1Ae2jteu4sA"
-					className="w-8 h-8"
+					className="w-8 h-8 relative z-50"
+					style={{ pointerEvents: "auto" }}
 				>
 					<span className="sr-only">Whatsapp</span>
 					<MdWhatsapp className="text-gray-700 h-8 w-8 hover:text-green-600" />
 				</a>
-				<a href="https://www.instagram.com/ctenvios/" className="w-8 h-8">
+				<a
+					href="https://www.instagram.com/ctenvios/"
+					className="w-8 h-8 relative z-50"
+					style={{ pointerEvents: "auto" }}
+				>
 					<span className="sr-only">Instagram</span>
 					<svg
 						fill="currentColor"
@@ -43,10 +52,12 @@ export const Footer = () => {
 					</svg>
 				</a>
 			</div>
-			<div className="flex text-sm justify-center items-center">
-				<Link href="/terms">Términos y Condiciones</Link>
+			<div className="flex text-sm justify-center items-center relative z-50">
+				<Link href="/terms" className="relative z-50" style={{ pointerEvents: "auto" }}>
+					Términos y Condiciones
+				</Link>
 			</div>
-			<div>© 2025 CTEnvios, Inc. Todos los derechos reservados.</div>
-		</div>
+			<div className="relative z-50">© 2025 CTEnvios, Inc. Todos los derechos reservados.</div>
+		</footer>
 	);
 };

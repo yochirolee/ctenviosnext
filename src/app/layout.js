@@ -111,9 +111,8 @@ export default function RootLayout({ children }) {
 					</header>
 					<QueryProvider>{children}</QueryProvider>
 				</div>
-				<footer>
-					<Footer />
-				</footer>
+
+				<Footer />
 			</body>
 		</html>
 	);
