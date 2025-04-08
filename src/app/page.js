@@ -6,7 +6,6 @@ import { Stats } from "@/Components/Stats/Stats";
 import TrackingSection from "./sections/tracking-section";
 import Faq from "@/Components/Faq/Faq";
 import dynamic from "next/dynamic";
-import Prices from "@/Components/Animated/animated-price-card";
 import PriceCards from "@/Components/Cards/PricesCards";
 
 const FeaturedProducts = dynamic(() => import("./sections/feaured-products"), {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Globe } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../Components/ui/button";
 
 export default function TermsAndConditions() {
 	const [language, setLanguage] = useState("es");
