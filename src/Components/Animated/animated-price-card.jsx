@@ -176,9 +176,9 @@ export default function Prices() {
 				</p>
 				<NeonGradientCard>
 					<Card className="bg-gray-900 my-4 p-4 rounded-lg text-white">
-						<CardTitle>ENERO 2025</CardTitle>
+						<CardTitle>Abril de Descuentos</CardTitle>
 						<CardDescription>
-							Si envias mas de 50 lb en el mes, te ofrecemos un 10% de descuento en el envio.
+							En todos los productos, solo los martes
 						</CardDescription>
 					</Card>
 				</NeonGradientCard>

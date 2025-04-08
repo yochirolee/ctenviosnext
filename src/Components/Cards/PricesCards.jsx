@@ -18,11 +18,11 @@ const tiers = [
 		featured: false,
 	},
 	{
-		name: "Oferta Especial - Enero 2025",
+		name: "Grandes Descuentos - Abril 2025",
 		id: "tier-enterprise",
 		href: "#",
-		priceMonthly: "$1.79",
-		description: "Si envias mas de 50 lb en el mes, te ofrecemos un 10% de descuento en el envio.",
+		priceMonthly: "$1.69",
+		description: "En todos los productos, solo los martes",
 		features: [
 			"Entregas en Toda la Isla",
 			"Sistema de Tracking en Tiempo Real",

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { React } from "react";
 import { MdWhatsapp } from "react-icons/md";
 export const Footer = () => {
@@ -41,6 +42,9 @@ export const Footer = () => {
 						></path>
 					</svg>
 				</a>
+			</div>
+			<div className="flex text-sm justify-center items-center">
+				<Link href="/terms">Términos y Condiciones</Link>
 			</div>
 			<div>© 2025 CTEnvios, Inc. Todos los derechos reservados.</div>
 		</div>
