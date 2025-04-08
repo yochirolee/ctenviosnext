@@ -7,9 +7,15 @@
   </url>
   <url>
     <loc>https://ctenvios.com/tracking</loc>
-    <lastmod>2023-09-12T15:02:24.021Z</lastmod>
+    <lastmod>2025-04-08T15:02:24.021Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>https://ctenvios.com/terms</loc>
+    <lastmod>2025-04-08T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
  
   
