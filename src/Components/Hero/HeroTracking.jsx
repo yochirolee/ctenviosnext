@@ -39,7 +39,7 @@ export const HeroTracking = () => {
 	}
 
 	return (
-		<div className="max-w-7xl  mx-auto">
+		<div className="max-w-7xl mx-auto">
 			<ShadowBg1 />
 			<div className="grid   gap-20 px-4   mx-auto container  py-6  lg:py-20  ">
 				<div className=" mt-10 sm:mb-8 sm:flex sm:justify-center ">
@@ -80,17 +80,17 @@ export const HeroTracking = () => {
 								</button>
 							</div>
 						</form>
-						<p className="mt-4 text-md leading-8 text-gray-600">
-							Nuestro sistema de tracking permite brindarle información sobre sus envíos 24/7, ante
-							cualquier duda o problema, contáctenos.
-							<Link
-								href="https://api.whatsapp.com/send?phone=%2B17542778810"
-								className="w-full border-t border-dashed pt-4 sm:w-auto flex justify-center items-center mt-4  text-sm  text-green-600   focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
-							>
-								<MdOutlineWhatsapp className="h-5 w-5 sm:w-6 mx-2" />
-								<span className="text-green-600">Contáctanos</span>
+						<div className="flex items-center flex-col gap-2">
+							<p className="mt-4 text-md leading-8 text-gray-600">
+								Nuestro sistema de tracking permite brindarle información sobre sus envíos 24/7,
+								ante cualquier duda o problema
+							</p>
+							<Link href="https://api.whatsapp.com/send?phone=%2B17542778810">
+								<p className="w-full text-gray-800 mx-auto flex items-center gap-1 hover:text-green-500">
+									<MdOutlineWhatsapp className="h-5 w-5" /> Contáctenos
+								</p>
 							</Link>
-						</p>
+						</div>
 					</div>
 				</div>
 
