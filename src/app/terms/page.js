@@ -235,7 +235,7 @@ export default function TermsAndConditions() {
 
 	return (
 		<main className="container mx-auto px-4 py-8 max-w-4xl">
-			<div className="flex justify-between items-center mb-6">
+			<div className="flex justify-between items-center mt-6">
 				<h1 className="text-xl font-bold text-gray-900">{currentContent.title}</h1>
 				<Button onClick={toggleLanguage} variant="ghost" className="flex items-center gap-2">
 					<Globe className="h-4 w-4" />

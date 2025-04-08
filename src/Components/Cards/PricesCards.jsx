@@ -1,7 +1,5 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
 
-import { BorderBeam } from "../ui/border-beam";
-
 const tiers = [
 	{
 		name: "Marítimo Precio Regular",
@@ -38,7 +36,7 @@ function classNames(...classes) {
 
 export default function PriceCards() {
 	return (
-		<div className="relative isolate bg-white px-6 p pt-4 pb-12 lg:px-8">
+		<div className="relative isolate rounded-3xl  bg-white px-6 p pt-4 pb-12 lg:px-8">
 			<div
 				aria-hidden="true"
 				className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
@@ -189,13 +187,6 @@ export default function PriceCards() {
 											</ul>
 										</div>
 									</div>
-									<BorderBeam
-										size={250}
-										duration={12}
-										delay={9}
-										colorFrom="#ec4899"
-										colorTo="#6fa8dc"
-									/>
 								</>
 							)}
 						</div>

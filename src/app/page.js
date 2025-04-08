@@ -18,7 +18,6 @@ export default function Home() {
 		<main>
 			<Hero />
 			<PriceCards />
-			<FeaturedProducts />
 			<TrackingSection />
 			<Stats />
 			<TrackingContent />

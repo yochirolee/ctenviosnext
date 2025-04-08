@@ -1,5 +1,4 @@
 import BlurFade from "../ui/blur-fade";
-import Meteors from "../ui/meteors";
 import NumberTicker from "../ui/number-ticker";
 import Ripple from "../ui/ripple";
 
@@ -11,7 +10,7 @@ const stats = [
 
 export const Stats = () => {
 	return (
-		<div className=" ">
+		<div className=" relative">
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl mb-10">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">
 					Paquetes Entregados y Clientes
