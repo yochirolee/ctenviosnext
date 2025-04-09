@@ -25,7 +25,7 @@ export default function TermsAndConditions() {
 					title: "1. Introducción",
 					content: [
 						"Bienvenido a CT Envíos. Estos términos y condiciones rigen el uso de nuestros servicios de envío internacional a Cuba, incluyendo nuestro sitio web, aplicaciones móviles y todos los servicios relacionados.",
-						"Al utilizar nuestros servicios, usted acepta estos términos y condiciones en su totalidad. Si no está de acuerdo con estos términos y condiciones o cualquier parte de los mismos, no debe utilizar nuestros servicios.",
+						"Al utilizar nuestros servicios, usted acepta estos términos y condiciones en su totalidad. Si no está de acuerdo en su totalidad con estos términos y condiciones o cualquier parte de los mismos, no debe utilizar nuestros servicios.",
 					],
 				},
 				{
@@ -59,7 +59,7 @@ export default function TermsAndConditions() {
 						"Artículos que violen las leyes de embargo",
 					],
 					afterList: [
-						"El remitente es responsable de asegurar que el contenido del paquete no infringe estas restricciones. CT Envíos se reserva el derecho de inspeccionar los paquetes para verificar su contenido.",
+						"El remitente es responsable de asegurar que el contenido del paquete, asi como la información brindada, no infringen las leyes de los Estados Unidos y Cuba. CT Envíos se reserva el derecho de inspeccionar los paquetes para verificar su contenido.",
 					],
 				},
 				{
@@ -117,6 +117,7 @@ export default function TermsAndConditions() {
 						"10230 NW 80th Ave. Hialeah Gardens",
 						"Teléfono: 305-851-3004",
 						"Email: soporte@ctenvios.com",
+						"Whatsapp: +1 754 277 8810",
 					],
 				},
 			],
