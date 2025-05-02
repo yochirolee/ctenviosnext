@@ -6,7 +6,7 @@ import { AnimatedShinyTextDemo } from "../Animated/animated-shiny-text";
 export const HeroLeft = () => {
 	return (
 		<div className="mx-auto px-4 text-center">
-			<h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
+			<h1 className="mt-0 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
 				Envíos a toda Cuba
 			</h1>
 			<p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">

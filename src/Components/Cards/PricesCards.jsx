@@ -1,5 +1,5 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
-
+import Image from "next/image";
 const tiers = [
 	{
 		name: "Marítimo Precio Regular",
@@ -16,11 +16,11 @@ const tiers = [
 		featured: false,
 	},
 	{
-		name: "Grandes Descuentos - Abril 2025",
+		name: "Felicidades Mamá - Oferta de Mayo",
 		id: "tier-enterprise",
 		href: "#",
-		priceMonthly: "$1.69",
-		description: "En todos los productos, solo los martes",
+		priceMonthly: "$1.59",
+		description: "Envia a Cuba (Alimentos, Medicinas y Aseo) min 15 lb, por solo $1.59/lb, oferta válida todos los jueves del mes de Mayo",
 		features: [
 			"Entregas en Toda la Isla",
 			"Sistema de Tracking en Tiempo Real",
@@ -52,7 +52,7 @@ export default function PriceCards() {
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">Nuestros Precios</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-					El mejor Precio del Mercado
+					El mejor Precio del Mercado cuando envías a Cuba
 				</p>
 			</div>
 
@@ -82,6 +82,15 @@ export default function PriceCards() {
 							>
 								{tier.name}
 							</h3>
+							{tier.featured && (
+								<Image
+									src="/envios_cuba_madres.png"
+									alt="Envios a Cuba Oferta de Mayo"
+									className="w-full mt-3 rounded-full object-scale-down"
+									width={500}
+									height={500}
+								/>
+							)}
 							<p className="mt-4 flex items-baseline gap-x-2">
 								<span
 									className={classNames(
@@ -128,67 +137,6 @@ export default function PriceCards() {
 									</li>
 								))}
 							</ul>
-							{tier.featured && (
-								<>
-									<div className="relative my-6">
-										<div
-											className={classNames(
-												tier.featured
-													? " bg-gray-800 border rounded-lg p-6 border-gray-700 pt-6"
-													: " bg-gray-50 border rounded-lg p-6 border-gray-300 pt-6",
-											)}
-										>
-											<h4
-												className={classNames(
-													tier.featured ? "text-white" : "text-gray-900",
-													"text-lg font-semibold mb-2",
-												)}
-											>
-												Sobrepeso
-											</h4>
-											<p
-												className={classNames(
-													tier.featured ? "text-gray-300" : "text-gray-600",
-													"text-sm mb-4",
-												)}
-											>
-												Para artículos con sobrepeso, se aplican las siguientes tarifas:
-											</p>
-											<ul
-												className={classNames(
-													tier.featured ? "text-gray-300" : "text-gray-600",
-													"text-sm space-y-2",
-												)}
-											>
-												<li className="flex justify-between">
-													<span>101-200 lbs:</span>
-													<span
-														className={classNames(
-															tier.featured
-																? "font-semibold text-sky-400"
-																: "font-semibold text-sky-600",
-														)}
-													>
-														$30 adicionales
-													</span>
-												</li>
-												<li className="flex justify-between">
-													<span>200-500 lbs:</span>
-													<span
-														className={classNames(
-															tier.featured
-																? "font-semibold text-sky-400"
-																: "font-semibold text-sky-600",
-														)}
-													>
-														$50 adicionales
-													</span>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</>
-							)}
 						</div>
 					))}
 			</div>
