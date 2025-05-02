@@ -5,9 +5,9 @@ const faqSections = [
 		title: "Información General",
 		faqs: [
 			{
-				title: "¿Qué tiempo demora un envío?",
+				title: "¿Qué tiempo demora un envío a Cuba?",
 				content:
-					"Generalmente nuestros envíos demoran de 30 a 45 días laborables. Este tiempo depende también de la provincia a la que se envíe, siendo las provincias orientales las que más tardamos en entregar.",
+					"Generalmente nuestros envíos a Cuba demoran de 30 a 45 días laborables. Este tiempo depende también de la provincia a la que se envíe, siendo las provincias orientales las que más tardamos en entregar.",
 				value: "general-1",
 			},
 			{
@@ -22,13 +22,13 @@ const faqSections = [
 		title: "Restricciones y Seguridad",
 		faqs: [
 			{
-				title: "¿Qué artículos están prohibidos para enviar?",
+				title: "¿Qué artículos están prohibidos para enviar a Cuba?",
 				content:
 					"Está prohibido enviar artículos como drogas, armas, explosivos, materiales inflamables, animales vivos, dinero en efectivo y otros artículos ilegales o peligrosos. Por favor, consulte nuestra lista completa de artículos prohibidos antes de realizar su envío.",
 				value: "security-1",
 			},
 			{
-				title: "¿Ofrecen seguro para los envíos?",
+				title: "¿Ofrecen seguro para los envíos a Cuba?",
 				content:
 					"Sí, ofrecemos opciones de seguro para sus envíos. El costo del seguro varía según el valor declarado del contenido del paquete. Recomendamos asegurar todos los envíos de alto valor para su tranquilidad.",
 				value: "security-2",
@@ -60,7 +60,7 @@ export default function Faq() {
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">Preguntas Frecuentes</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-					Todo lo que debe Conocer..
+					Lo que debe Conocer cuando envía a Cuba.
 				</p>
 			</div>
 			<div>

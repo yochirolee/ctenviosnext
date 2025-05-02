@@ -9,15 +9,20 @@ export default function GoogleAnalytics() {
 				strategy="afterInteractive"
 				defer
 			/>
-			<Script id="google-analytics" strategy="afterInteractive" defer>
-				{`
+			<Script
+				id="google-analytics"
+				strategy="afterInteractive"
+				defer
+				dangerouslySetInnerHTML={{
+					__html: `
           window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-DMGE29VG1R');
-        `}
-			</Script>
+        `,
+				}}
+			/>
 		</>
 	);
 }

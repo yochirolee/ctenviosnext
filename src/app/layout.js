@@ -34,6 +34,7 @@ export const metadata = {
 		"Mejor servicio de envíos a Cuba",
 		"Envíos garantizados a Cuba",
 		"Precios de envíos a Cuba",
+		"Agencia de envios a Cuba",
 	],
 	authors: [{ name: "CTEnvios Team" }],
 	creator: "CTEnvios",
@@ -60,9 +61,9 @@ export const metadata = {
 		},
 	},
 	openGraph: {
-		title: "CTEnvios - Envíos a Cuba Rápidos y Confiables",
+		title: "CTEnvios -Agencia de Envíos a Cuba Rápidos y Confiables",
 		description:
-			"Servicios de envío a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
+			"Agencia de envíos a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
 		url: "https://www.ctenvios.com",
 		siteName: "CTEnvios",
 		images: [
@@ -80,9 +81,9 @@ export const metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "CTEnvios - Envíos a Cuba Rápidos y Confiables",
+		title: "CTEnvios - Agencia de Envíos a Cuba Rápidos y Confiables",
 		description:
-			"Servicios de envío a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
+			"Agencia de envíos a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
 		creator: "@ctenvios",
 		images: {
 			url: "https://www.ctenvios.com/twitter-image.jpg",

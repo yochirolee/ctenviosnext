@@ -9,6 +9,7 @@ const navigation = [
 	{ name: "Inicio", href: "/" },
 	{ name: "Tracking", href: "/tracking" },
 	{ name: "Preguntas Frecuentes", href: "/#faq" },
+	{ name: "Términos y Condiciones", href: "/terms" },
 ];
 
 export default function NavBar() {

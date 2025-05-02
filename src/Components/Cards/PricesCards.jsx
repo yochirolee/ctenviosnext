@@ -20,7 +20,8 @@ const tiers = [
 		id: "tier-enterprise",
 		href: "#",
 		priceMonthly: "$1.59",
-		description: "Envia a Cuba (Alimentos, Medicinas y Aseo) min 15 lb, por solo $1.59/lb, oferta válida todos los jueves del mes de Mayo",
+		description:
+			"Envia a Cuba (Alimentos, Medicinas y Aseo) min 15 lb, por solo $1.59/lb, oferta válida todos los jueves del mes de Mayo",
 		features: [
 			"Entregas en Toda la Isla",
 			"Sistema de Tracking en Tiempo Real",
@@ -86,9 +87,12 @@ export default function PriceCards() {
 								<Image
 									src="/envios_cuba_madres.png"
 									alt="Envios a Cuba Oferta de Mayo"
-									className="w-full mt-3 rounded-full object-scale-down"
-									width={500}
-									height={500}
+									className="w-full mt-3 rounded-full object-cover"
+									width={300}
+									height={300}
+									loading="lazy"
+									priority={false}
+									quality={60}
 								/>
 							)}
 							<p className="mt-4 flex items-baseline gap-x-2">

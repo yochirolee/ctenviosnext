@@ -19,6 +19,9 @@ export const HeroRight = () => {
 						className="w-full object-scale-down"
 						width={600}
 						height={600}
+						loading="lazy"
+						priority={false}
+						quality={85}
 					/>
 				</motion.div>
 			</div>
