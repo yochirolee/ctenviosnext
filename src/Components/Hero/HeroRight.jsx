@@ -17,11 +17,11 @@ export const HeroRight = () => {
 						src="/banner-envios-cuba.png"
 						alt="Envios a Cuba Oferta de Mayo"
 						className="w-full object-scale-down"
-						width={600}
-						height={600}
+						width={400}
+						height={400}
 						loading="lazy"
 						priority={false}
-						quality={85}
+						quality={65}
 					/>
 				</motion.div>
 			</div>

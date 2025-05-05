@@ -7,15 +7,16 @@ export const HeroLeft = () => {
 	return (
 		<div className="mx-auto px-4 text-center">
 			<h1 className="mt-0 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
-				Envíos a toda Cuba
+				Su Agencia de Envíos a Cuba
 			</h1>
 			<p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
-				Somos una empresa de logística internacional, especializada en envíos de cargas marítimas y
-				aéreas a toda Cuba, con más de 20 años de experiencia en el sector
+				Somos una agencia de envíos a Cuba y el Caribe, especializada en envíos de cargas marítimas
+				y aéreas, con más de 20 años de experiencia en el sector
 			</p>
 			<AnimatedShinyTextDemo />
 			<div className="mt-6 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-y-4 sm:gap-x-6">
 				<Link
+					prefetch={true}
 					href="https://api.whatsapp.com/send?phone=%2B17542778810"
 					className="w-full sm:w-auto flex justify-center items-center rounded-md bg-green-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
 				>
