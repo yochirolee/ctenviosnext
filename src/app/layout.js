@@ -4,7 +4,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Footer } from "@/Components/Footer/Footer";
 import QueryProvider from "@/Utils/Providers/QueryProvider";
-import GoogleAnalytics from "@/Components/Analytics/GoogleAnalytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -105,7 +105,6 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="es">
 			<body className={inter.className}>
-				<GoogleAnalytics />
 				<div className="relative isolate pt-4 max-w-7xl mx-auto sm:px-6 lg:pt-14 lg:px-8">
 					<header>
 						<NavBar />
@@ -115,6 +114,7 @@ export default function RootLayout({ children }) {
 
 				<Footer />
 			</body>
+			<GoogleAnalytics gaId="G-E53C6QQ7Z8" />
 		</html>
 	);
 }
