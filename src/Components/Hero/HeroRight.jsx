@@ -16,8 +16,7 @@ export const HeroRight = () => {
 					<Image
 						src="/banner-envios-cuba.png"
 						alt="Envios a Cuba Oferta de Mayo"
-						className="w-full object-scale-down"
-						width={400}
+						width={500}
 						height={400}
 						loading="lazy"
 						priority={false}

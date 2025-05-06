@@ -9,10 +9,10 @@ export const HeroLeft = () => {
 			<h1 className="mt-0 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
 				Su Agencia de Envíos a Cuba
 			</h1>
-			<p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
+			<h2 className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
 				Somos una agencia de envíos a Cuba y el Caribe, especializada en envíos de cargas marítimas
 				y aéreas, con más de 20 años de experiencia en el sector
-			</p>
+			</h2>
 			<AnimatedShinyTextDemo />
 			<div className="mt-6 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-y-4 sm:gap-x-6">
 				<Link
@@ -24,7 +24,7 @@ export const HeroLeft = () => {
 					<span className="text-white">Contáctanos</span>
 				</Link>
 
-				<Link href="/tracking" className="text-sm font-semibold leading-6 text-gray-900">
+				<Link prefetch={true} href="/tracking" className="text-sm font-semibold leading-6 text-gray-900">
 					Tracking de su Envío<span aria-hidden="true"> →</span>
 				</Link>
 			</div>
