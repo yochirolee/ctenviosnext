@@ -111,6 +111,12 @@ export const viewport = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="es">
+			<head>
+				<link rel="preconnect" href="https://www.google-analytics.com" />
+				<link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+				<link rel="dns-prefetch" href="https://www.google-analytics.com" />
+				<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+			</head>
 			<body className={inter.className}>
 				<div className="relative isolate pt-4 max-w-7xl mx-auto sm:px-6 lg:pt-14 lg:px-8">
 					<header>
@@ -121,7 +127,7 @@ export default function RootLayout({ children }) {
 
 				<Footer />
 			</body>
-			<GoogleAnalytics gaId="G-E53C6QQ7Z8" strategy="afterInteractive" />
+			<GoogleAnalytics gaId="G-E53C6QQ7Z8" />
 		</html>
 	);
 }
