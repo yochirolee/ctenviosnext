@@ -21,7 +21,7 @@ const tiers = [
 		href: "#",
 		priceMonthly: "$1.49",
 		description:
-			"Envía a Cuba (Alimentos) min 15 lb, por solo $1.49/lb, precio regular $1.99/lb, oferta válida todos los jueves del mes de Mayo",
+			"Envía a Cuba (Alimentos,Aseo y Medicinas) min 15 lb, por solo $1.49/lb, precio regular $1.99/lb, oferta válida todos los jueves del mes de Mayo",
 		features: [
 			"Entregas en Toda la Isla",
 			"Sistema de Tracking en Tiempo Real",
