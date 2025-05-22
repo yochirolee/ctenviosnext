@@ -19,9 +19,9 @@ const tiers = [
 		name: "Felicidades Mamá - Oferta de Mayo",
 		id: "tier-enterprise",
 		href: "#",
-		priceMonthly: "$1.59",
+		priceMonthly: "$1.49",
 		description:
-			"Envia a Cuba (Alimentos, Medicinas y Aseo) min 15 lb, por solo $1.59/lb, oferta válida todos los jueves del mes de Mayo",
+			"Envía a Cuba (Alimentos) min 15 lb, por solo $1.49/lb, precio regular $1.99/lb, oferta válida todos los jueves del mes de Mayo",
 		features: [
 			"Entregas en Toda la Isla",
 			"Sistema de Tracking en Tiempo Real",
