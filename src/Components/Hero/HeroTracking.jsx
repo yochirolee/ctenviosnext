@@ -51,7 +51,7 @@ export const HeroTracking = () => {
 								}`}
 							/>
 							<h2 className="mt-4 text-center text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
-								Rastree su paquete o envio en tiempo real
+							Rastreo de Envíos a Cuba en Tiempo Real
 							</h2>
 						</div>
 
@@ -80,17 +80,21 @@ export const HeroTracking = () => {
 								</button>
 							</div>
 						</form>
-						<div className="flex items-center flex-col gap-2">
-							<p className="mt-4 text-md leading-8 text-gray-600">
-								Nuestro sistema de tracking permite brindarle información sobre sus envíos 24/7,
-								ante cualquier duda o problema
-							</p>
-							<Link href="https://api.whatsapp.com/send?phone=%2B17542778810">
-								<p className="w-full text-gray-800 mx-auto flex items-center gap-1 hover:text-green-500">
-									<MdOutlineWhatsapp className="h-5 w-5" /> Contáctenos
-								</p>
-							</Link>
+						<div className="flex flex-col gap-2 items-start">
+						<p className="mt-4 text-md leading-8 text-gray-600">
+							Rastree su paquete a Cuba fácilmente. Nuestro sistema de tracking le ofrece información actualizada 24/7 sobre sus envíos marítimos o aéreos. Seguimiento seguro, rápido y confiable.
+						</p>
+						<Link
+							href="https://api.whatsapp.com/send?phone=%2B17542778810"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="self-center inline-flex items-center gap-2 text-gray-800 hover:text-green-500"
+						>
+							<MdOutlineWhatsapp className="h-5 w-5" />
+							Contáctenos
+						</Link>
 						</div>
+
 					</div>
 				</div>
 

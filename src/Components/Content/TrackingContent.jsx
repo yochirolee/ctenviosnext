@@ -35,7 +35,7 @@ export const TrackingContent = () => {
 					/>
 				</svg>
 			</div>
-			<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+			<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
 				<div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="lg:pr-4">
 						<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
@@ -95,7 +95,7 @@ export const TrackingContent = () => {
 								</li>
 							</ul>
 							<p className="mt-8">
-							En nuestra agencia de envíos, cada paquete que enviamos a Cuba representa un compromiso de seguridad, rapidez y atención personalizada. Gracias por elegirnos para cuidar lo que más importa.
+								En nuestra agencia de envíos, cada paquete que enviamos a Cuba representa un compromiso de seguridad, rapidez y atención personalizada. Gracias por elegirnos para cuidar lo que más importa.
 							</p>
 						</div>
 					</div>

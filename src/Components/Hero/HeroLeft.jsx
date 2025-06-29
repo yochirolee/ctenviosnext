@@ -17,6 +17,8 @@ export const HeroLeft = () => {
 				<Link
 					prefetch={true}
 					href="https://api.whatsapp.com/send?phone=%2B17542778810"
+					target="_blank"
+          			rel="noopener noreferrer"
 					aria-label="Enviar mensaje por WhatsApp a CTEnvíos"
 					className="w-full sm:w-auto flex justify-center items-center rounded-md bg-green-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
 				>
@@ -25,6 +27,8 @@ export const HeroLeft = () => {
 				</Link>
 
 				<Link prefetch={true} href="/tracking"
+				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="Rastrear paquete enviado a Cuba"
 				className="text-sm font-semibold leading-6 text-gray-900">
 					Tracking de su Envío<span aria-hidden="true"> →</span>

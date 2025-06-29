@@ -3,7 +3,7 @@ import { React } from "react";
 import { MdWhatsapp } from "react-icons/md";
 export const Footer = () => {
 	return (
-		<footer className="container text-center mx-auto pt-10 relative z-50 bg-white mt-auto">
+		<footer className="container text-center mx-auto pt-10 pb-10 relative z-50 bg-white mt-auto">
 			<div className="relative z-50 h-12 inline-flex gap-8 p-10">
 				<a
 					href="https://www.facebook.com/people/CTEnvios/100087529462450/"
