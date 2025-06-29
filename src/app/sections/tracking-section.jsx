@@ -64,6 +64,7 @@ export const ShadowBg2 = () => {
 
 export default function TrackingSection() {
 	return (
+		
 		<section className=" relative py-20  md:py-12 ">
 			<div className="mx-auto sm:py-24 lg:py-32 lg:container lg:max-w-7xl ">
 				<div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
@@ -77,9 +78,9 @@ export default function TrackingSection() {
 							</p>
 						</div>
 
-						<SphereMask />
+						{/* <SphereMask /> */}
 
-						<ShimmerButton className=" mx-auto w-64 bg-gray-800">
+						<ShimmerButton className=" mx-auto w-64 bg-gray-800 mt-3">
 							<Link href="/tracking" className="inline-flex items-center gap-2">
 								Tracking
 								<MapPinIcon className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
@@ -125,5 +126,6 @@ export default function TrackingSection() {
 			</div>
 			<ShadowBg1 />
 		</section>
+		
 	);
 }
