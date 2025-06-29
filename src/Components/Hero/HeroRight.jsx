@@ -27,11 +27,11 @@ export const HeroRight = () => {
 			<div>
 				<div className="relative  px-6 md:p-0 ">
 					<div className="group mx-auto flex  justify-center  items-center gap-2 rounded-full bg-white/25 px-3 py-2 text-sm text-slate-900 ring-1 ring-inset ring-black/[0.08] hover:bg-white/50 hover:ring-black/[0.13] sm:flex md:ml-8 lg:hidden xl:flex">
-						<span className="text-xs font-semibold mx-2 text-sky-600 ">Seguridad y Garantía</span>
+						<span className="text-xs font-semibold mx-2 text-sky-600 ">Seguridad y Garantía en Envíos a Cuba</span>
 
 						<span className="text-xs md:font-medium">
 							<span className="md:hidden">Líderes en el Sector</span>
-							<span className="hidden md:inline">Líderes en el Sector de Paquetería a Cuba</span>
+							<span className="hidden md:inline">Somos líderes en el sector de paquetería a Cuba, ofreciendo servicios confiables y seguros para tus envíos marítimos y aéreos.</span>
 						</span>
 					</div>
 				</div>

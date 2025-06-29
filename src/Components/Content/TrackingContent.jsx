@@ -64,18 +64,14 @@ export const TrackingContent = () => {
 					<div className="lg:pr-4">
 						<div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
 							<p>
-								Nos enorgullece ofrecer envíos rápidos y seguros a Cuba desde cualquier parte del
-								mundo. Nuestra dedicación se refleja en tarifas competitivas y en la atención
-								especial que brindamos a cada paquete. Desde la Aduana hasta la entrega, gestionamos
-								cada paso del proceso para garantizar la eficiencia y la tranquilidad de nuestros
-								clientes.
+							Nos enorgullece ofrecer envíos de paquetes rápidos y seguros a Cuba desde cualquier parte del mundo. Nuestra experiencia y compromiso se reflejan en tarifas competitivas, atención personalizada y un servicio de calidad. Desde la aduana hasta la entrega final, gestionamos cada paso para que tu envío a Cuba sea eficiente y sin complicaciones.
 							</p>
 							<ul role="list" className="mt-8 space-y-8 text-gray-600">
 								<li className="flex gap-x-3">
 									<HomeIcon className="mt-1 h-5 w-5 flex-none text-sky-600" aria-hidden="true" />
 									<span>
-										<strong className="font-semibold text-gray-900">Entregas Puerta a Casa.</strong>{" "}
-										Todos sus Paquetes serán entregados en la puerta de su casa o su Familiar.
+										<strong className="font-semibold text-gray-900">Entregas Puerta a Puerta.</strong>{" "}
+										Todos los paquetes serán entregados directamente en la puerta de tu casa o la de tu familiar en Cuba.
 									</span>
 								</li>
 								<li className="flex gap-x-3">
@@ -84,7 +80,7 @@ export const TrackingContent = () => {
 										<strong className="font-semibold text-gray-900">
 											Información en tiempo real.
 										</strong>{" "}
-										Puede rastrear su paquete en tiempo real desde su celular o computadora.
+										Rastrea tu envío de paquetes a Cuba fácilmente desde tu celular o computadora con nuestro sistema de tracking.
 									</span>
 								</li>
 								<li className="flex gap-x-3">
@@ -94,13 +90,12 @@ export const TrackingContent = () => {
 									/>
 									<span>
 										<strong className="font-semibold text-gray-900">Garantía y Seguridad.</strong>{" "}
-										Con nosotros todos sus paquetes están asegurados y garantizados.
+										Con CTEnvíos, todos tus envíos están asegurados y protegidos. Tu tranquilidad es nuestra prioridad.
 									</span>
 								</li>
 							</ul>
 							<p className="mt-8">
-								No solo ofrecemos un servicio de envío, sino una experiencia completa. Valoramos la
-								confianza que depositan en nosotros al elegirnos para sus envíos a Cuba.
+							En nuestra agencia de envíos, cada paquete que enviamos a Cuba representa un compromiso de seguridad, rapidez y atención personalizada. Gracias por elegirnos para cuidar lo que más importa.
 							</p>
 						</div>
 					</div>

@@ -5,7 +5,10 @@ export const SocialMedia = () => {
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">Nuestras Redes Sociales</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-					No esperes mas, comienza a seguirnos
+				Comienza a seguirnos y únete a la comunidad CTEnvíos.
+				</p>
+				<p className="mt-4 text-base text-gray-700 sm:text-lg">
+				Mantente informado sobre nuestras ofertas, novedades y consejos para enviar paquetes a Cuba de forma segura y rápida.
 				</p>
 			</div>
 			<div className=" items-center mt-10  z-20 justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">

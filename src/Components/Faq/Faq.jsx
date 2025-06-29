@@ -7,13 +7,13 @@ const faqSections = [
 			{
 				title: "¿Qué tiempo demora un envío a Cuba?",
 				content:
-					"Generalmente nuestros envíos a Cuba demoran de 30 a 45 días laborables. Este tiempo depende también de la provincia a la que se envíe, siendo las provincias orientales las que más tardamos en entregar.",
+					"Generalmente, nuestros envíos de paquetes a Cuba tardan entre 30 y 45 días laborables. El tiempo de entrega varía según la provincia, con las provincias orientales siendo las que más tiempo requieren para la entrega.",
 				value: "general-1",
 			},
 			{
 				title: "¿Cuál es el peso máximo permitido para un paquete?",
 				content:
-					"El peso máximo permitido para un paquete es de 30 kg. Si su envío supera este peso, deberá dividirlo en varios paquetes.",
+					"El peso máximo permitido para un paquete es de 30 kg. Si su envío supera este peso, deberá dividirlo en varios paquetes para un envío seguro y eficiente.",
 				value: "general-2",
 			},
 		],
@@ -24,13 +24,13 @@ const faqSections = [
 			{
 				title: "¿Qué artículos están prohibidos para enviar a Cuba?",
 				content:
-					"Está prohibido enviar artículos como drogas, armas, explosivos, materiales inflamables, animales vivos, dinero en efectivo y otros artículos ilegales o peligrosos. Por favor, consulte nuestra lista completa de artículos prohibidos antes de realizar su envío.",
+					"Está prohibido enviar artículos como drogas, armas, explosivos, materiales inflamables, animales vivos, dinero en efectivo y otros artículos ilegales o peligrosos. Consulte nuestra lista completa de artículos prohibidos antes de realizar su envío a Cuba.",
 				value: "security-1",
 			},
 			{
 				title: "¿Ofrecen seguro para los envíos a Cuba?",
 				content:
-					"Sí, ofrecemos opciones de seguro para sus envíos. El costo del seguro varía según el valor declarado del contenido del paquete. Recomendamos asegurar todos los envíos de alto valor para su tranquilidad.",
+					"Sí, ofrecemos opciones de seguro para sus envíos a Cuba. El costo del seguro varía según el valor declarado del contenido del paquete. Recomendamos asegurar todos los envíos de alto valor para su tranquilidad.",
 				value: "security-2",
 			},
 		],
@@ -41,13 +41,13 @@ const faqSections = [
 			{
 				title: "¿Cómo puedo rastrear mi paquete?",
 				content:
-					"Puede rastrear su paquete utilizando el número de seguimiento proporcionado en el momento del envío. Ingrese este número en la sección de 'Rastreo' de nuestra página web o aplicación móvil para obtener actualizaciones sobre el estado de su envío.",
+					"Puede rastrear su paquete utilizando el número de seguimiento proporcionado al momento del envío. Ingrese este número en la sección de 'Tracking' de nuestra página web para obtener actualizaciones en tiempo real sobre su envío a Cuba.",
 				value: "tracking-1",
 			},
 			{
 				title: "¿Qué hago si mi paquete se pierde o se daña?",
 				content:
-					"En caso de pérdida o daño de su paquete, por favor contáctenos inmediatamente. Tenemos un proceso de reclamación que debe iniciarse dentro de los 15 días posteriores a la fecha estimada de entrega. Asegúrese de guardar todos los recibos y documentación relacionada con su envío.",
+					"En caso de pérdida o daño de su paquete, contáctenos inmediatamente. Tenemos un proceso de reclamación que debe iniciarse dentro de los 15 días posteriores a la fecha estimada de entrega. Guarde todos los recibos y documentación relacionada con su envío.",
 				value: "tracking-2",
 			},
 		],
@@ -60,7 +60,7 @@ export default function Faq() {
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
 				<h2 className="text-base font-semibold leading-7 text-sky-600">Preguntas Frecuentes</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-					Lo que debe Conocer cuando envía a Cuba.
+				Somos tu agencia de envíos a Cuba y estamos aquí para ayudarte en cada paso.
 				</p>
 			</div>
 			<div>

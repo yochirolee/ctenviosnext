@@ -7,6 +7,9 @@ export const Footer = () => {
 			<div className="relative z-50 h-12 inline-flex gap-8 p-10">
 				<a
 					href="https://www.facebook.com/people/CTEnvios/100087529462450/"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Facebook"
 					className="w-8 h-8 relative z-50"
 					style={{ pointerEvents: "auto" }}
 				>
@@ -26,6 +29,9 @@ export const Footer = () => {
 				</a>
 				<a
 					href="https://api.whatsapp.com/send?phone=%2B17542778810&data=AWCHK2enYTDFDGMl_C4WA-bU40pq2QeXbNy1Sy7ChnJantSaLPPYdb9OC4HK7-TXb4PUCw98TQsnV2uXOr4AHR8w7oKLusK52IM_7hQJqn-TKg36Y5KSPvQKVYyehzFbmSiDmcw6C3U2V_h6L2GUxzYviilHWyCEetBiYEYg8xsJ5Bwf4XzAto8JhiDGWmfZdXuopzwfJzIS1WSmWMp9-_Vk9rfhD4IyFq-jtsLWgY3Zr3O3kjmG4eOBdWssT8hI_RtD5_pM10XEXowaTTyD_xuVKsQ8d62vxfbpRpJBWlj1XgU&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR0gA2hkfBC9mgbWIaX9XRjAiFZdRwxPDIaH0Frad0oE4jUD1Ae2jteu4sA"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Whatsapp"
 					className="w-8 h-8 relative z-50"
 					style={{ pointerEvents: "auto" }}
 				>
@@ -33,7 +39,10 @@ export const Footer = () => {
 					<MdWhatsapp className="text-gray-700 h-8 w-8 hover:text-green-600" />
 				</a>
 				<a
-					href="https://www.instagram.com/ctenvios/"
+					href="https://www.instagram.com/ctenvios/"					
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Instagram"
 					className="w-8 h-8 relative z-50"
 					style={{ pointerEvents: "auto" }}
 				>

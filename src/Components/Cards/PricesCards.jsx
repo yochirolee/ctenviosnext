@@ -2,30 +2,30 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 const tiers = [
 	{
-		name: "Marítimo Precio Regular",
+		name: "Envío Marítimo Precio Regular",
 		id: "tier-hobby",
 		href: "#",
 		priceMonthly: "$1.99",
 		description:
-			"El precio y el plan perfecto para enviar a Cuba. Ahorra en los artículos de gran volumen y peso",
+			"La opción ideal para enviar paquetes a Cuba con tarifas competitivas. Ahorra en envíos de gran volumen y peso con un servicio confiable y entrega en toda la isla.",
 		features: [
-			"Entregas en Toda la Isla",
-			"Sistema de Tracking en Tiempo Real",
-			"Atención al Cliente 24/7 mediante WhatsApp",
+			"Entregas puerta a puerta en toda Cuba",
+			"Seguimiento en tiempo real de tu envío",
+			"Atención al cliente 24/7 vía WhatsApp",
 		],
 		featured: false,
 	},
 	{
-		name: "Felicidades Mamá - Oferta de Mayo",
+		name: "Oferta Martes Especial",
 		id: "tier-enterprise",
 		href: "#",
-		priceMonthly: "$1.49",
+		priceMonthly: "$1.69",
 		description:
-			"Envía a Cuba (Alimentos,Aseo y Medicinas) min 15 lb, por solo $1.49/lb, precio regular $1.99/lb, oferta válida todos los jueves del mes de Mayo",
+			"Envía tus paquetes a Cuba por solo $1.69 la libra, todos los martes. Aprovecha esta tarifa especial para envíos a Cuba con entrega puerta a puerta en toda la isla",
 		features: [
-			"Entregas en Toda la Isla",
-			"Sistema de Tracking en Tiempo Real",
-			"Atención al Cliente 24/7 mediante WhatsApp",
+			"Tarifas exclusivas todos los martes",
+			"Entregas rápidas y seguras en toda Cuba",
+			"Atención personalizada 24/7 por WhatsApp",
 		],
 		featured: true,
 	},
@@ -51,9 +51,9 @@ export default function PriceCards() {
 				/>
 			</div>
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-				<h2 className="text-base font-semibold leading-7 text-sky-600">Nuestros Precios</h2>
+				<h2 className="text-base font-semibold leading-7 text-sky-600">Envíos a Cuba al Mejor Precio Garantizado</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-					El mejor Precio del Mercado cuando envías a Cuba
+				Ofrecemos el mejor precio del mercado para tus envíos a Cuba
 				</p>
 			</div>
 
@@ -86,7 +86,7 @@ export default function PriceCards() {
 							{tier.featured && (
 								<Image
 									src="/envios_cuba_madres.png"
-									alt="Envios a Cuba Oferta de Mayo"
+									alt="Envios a Cuba Oferta Martes"
 									className="w-full mt-3 rounded-full object-cover"
 									width={300}
 									height={300}

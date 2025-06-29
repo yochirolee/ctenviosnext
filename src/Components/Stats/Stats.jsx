@@ -3,9 +3,9 @@ import NumberTicker from "../ui/number-ticker";
 import Ripple from "../ui/ripple";
 
 const stats = [
-	{ id: 1, name: "Enviados en el 2024", description: "Contenedores", value: 85 },
-	{ id: 2, name: "Entregados en el 2024", description: "Paquetes", value: 126000 },
-	{ id: 3, name: "Nuevos en el 2024", description: "Clientes", value: 3402 },
+	{ id: 1, name: "Transporte eficiente y constante", description: "Contenedores Enviados", value: 85 },
+	{ id: 2, name: "Entregas puerta a puerta", description: "Paquetes Entregados", value: 126000 },
+	{ id: 3, name: "Nuevas Familias para CTEnvíos", description: "Nuevos Clientes", value: 3402 },
 ];
 
 export const Stats = () => {
@@ -16,7 +16,7 @@ export const Stats = () => {
 					Paquetes Entregados y Clientes
 				</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-					Nuestros Resultados en el 2024
+				Resultados que Hablan por Nosotros – 2025
 				</p>
 			</div>
 			<BlurFade delay={0.5 * 0.5} inView>
