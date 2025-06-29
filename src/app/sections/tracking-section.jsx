@@ -80,7 +80,7 @@ export default function TrackingSection() {
 
 						{/* <SphereMask /> */}
 
-						<ShimmerButton className=" mx-auto w-64 bg-gray-800 mt-3">
+						<ShimmerButton className=" mx-auto w-64 bg-gray-800 mt-8">
 							<Link href="/tracking" className="inline-flex items-center gap-2">
 								Tracking
 								<MapPinIcon className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
