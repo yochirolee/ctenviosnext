@@ -4,7 +4,7 @@ import { TrackingCard } from "../Cards/TrackingCard";
 export const TrackingDetails = ({ invoice }) => {
 	// Early return if invoice is falsy or empty
 	if (!invoice || Object.keys(invoice).length === 0) {
-		return null;
+		<p></p>
 	}
 
 	const { parcels } = invoice;

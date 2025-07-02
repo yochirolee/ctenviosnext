@@ -11,7 +11,7 @@ export const TrackingHistoryCard = ({ events }) => {
 					<CheckIcon className="w-6 h-6 text-[#0EA5E9]" />
 					<p className="ml-5 flex flex-col ">
 						<strong className="flex font-semibold gap-2 text-slate-900">
-							{event?.locations?.name}
+							{event?.location}
 						</strong>
 						<span className="text-xs text-[#0EA5E9]">
 							{event?.updatedAt !== "0000-00-00"
