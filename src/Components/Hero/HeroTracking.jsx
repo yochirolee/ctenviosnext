@@ -12,6 +12,7 @@ export const HeroTracking = () => {
 	const router = useRouter();
 	const searchParams = useSearchParams();
 	const [searchTerm, setSearchTerm] = useState(searchParams.get("search") || "");
+	
 	const { data: invoice, isLoading, isError } = useFetchByInvoiceOrHBL(searchTerm);
 	const [hasSearched, setHasSearched] = useState(!!searchParams.get("search"));
 
@@ -41,7 +42,7 @@ export const HeroTracking = () => {
 	return (
 		<div className="max-w-7xl mx-auto">
 			<ShadowBg1 />
-			<div className="grid   gap-20 px-4   mx-auto container  py-6  lg:py-20  ">
+			<div className="grid   px-4   mx-auto container  py-6  lg:pt-20  pb- ">
 				<div className=" mt-10 sm:mb-8 sm:flex sm:justify-center ">
 					<div className="max-w-xl lg:max-w-lg">
 						<div className=" flex flex-col gap-4 ">
@@ -51,7 +52,7 @@ export const HeroTracking = () => {
 								}`}
 							/>
 							<h2 className="mt-4 text-center text-2xl font-extrabold tracking-tight text-slate-900 xl:text-3xl xl:leading-[2.5rem]">
-							Rastreo de Envíos a Cuba en Tiempo Real
+								Rastreo de Envíos a Cuba en Tiempo Real
 							</h2>
 						</div>
 
@@ -80,9 +81,14 @@ export const HeroTracking = () => {
 								</button>
 							</div>
 						</form>
-						<div className="flex flex-col gap-2 items-start">
+					</div>
+				</div>
+				{invoice == undefined || invoice == null ? (
+					<div className="flex flex-col max-w-2xl mx-auto gap-2 items-start">
 						<p className="mt-4 text-md leading-8 text-gray-600">
-							Rastree su paquete a Cuba fácilmente. Nuestro sistema de tracking le ofrece información actualizada 24/7 sobre sus envíos marítimos o aéreos. Seguimiento seguro, rápido y confiable.
+							Rastree su paquete a Cuba fácilmente. Nuestro sistema de tracking le ofrece
+							información actualizada 24/7 sobre sus envíos marítimos o aéreos. Seguimiento seguro,
+							rápido y confiable.
 						</p>
 						<Link
 							href="https://api.whatsapp.com/send?phone=%2B17542778810"
@@ -93,12 +99,10 @@ export const HeroTracking = () => {
 							<MdOutlineWhatsapp className="h-5 w-5" />
 							Contáctenos
 						</Link>
-						</div>
-
 					</div>
-				</div>
-
-				{invoice ? <TrackingDetails invoice={invoice} /> : ""}
+				) : (
+					<TrackingDetails invoice={invoice} />
+				)}
 			</div>
 			<ShadowBg2 />
 		</div>

@@ -6,13 +6,11 @@ import { Stats } from "@/Components/Stats/Stats";
 
 const Tracking = () => {
 	return (
-		<>
-			<Suspense fallback={<div>Loading...</div>}>
-				<HeroTracking />
-				<Stats />
-				<TrackingContent />
-			</Suspense>
-		</>
+		<Suspense fallback={<div>Loading...</div>}>
+			<HeroTracking />
+			<Stats />
+			<TrackingContent />
+		</Suspense>
 	);
 };
 export default Tracking;
