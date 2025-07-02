@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { Footer } from "@/Components/Footer/Footer";
 import QueryProvider from "@/Utils/Providers/QueryProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -117,6 +118,17 @@ export default function RootLayout({ children }) {
 				<link rel="dns-prefetch" href="https://www.google-analytics.com" />
 				<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 			</head>
+			<Script src="https://www.googletagmanager.com/gtag/js?id=G-DMGE29VG1R" strategy="afterInteractive" />
+			<Script id="gtag-init" strategy="afterInteractive">
+			{`
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'G-DMGE29VG1R'); // Google Ads
+				gtag('config', 'G-E53C6QQ7Z8'); // Google Analytics 4
+			`}
+			</Script>
 			<body className={inter.className}>
 				<div className="relative isolate pt-4 max-w-7xl mx-auto sm:px-6 lg:pt-14 lg:px-8">
 					<header>
@@ -127,7 +139,6 @@ export default function RootLayout({ children }) {
 
 				<Footer />
 			</body>
-			<GoogleAnalytics gaId="G-E53C6QQ7Z8" />
 		</html>
 	);
 }
