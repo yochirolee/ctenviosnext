@@ -51,9 +51,11 @@ export default function PriceCards() {
 				/>
 			</div>
 			<div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-				<h2 className="text-base font-semibold leading-7 text-sky-600">Envíos a Cuba al Mejor Precio Garantizado</h2>
+				<h2 className="text-base font-semibold leading-7 text-sky-600">
+					Envíos a Cuba al Mejor Precio Garantizado
+				</h2>
 				<p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-				Ofrecemos el mejor precio del mercado para tus envíos a Cuba
+					Ofrecemos el mejor precio del mercado para tus envíos a Cuba
 				</p>
 			</div>
 
@@ -87,7 +89,7 @@ export default function PriceCards() {
 								<Image
 									src="/oferta-envio-cuba-4-julio.jpg"
 									alt="Envios a Cuba Oferta Martes"
-									className="w-full mt-3 object-cover"
+									className="w-full mt-3 object-cover rounded-lg"
 									width={300}
 									height={300}
 									loading="lazy"
