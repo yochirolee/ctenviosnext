@@ -16,12 +16,12 @@ const tiers = [
 		featured: false,
 	},
 	{
-		name: "Gran Oferta 4 de Julio",
+		name: "Descuentos de Jueves",
 		id: "tier-enterprise",
 		href: "#",
-		priceMonthly: "$1.59",
+		priceMonthly: "$1.49",
 		description:
-			"Gran Oferta: solo $1.59 por libra. Envíos a Cuba del 4 al 6 de julio, sin límite de peso. Entrega puerta a puerta",
+			"Rebajas de Jueves: Misceláneas solo $1.49 por libra. Todos los jueves de Julio, sin límite de peso. Entrega puerta a puerta",
 		features: [
 			"Entregas puerta a puerta en toda Cuba",
 			"Seguimiento en tiempo real de tu envío",
@@ -85,9 +85,9 @@ export default function PriceCards() {
 							>
 								{tier.name}
 							</h3>
-							{tier.featured && (
+							 {tier.featured && (
 								<Image
-									src="/oferta-envio-cuba-4-julio.jpg"
+									src="/banner-discounts.png"
 									alt="Envios a Cuba Oferta Martes"
 									className="w-full mt-3 object-cover rounded-lg"
 									width={300}
@@ -96,7 +96,7 @@ export default function PriceCards() {
 									priority={false}
 									quality={60}
 								/>
-							)}
+							)} 
 							<p className="mt-4 flex items-baseline gap-x-2">
 								<span
 									className={classNames(
