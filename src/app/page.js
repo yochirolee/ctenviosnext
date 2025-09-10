@@ -6,6 +6,13 @@ import { SocialMedia } from "@/Components/SocialMedia/SocialMedia";
 import { Stats } from "@/Components/Stats/Stats";
 import Faq from "@/Components/Faq/Faq";
 import ReviewsWidget from "@/Components/Reviews/ReviewsWidget";
+import InstagramSmartGrid from '@/Components/Instagram/InstagramSmartGrid'
+
+const instaItems = [
+	'https://www.instagram.com/reel/DOJxhtskSU5/?igsh=MzZ6MTJiY2ljM2cy',
+	'https://www.instagram.com/reel/DONKJqGDPuj/?igsh=MXhxZXliMGllNWs5ZA==',
+	'https://www.instagram.com/p/CnHRzZWBbWH/?igsh=Yms4dnN6MjJ6cnlv',
+  ]
 
 const PriceCards = lazy(() => import("@/Components/Cards/PricesCards"));
 const TrackingSection = lazy(() => import("./sections/tracking-section"));
@@ -14,7 +21,7 @@ const LoadingFallback = ({ height }) => (
 	<div className={`flex justify-center items-center ${height}`}>
 		<div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
 	</div>
-);
+);	
 export default function Home() {
 	return (
 		<main>
@@ -27,6 +34,7 @@ export default function Home() {
 			<TrackingContent />
 			<ReviewsWidget />
 			<SocialMedia />
+			<InstagramSmartGrid items={instaItems} />
 			<Faq />
 			<NewsLetter />
 		</main>
