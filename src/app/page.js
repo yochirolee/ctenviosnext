@@ -5,6 +5,7 @@ import NewsLetter from "@/Components/Newsletter/Newsletter";
 import { SocialMedia } from "@/Components/SocialMedia/SocialMedia";
 import { Stats } from "@/Components/Stats/Stats";
 import Faq from "@/Components/Faq/Faq";
+import ReviewsWidget from "@/Components/Reviews/ReviewsWidget";
 
 const PriceCards = lazy(() => import("@/Components/Cards/PricesCards"));
 const TrackingSection = lazy(() => import("./sections/tracking-section"));
@@ -24,6 +25,7 @@ export default function Home() {
 			</Suspense>
 			<Stats />
 			<TrackingContent />
+			<ReviewsWidget />
 			<SocialMedia />
 			<Faq />
 			<NewsLetter />

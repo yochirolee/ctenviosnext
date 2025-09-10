@@ -34,8 +34,10 @@ export const metadata = {
 		"Envíos seguros a Cuba",
 		"Mejor servicio de envíos a Cuba",
 		"Envíos garantizados a Cuba",
-		"Precios de envíos a Cuba",
-		"Agencia de envios a Cuba",
+		"Cubamax envios a cuba",
+		"Dimecuba envios a Cuba",
+		"Rapidviaservices de envios a Cuba",
+		"Cubaencarga de envios a Cuba",
 	],
 	authors: [{ name: "CTEnvios Team" }],
 	creator: "CTEnvios",
@@ -65,11 +67,11 @@ export const metadata = {
 		title: "CTEnvios -Agencia de Envíos a Cuba Rápidos y Confiables",
 		description:
 			"Agencia de envíos a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
-		url: "https://www.ctenvios.com",
+		url: "https://ctenvios.com",
 		siteName: "CTEnvios",
 		images: [
 			{
-				url: "https://www.ctenvios.com/og-image.jpg",
+				url: "https://ctenvios.com/banner-discounts",
 				width: 1200,
 				height: 630,
 				alt: "CTEnvios - Envíos a Cuba",
@@ -87,7 +89,7 @@ export const metadata = {
 			"Agencia de envíos a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
 		creator: "@ctenvios",
 		images: {
-			url: "https://www.ctenvios.com/twitter-image.jpg",
+			url: "https://ctenvios.com/banner-discounts.png",
 			alt: "CTEnvios - Envíos a Cuba",
 		},
 	},
