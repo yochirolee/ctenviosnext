@@ -73,4 +73,13 @@
   }
 }
 
+.ti-widget,
+.ti-widget > div,
+.ti-root,
+.ti-root > div {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 
