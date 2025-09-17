@@ -66,7 +66,7 @@ export const Footer = () => {
 					Términos y Condiciones
 				</Link>
 			</div>
-			<div className="relative z-50">© 2025 CTEnvios, Inc. Todos los derechos reservados.</div>
+			<div className="relative z-50">© 2025 CTEnvios. Todos los derechos reservados. · Desarrollado por Valelee LLC</div>
 		</footer>
 	);
 };
