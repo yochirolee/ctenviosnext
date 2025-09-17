@@ -39,7 +39,7 @@ export const Footer = () => {
 					<MdWhatsapp className="text-gray-700 h-8 w-8 hover:text-green-600" />
 				</a>
 				<a
-					href="https://www.instagram.com/ctenvios/"					
+					href="https://www.instagram.com/ctenvios/"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="Instagram"
@@ -66,7 +66,11 @@ export const Footer = () => {
 					Términos y Condiciones
 				</Link>
 			</div>
-			<div className="relative z-50">© 2025 CTEnvios. Todos los derechos reservados. · Desarrollado por Valelee LLC</div>
-		</footer>
+			<div className="relative z-50">© {new Date().getFullYear()} CTEnvios. Todos los derechos reservados.
+				{" · "}
+				Desarrollado por Valelee LLC
+				{/* <a href="https://valelee.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 underline-offset-2 hover:underline">Valelee LLC</a>*/}
+				</div>
+			</footer>
 	);
 };
