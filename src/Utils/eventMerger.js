@@ -33,6 +33,7 @@ const HM_STATUS_MAP = {
 	},
 };
 
+
 /**
  * Extracts location from the detail text
  * Checks for "almacén X" or "provincia X" patterns
