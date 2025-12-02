@@ -1,8 +1,21 @@
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
-import { React } from "react";
+import { React, useMemo } from "react";
 import { TrackingHistoryCard } from "./TrackingHistoryCard";
+import { useFetchHMHistory } from "@/Hooks/useFetchHMHistory";
+import { mergeAndNormalizeEvents } from "@/Utils/eventMerger";
+
 export const TrackingCard = ({ parcel, invoice }) => {
-	if (!parcel) return;
+	const { data: hmHistory, isLoading: isLoadingHM } = useFetchHMHistory(
+		parcel?.hbl
+	);
+
+	const mergedEvents = useMemo(() => {
+		if (!parcel?.events) return [];
+		return mergeAndNormalizeEvents(parcel.events, hmHistory);
+	}, [parcel?.events, hmHistory]);
+
+	if (!parcel) return null;
+
 	return (
 		<div className="relative  z-10 -mx-4 shadow-lg ring-1 ring-slate-900/10 sm:mx-0 sm:rounded-3xl  lg:flex-none">
 			<div className="flex absolute -bottom-px left-1/2 -ml-48 h-[2px] w-96">
@@ -22,6 +35,9 @@ export const TrackingCard = ({ parcel, invoice }) => {
 							</span>
 						</span>
 					</div>
+					<div className="text-sm text-gray-500">
+						{invoice?.province} - {invoice?.city}
+					</div>
 					<div className="my-4 flex items-center">
 						<p className="text-[1.5rem] leading-none text-slate-900">
 							<span className="font-bold">{parcel?.hbl}</span>
@@ -32,7 +48,7 @@ export const TrackingCard = ({ parcel, invoice }) => {
 					</div>
 					<span className="text-slate-500 mt-4">{parcel?.description}</span>
 				</div>
-				<TrackingHistoryCard events={parcel.events} />
+				<TrackingHistoryCard events={mergedEvents} isLoading={isLoadingHM} />
 			</div>
 		</div>
 	);

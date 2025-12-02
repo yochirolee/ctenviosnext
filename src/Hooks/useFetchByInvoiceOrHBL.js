@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const production_URL = "https://tracking.ctenvios.com/api/v1";
-const dev_url = "http://localhost:3000/api/v1";
+const dev_url = "https://tracking.ctenvios.com/api/v1";
 axios.defaults.baseURL = process.env.NODE_ENV === "production" ? production_URL : dev_url;
 const apiKey = "c3VwYmFzZWNyZXQ=";
 axios.defaults.headers.common = { "api-key": apiKey };
@@ -23,6 +23,7 @@ const getProductData = async (id) => {
 	//scalp id
 	if (trimedId.length >= 4 && trimedId.length < 7) {
 		const response = await axios.get(`parcels/invoice/${trimedId}`);
+		
 		return response.data;
 	} else {
 		const response = await axios.get(`parcels/hbl/${trimedId}`);
