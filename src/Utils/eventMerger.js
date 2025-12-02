@@ -41,14 +41,25 @@ const extractLocationFromDetalle = (detalle) => {
 };
 
 /**
+ * Safely converts a date value to ISO string
+ * Returns null if the date is invalid
+ * @param {string|Date|null} dateValue - The date value to convert
+ * @returns {string|null} - ISO string or null if invalid
+ */
+const safeToISOString = (dateValue) => {
+	if (!dateValue) return null;
+	const date = new Date(dateValue);
+	if (isNaN(date.getTime())) return null;
+	return date.toISOString();
+};
+
+/**
  * Maps events from the base API (parcels) to normalized tracking event format
  * @param {object} ev - Event from base API
  * @returns {object} - Normalized tracking event
  */
 const mapNewEventToTrackingEvent = (ev) => {
-	const ts = ev.updatedAt
-		? new Date(ev.updatedAt).toISOString()
-		: new Date().toISOString();
+	const ts = safeToISOString(ev.updatedAt);
 
 	return {
 		timestamp: ts,
@@ -56,6 +67,7 @@ const mapNewEventToTrackingEvent = (ev) => {
 		statusName: ev.location || "Unknown",
 		statusDescription: null,
 		location: ev.location || null,
+		locationId: ev.locationId || null,
 		updateMethod: "SYSTEM",
 		userName: null,
 		source: "NEW",
@@ -88,14 +100,15 @@ const mapHmHistoryToTrackingEvent = (hm) => {
 		};
 	}
 
-	const ts = hm.fecha_objeto || hm.fecha;
+	const ts = safeToISOString(hm.fecha_objeto || hm.fecha);
 
 	return {
-		timestamp: new Date(ts).toISOString(),
+		timestamp: ts,
 		statusCode: statusCfg.code,
 		statusName: statusCfg.name,
 		statusDescription: hm.detalle || null,
 		location: extractLocationFromDetalle(hm.detalle),
+		locationId: null,
 		updateMethod: "HM_HISTORY",
 		userName: hm.usuario || null,
 		source: "HM",
@@ -134,10 +147,30 @@ export const mergeAndNormalizeEvents = (baseEvents, hmHistoryRaw) => {
 
 	let merged = [...newEvents, ...hmEvents];
 
-	// 1. Sort chronologically
-	merged.sort(
-		(a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
-	);
+	// 1. Sort: locationId <= 5 first (by locationId), then rest by date
+	merged.sort((a, b) => {
+		const aLocId = a.locationId || Infinity;
+		const bLocId = b.locationId || Infinity;
+		const aIsFixed = aLocId <= 5;
+		const bIsFixed = bLocId <= 5;
+
+		// Both have locationId <= 5: sort by locationId
+		if (aIsFixed && bIsFixed) {
+			return aLocId - bLocId;
+		}
+		// Only a has locationId <= 5: a comes first
+		if (aIsFixed && !bIsFixed) {
+			return -1;
+		}
+		// Only b has locationId <= 5: b comes first
+		if (!aIsFixed && bIsFixed) {
+			return 1;
+		}
+		// Both are > 5 or HM events: sort by date
+		const aTime = a.timestamp ? new Date(a.timestamp).getTime() : 0;
+		const bTime = b.timestamp ? new Date(b.timestamp).getTime() : 0;
+		return aTime - bTime;
+	});
 
 	// 2. Remove duplicates
 	const deduped = [];

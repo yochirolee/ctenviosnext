@@ -18,8 +18,13 @@ const getEventIcon = (statusCode) => {
 const formatEventDate = (timestamp) => {
 	if (!timestamp || timestamp === "0000-00-00") return "";
 	
-	const date = parseISO(timestamp);
-	return format(date, "MMM d, yyyy HH:mm");
+	try {
+		const date = parseISO(timestamp);
+		if (isNaN(date.getTime())) return "";
+		return format(date, "MMM d, yyyy HH:mm");
+	} catch {
+		return "";
+	}
 };
 
 export const TrackingHistoryCard = ({ events, isLoading }) => {
@@ -53,9 +58,11 @@ export const TrackingHistoryCard = ({ events, isLoading }) => {
 						{event.location && (
 							<span className="text-xs text-slate-600">{event.location}</span>
 						)}
-						<span className="text-xs text-[#0EA5E9] mt-1">
-							{formatEventDate(event.timestamp)}
-						</span>
+						{formatEventDate(event.timestamp) && (
+							<span className="text-xs text-[#0EA5E9] mt-1">
+								{formatEventDate(event.timestamp)}
+							</span>
+						)}
 					</div>
 				</li>
 			))}
