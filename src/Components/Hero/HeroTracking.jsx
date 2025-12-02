@@ -16,7 +16,7 @@ export const HeroTracking = () => {
 	const { data: invoice, isLoading, isError } = useFetchByInvoiceOrHBL(searchTerm);
 	const [hasSearched, setHasSearched] = useState(!!searchParams.get("search"));
 
-	console.log(invoice);
+	
 	useEffect(() => {
 		const currentSearch = searchParams.get("search");
 		if (currentSearch) {
