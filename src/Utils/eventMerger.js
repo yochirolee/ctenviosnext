@@ -1,3 +1,22 @@
+// Known typos from HM history data
+const TYPO_CORRECTIONS = {
+	Trasncargo: "Transcargo",
+};
+
+/**
+ * Fixes known typos in text from HM history
+ * @param {string|null} text - The text to correct
+ * @returns {string|null} - Corrected text or original if no corrections needed
+ */
+const fixKnownTypos = (text) => {
+	if (!text) return text;
+	let corrected = text;
+	for (const [typo, correction] of Object.entries(TYPO_CORRECTIONS)) {
+		corrected = corrected.replace(new RegExp(typo, "gi"), correction);
+	}
+	return corrected;
+};
+
 // HM Status mapping for event types
 const HM_STATUS_MAP = {
 	entradarecibida: {
@@ -80,14 +99,17 @@ const mapNewEventToTrackingEvent = (ev) => {
  * @returns {object} - Normalized tracking event
  */
 const mapHmHistoryToTrackingEvent = (hm) => {
+	// Fix known typos in HM data
+	const evento = fixKnownTypos((hm.evento || "").trim());
+	const detalle = fixKnownTypos(hm.detalle || "");
+
 	let statusCfg = HM_STATUS_MAP[hm.tipo] || {
 		code: hm.tipo ? hm.tipo.toUpperCase() : "HM_EVENT",
-		name: hm.evento || "Evento HM",
+		name: evento || "Evento HM",
 	};
 
-	const evento = (hm.evento || "").trim();
 	const eventoLower = evento.toLowerCase();
-	const detalleLower = (hm.detalle || "").toLowerCase();
+	const detalleLower = detalle.toLowerCase();
 
 	// Detect successful delivery
 	const isEntregaExitosaByEvento = eventoLower === "entrega exitosa";
@@ -106,8 +128,8 @@ const mapHmHistoryToTrackingEvent = (hm) => {
 		timestamp: ts,
 		statusCode: statusCfg.code,
 		statusName: statusCfg.name,
-		statusDescription: hm.detalle || null,
-		location: extractLocationFromDetalle(hm.detalle),
+		statusDescription: detalle || null,
+		location: extractLocationFromDetalle(detalle),
 		locationId: null,
 		updateMethod: "HM_HISTORY",
 		userName: hm.usuario || null,
