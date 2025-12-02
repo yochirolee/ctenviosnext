@@ -1,10 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
-const HM_API_URL = "http://72.60.114.241/api/historial/envio";
-
 /**
  * Fetches HM history for a given HBL
- * Uses native fetch to avoid global axios headers (api-key) that cause CORS issues
+ * Uses local API route to proxy the request (avoids mixed content issues in production)
  * @param {string} hbl - The HBL code to fetch history for
  * @returns {Promise<object>} - The HM history response
  */
@@ -13,7 +11,7 @@ const fetchHMHistory = async (hbl) => {
 		return { historial: [] };
 	}
 
-	const response = await fetch(`${HM_API_URL}/${hbl.trim()}`);
+	const response = await fetch(`/api/historial/${hbl.trim()}`);
 	
 	if (!response.ok) {
 		return { historial: [] };
