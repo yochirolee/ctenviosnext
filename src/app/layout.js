@@ -4,8 +4,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Footer } from "@/Components/Footer/Footer";
 import QueryProvider from "@/Utils/Providers/QueryProvider";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
+import { JsonLd } from "@/Components/Seo/JsonLd";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -20,24 +20,28 @@ export const metadata = {
 	generator: "Next.js",
 	applicationName: "CTEnvios",
 	referrer: "origin-when-cross-origin",
+	metadataBase: new URL("https://ctenvios.com"),
+	alternates: {
+		canonical: "/",
+	},
 	keywords: [
 		"Envíos a Cuba",
 		"Paquetes a Cuba",
 		"Remesas a Cuba",
-		"Envío maritimo y aereo a Cuba",
+		"Envío marítimo y aéreo a Cuba",
 		"Servicios de mensajería a Cuba",
-		"Agencia de envios  a Cuba",
-		"Autos, Carros  para Cuba",
+		"Agencia de envíos a Cuba",
+		"Autos y Carros para Cuba",
 		"Motos para Cuba",
 		"Enviar dinero a Cuba",
 		"Enviar comida a Cuba",
 		"Envíos seguros a Cuba",
 		"Mejor servicio de envíos a Cuba",
 		"Envíos garantizados a Cuba",
-		"Cubamax envios a cuba",
-		"Dimecuba envios a Cuba",
-		"Rapidviaservices de envios a Cuba",
-		"Cubaencarga de envios a Cuba",
+		"Cubamax envíos a Cuba",
+		"Dimecuba envíos a Cuba",
+		"Rapidviaservices envíos a Cuba",
+		"Cubaencarga envíos a Cuba",
 	],
 	authors: [{ name: "CTEnvios Team" }],
 	creator: "CTEnvios",
@@ -71,11 +75,11 @@ export const metadata = {
 		siteName: "CTEnvios",
 		images: [
 			{
-				url: "https://ctenvios.com/banner-discounts",
+				url: "https://ctenvios.com/banner-discounts.png",
 				width: 1200,
 				height: 630,
 				alt: "CTEnvios - Envíos a Cuba",
-				type: "image/jpeg",
+				type: "image/png",
 			},
 		],
 		locale: "es_ES",
@@ -122,7 +126,7 @@ export default function RootLayout({ children }) {
 			</head>
 			<Script src="https://www.googletagmanager.com/gtag/js?id=G-DMGE29VG1R" strategy="afterInteractive" />
 			<Script id="gtag-init" strategy="afterInteractive">
-			{`
+				{`
 				window.dataLayer = window.dataLayer || [];
 				function gtag(){dataLayer.push(arguments);}
 				gtag('js', new Date());
@@ -140,6 +144,7 @@ export default function RootLayout({ children }) {
 				</div>
 
 				<Footer />
+				<JsonLd />
 			</body>
 		</html>
 	);
