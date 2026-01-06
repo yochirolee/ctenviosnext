@@ -14,7 +14,7 @@ export const HeroRight = () => {
 					transition={{ duration: 0.8, ease: "easeOut" }}
 				>
 					<Image
-						src="/banner-envios-cuba.png"
+						src="/banner-envios-cuba-compressed.jpg"
 						alt="Envios a Cuba Oferta de Mayo"
 						width={500}
 						height={400}

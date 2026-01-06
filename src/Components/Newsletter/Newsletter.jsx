@@ -6,11 +6,11 @@ import { React } from "react";
   ```
   // tailwind.config.js
   module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
+	// ...
+	plugins: [
+	  // ...
+	  require('@tailwindcss/forms'),
+	],
   }
   ```
 */
@@ -23,7 +23,7 @@ export default function NewsLetter() {
 		<div className="relative  sm:rounded-3xl isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
 			<Image
 				fill
-				src="/ship.webp"
+				src="/ship-new.jpg"
 				alt="Ship Cuba Envíos"
 				loading="lazy"
 				priority={false}
@@ -38,7 +38,7 @@ export default function NewsLetter() {
 							Únete a Nuestra Gran Familia.
 						</h2>
 						<p className="mt-4 text-lg leading-8 text-white">
-						Mantente informado sobre nuestras noticias, promociones y eventos especiales para envíos a Cuba.
+							Mantente informado sobre nuestras noticias, promociones y eventos especiales para envíos a Cuba.
 						</p>
 						<div className="mt-6 flex max-w-md gap-x-4">
 							<label htmlFor="email-address" className="sr-only">
@@ -79,7 +79,7 @@ export default function NewsLetter() {
 								Consentimiento para recibir emails y mensajes de texto informativos y promocionales
 							</label>
 							<span className="text-xs">
-							Acepto recibir emails y mensajes de texto con información y promociones de CTEnvíos.
+								Acepto recibir emails y mensajes de texto con información y promociones de CTEnvíos.
 							</span>
 						</div>
 						<Button>Unirse</Button>
@@ -91,7 +91,7 @@ export default function NewsLetter() {
 							</div>
 							<h2 className="mt-4 font-semibold text-white">Promociones y Noticias</h2>
 							<p className="mt-2 leading-7 text-white">
-							Recibe las mejores ofertas, actualizaciones y consejos para tus envíos de paquetes a Cuba.
+								Recibe las mejores ofertas, actualizaciones y consejos para tus envíos de paquetes a Cuba.
 							</p>
 						</div>
 						<div className="flex flex-col items-start">

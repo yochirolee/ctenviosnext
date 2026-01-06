@@ -71,8 +71,8 @@ export default function PriceCards() {
 								tier.featured
 									? ""
 									: tierIdx === 0
-									? "rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl lg:rounded-tr-none"
-									: "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl",
+										? "rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl lg:rounded-tr-none"
+										: "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl",
 								"rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10",
 							)}
 						>
@@ -85,9 +85,9 @@ export default function PriceCards() {
 							>
 								{tier.name}
 							</h3>
-							 {tier.featured && (
+							{tier.featured && (
 								<Image
-									src="/banner-discounts.png"
+									src="/banner-discounts-compressed.jpg"
 									alt="Envios a Cuba Oferta Martes"
 									className="w-full mt-3 object-cover rounded-lg"
 									width={300}
@@ -96,7 +96,7 @@ export default function PriceCards() {
 									priority={false}
 									quality={60}
 								/>
-							)} 
+							)}
 							<p className="mt-4 flex items-baseline gap-x-2">
 								<span
 									className={classNames(

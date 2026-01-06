@@ -75,7 +75,7 @@ export const metadata = {
 		siteName: "CTEnvios",
 		images: [
 			{
-				url: "https://ctenvios.com/banner-discounts.png",
+				url: "https://ctenvios.com/banner-discounts-compressed.jpg",
 				width: 1200,
 				height: 630,
 				alt: "CTEnvios - Envíos a Cuba",
@@ -93,7 +93,7 @@ export const metadata = {
 			"Agencia de envíos a Cuba seguros y económicos. Envía paquetes y más a tus seres queridos en Cuba.",
 		creator: "@ctenvios",
 		images: {
-			url: "https://ctenvios.com/banner-discounts.png",
+			url: "https://ctenvios.com/banner-discounts-compressed.jpg",
 			alt: "CTEnvios - Envíos a Cuba",
 		},
 	},
