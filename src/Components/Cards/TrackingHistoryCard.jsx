@@ -17,7 +17,7 @@ const getEventIcon = (statusCode) => {
 
 const formatEventDate = (timestamp) => {
 	if (!timestamp || timestamp === "0000-00-00") return "";
-	
+
 	try {
 		const date = parseISO(timestamp);
 		if (isNaN(date.getTime())) return "";
@@ -28,44 +28,49 @@ const formatEventDate = (timestamp) => {
 };
 
 export const TrackingHistoryCard = ({ events, isLoading }) => {
-	if (isLoading) {
-		return <LoadingSpinner />;
-	}
-
-	if (!events || events.length === 0) {
-		return (
-			<div className="text-sm text-slate-500 py-4">
-				No hay eventos disponibles
-			</div>
-		);
-	}
+	const hasEvents = events && events.length > 0;
 
 	return (
-		<ul className="space-y-8 lg:border-l border-slate-900/10 pl-4 text-sm leading-6 text-slate-700">
-			{[...events].reverse().map((event, index) => (
-				<li key={index} className="flex items-start">
-					{getEventIcon(event.statusCode)}
-					<div className="ml-5 flex flex-col">
-						<strong
-							className={`flex font-semibold gap-2 ${
-								event.statusCode === "DELIVERED"
-									? "text-green-600"
-									: "text-slate-900"
-							}`}
-						>
-							{event.statusName}
-						</strong>
-						{event.location && (
-							<span className="text-xs text-slate-600">{event.location}</span>
-						)}
-						{formatEventDate(event.timestamp) && (
-							<span className="text-xs text-[#0EA5E9] mt-1">
-								{formatEventDate(event.timestamp)}
-							</span>
-						)}
+		<div className="flex flex-col w-full">
+			{hasEvents ? (
+				<ul className="space-y-8 lg:border-l border-slate-900/10 pl-4 text-sm leading-6 text-slate-700">
+					{[...events].reverse().map((event, index) => (
+						<li key={index} className="flex items-start">
+							{getEventIcon(event.statusCode)}
+							<div className="ml-5 flex flex-col">
+								<strong
+									className={`flex font-semibold gap-2 ${event.statusCode === "DELIVERED"
+											? "text-green-600"
+											: "text-slate-900"
+										}`}
+								>
+									{event.statusName}
+								</strong>
+								{event.location && (
+									<span className="text-xs text-slate-600">{event.location}</span>
+								)}
+								{formatEventDate(event.timestamp) && (
+									<span className="text-xs text-[#0EA5E9] mt-1">
+										{formatEventDate(event.timestamp)}
+									</span>
+								)}
+							</div>
+						</li>
+					))}
+				</ul>
+			) : (
+				!isLoading && (
+					<div className="text-sm text-slate-500 py-4">
+						No hay eventos disponibles
 					</div>
-				</li>
-			))}
-		</ul>
+				)
+			)}
+
+			{isLoading && (
+				<div className={`mt-6 ${hasEvents ? "border-t border-slate-900/5 pt-6" : ""}`}>
+					<LoadingSpinner />
+				</div>
+			)}
+		</div>
 	);
 };

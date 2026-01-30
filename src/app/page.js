@@ -5,7 +5,7 @@ import NewsLetter from "@/Components/Newsletter/Newsletter";
 import { SocialMedia } from "@/Components/SocialMedia/SocialMedia";
 import { Stats } from "@/Components/Stats/Stats";
 import Faq from "@/Components/Faq/Faq";
-import ReviewsWidget from "@/Components/Reviews/ReviewsWidget";
+import { OffersSection } from "./sections/offers-section";
 
 
 const PriceCards = lazy(() => import("@/Components/Cards/PricesCards"));
@@ -15,13 +15,14 @@ const LoadingFallback = ({ height }) => (
 	<div className={`flex justify-center items-center ${height}`}>
 		<div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
 	</div>
-);	
+);
 export default function Home() {
 	return (
 		<main>
 			<Hero />
 			<Suspense fallback={<LoadingFallback height="h-80" />}>
 				<PriceCards />
+				<OffersSection />
 				<TrackingSection />
 			</Suspense>
 			<Stats />

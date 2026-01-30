@@ -19,9 +19,9 @@ const tiers = [
 		name: "Descuentos de Jueves",
 		id: "tier-enterprise",
 		href: "#",
-		priceMonthly: "$1.49",
+		priceMonthly: "$1.43",
 		description:
-			"Rebajas de Jueves: Misceláneas solo $1.49 por libra. Todos los jueves de Julio, sin límite de peso. Entrega puerta a puerta",
+			"Rebajas de Jueves: Misceláneas solo $1.43 por libra. Todos los jueves de Julio, sin límite de peso. Entrega puerta a puerta",
 		features: [
 			"Entregas puerta a puerta en toda Cuba",
 			"Seguimiento en tiempo real de tu envío",
